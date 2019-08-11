@@ -17,7 +17,7 @@ Show them some love
 
 #### Tables
 ![Tables](screenshots/03_table.png)
-![Tables with Event Colors](screenshots/04_table_event_colors..png)
+![Tables with Event Colors](screenshots/04_table_event_colors.png)
 
 #### Messages
 ![Messages](screenshots/05_messages.png)
