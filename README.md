@@ -9,17 +9,17 @@ Show them some love
 * [Github](https://github.com/dhg/Skeleton/)
 
 # Features and Changes
-### Navigation Bar
+###### Navigation Bar
 ![Navigation Bar](screenshots/01_navbar.png)
 
-### Event Colors
+###### Event Colors
 ![Event Colors](screenshots/02_event_colors.png)
 
-### Tables
+###### Tables
 ![Tables](screenshots/03_table.png)
-![Tables with Even Colors](screenshots/04_table_event_colors.png)
+![Tables with Event Colors](screenshots/04_table_event_colors..png)
 
-### Messages
+###### Messages
 ![Messages](screenshots/05_messages.png)
 
 # TODO
