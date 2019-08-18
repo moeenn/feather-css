@@ -9,11 +9,14 @@ Show them some love
 * [Github](https://github.com/dhg/Skeleton/)
 
 # Features and Changes
-#### Navigation Bar
-![Navigation Bar](screenshots/01_navbar.png)
-
 #### Event Colors
 ![Event Colors](screenshots/02_event_colors.png)
+
+#### Buttons
+![Button Event Colors](screenshots/00_button_event_colors.png)
+
+#### Navigation Bar
+![Navigation Bar](screenshots/01_navbar.png)
 
 #### Tables
 ![Tables](screenshots/03_table.png)
@@ -24,5 +27,9 @@ Show them some love
 #### Messages with Event Colors
 ![Messages](screenshots/05_messages.png)
 
+#### Page Buttons
+![Page Buttons](screenshots/06_pages.png)
+
 # TODO
 * Fix the Navigation Bar for smaller screens
+* Whole lot of testing
