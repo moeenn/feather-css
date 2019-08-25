@@ -28,6 +28,7 @@ Event colors can be applied to various elements. They style the border, backgrou
 ![Tables](screenshots/table.png)
 ```css
 <table class="u-full-width">
+  <legend>User Details</legend>
   <thead>
     <tr>
       <th>ID.</th>
@@ -64,6 +65,7 @@ Event colors can be applied to various elements. They style the border, backgrou
 ![Tables with Event Colors](screenshots/table_event_colors.png)
 ```css
 <table class="u-full-width">
+  <legend>User Details</legend>
   <thead>
     <tr>
       <th>ID.</th>
