@@ -64,35 +64,35 @@ Event colors can be applied to various elements. They style the border, backgrou
 ![Tables with Event Colors](screenshots/table_event_colors.png)
 ```css
 <table class="u-full-width">
-	<thead>
-		<tr>
-			<th>ID.</th>
-			<th>Name</th>
-			<th>Email</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr class="positive">
-			<td>01</td>
-			<td>User</td>
-			<td>email@emai.com</td>
-		</tr>
-		<tr class="alert">
-			<td>02</td>
-			<td>User</td>
-			<td>email@emai.com</td>
-		</tr>
-		<tr class="negative">
-			<td>03</td>
-			<td>User</td>
-			<td>email@emai.com</td>
-		</tr>
-		<tr class="info">
-			<td>04</td>
-			<td>User</td>
-			<td>email@emai.com</td>
-		</tr>
-	</tbody>
+  <thead>
+    <tr>
+      <th>ID.</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+    <tbody>
+     <tr class="positive">
+       <td>01</td>
+       <td>User</td>
+       <td>email@emai.com</td>
+     </tr>
+     <tr class="alert">
+       <td>02</td>
+       <td>User</td>
+       <td>email@emai.com</td>
+     </tr>
+     <tr class="negative">
+       <td>03</td>
+       <td>User</td>
+       <td>email@emai.com</td>
+     </tr>
+     <tr class="info">
+       <td>04</td>
+       <td>User</td>
+       <td>email@emai.com</td>
+     </tr>
+   </tbody>
 </table>
 ```
 
@@ -100,24 +100,24 @@ Event colors can be applied to various elements. They style the border, backgrou
 ![Messages](screenshots/messages.png)
 ```css
 <div class="message">
-	<header>Default Message</header>
-	<p>... </p>
+  <header>Default Message</header>
+  <p>... </p>
 </div>
 <div class="positive message">
-	<header>Positive Message</header>
-	<p>... </p>
+  <header>Positive Message</header>
+  <p>... </p>
 </div>
 <div class="negative message">
-	<header>Negative Message</header>
-	<p>... </p>
+  <header>Negative Message</header>
+  <p>... </p>
 </div>
 <div class="alert message">
-	<header>Alert Message</header>
-	<p>... </p>
+  <header>Alert Message</header>
+  <p>... </p>
 </div>
 <div class="info message">
-	<header>Info Message</header>
-	<p>... </p>
+  <header>Info Message</header>
+  <p>... </p>
 </div>
 ```
 
@@ -125,11 +125,11 @@ Event colors can be applied to various elements. They style the border, backgrou
 ![Page Buttons](screenshots/pages.png)
 ```css
 <div class="pages">
-	<a>1</a>
-	<a class="active">2</a>
-	<a>3</a>
-	<a>4</a>
-	<a>5</a>
+  <a>1</a>
+  <a class="active">2</a>
+  <a>3</a>
+  <a>4</a>
+  <a>5</a>
 </div>
 ```
 
@@ -151,12 +151,12 @@ Event colors can be applied to various elements. They style the border, backgrou
 ![Gallery](screenshots/gallery.png)
 ```css
 <div class="gallery">
-	<div class="box item">
-		<img class="thumb" src="thumb_001.jpg">
-	</div>
-	<div class="box item">
-		<img class="thumb" src="thumb_002.jpg">
-	</div>
+  <div class="box item">
+    <img class="thumb" src="thumb_001.jpg">
+  </div>
+  <div class="box item">
+    <img class="thumb" src="thumb_002.jpg">
+  </div>
 </div
 ```
 
