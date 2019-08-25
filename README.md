@@ -15,8 +15,26 @@ Show them some love
 #### Buttons
 ![Button Event Colors](screenshots/00_button_event_colors.png)
 
-#### Navigation Bar
+```css
+<button class="button">Normal</button>
+<button class="button-primary">Primary</button>
+<button class="button positive">Positive</button>
+<button class="button negative">Negative</button>
+<button class="button alert">Alert</button>
+<button class="button info">Info</button>
+```
+
+#### Navigation Bar (Responsive)
 ![Navigation Bar](screenshots/01_navbar.png)
+
+```css
+<nav>
+  <a class="active">Home</a>
+  <a>Products</a>
+  <a>Services</a>
+  <a>Programs</a>
+</nav>
+```
 
 #### Tables
 ![Tables](screenshots/03_table.png)
