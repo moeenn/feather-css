@@ -9,12 +9,12 @@ Show them some love
 * [Github](https://github.com/dhg/Skeleton/)
 
 # Features and Changes
-#### Event Colors
-![Event Colors](screenshots/02_event_colors.png)
+# Event Colors
+Event colors can be applied to various elements. They style the border, background and font colors.
+![Event Colors](screenshots/event_colors.png)
 
-#### Buttons
-![Button Event Colors](screenshots/00_button_event_colors.png)
-
+# Buttons
+![Button Event Colors](screenshots/buttons.png)
 ```css
 <button class="button">Normal</button>
 <button class="button-primary">Primary</button>
@@ -24,9 +24,117 @@ Show them some love
 <button class="button info">Info</button>
 ```
 
-#### Navigation Bar (Responsive)
-![Navigation Bar](screenshots/01_navbar.png)
+# Tables
+![Tables](screenshots/table.png)
+```css
+<table class="u-full-width">
+  <thead>
+    <tr>
+      <th>ID.</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>01</td>
+      <td>User</td>
+      <td>email@emai.com</td>
+    </tr>
+    <tr>
+      <td>02</td>
+      <td>User</td>
+      <td>email@emai.com</td>
+    </tr>
+    <tr>
+      <td>03</td>
+      <td>User</td>
+      <td>email@emai.com</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td>User</td>
+      <td>email@emai.com</td>
+    </tr>
+  </tbody>
+</table>
+```
 
+### Tables with Event Colors
+![Tables with Event Colors](screenshots/table_event_colors.png)
+```css
+<table class="u-full-width">
+	<thead>
+		<tr>
+			<th>ID.</th>
+			<th>Name</th>
+			<th>Email</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="positive">
+			<td>01</td>
+			<td>User</td>
+			<td>email@emai.com</td>
+		</tr>
+		<tr class="alert">
+			<td>02</td>
+			<td>User</td>
+			<td>email@emai.com</td>
+		</tr>
+		<tr class="negative">
+			<td>03</td>
+			<td>User</td>
+			<td>email@emai.com</td>
+		</tr>
+		<tr class="info">
+			<td>04</td>
+			<td>User</td>
+			<td>email@emai.com</td>
+		</tr>
+	</tbody>
+</table>
+```
+
+# Messages with Event Colors
+![Messages](screenshots/messages.png)
+```css
+<div class="message">
+	<header>Default Message</header>
+	<p>... </p>
+</div>
+<div class="positive message">
+	<header>Positive Message</header>
+	<p>... </p>
+</div>
+<div class="negative message">
+	<header>Negative Message</header>
+	<p>... </p>
+</div>
+<div class="alert message">
+	<header>Alert Message</header>
+	<p>... </p>
+</div>
+<div class="info message">
+	<header>Info Message</header>
+	<p>... </p>
+</div>
+```
+
+# Page Buttons
+![Page Buttons](screenshots/pages.png)
+```css
+<div class="pages">
+	<a>1</a>
+	<a class="active">2</a>
+	<a>3</a>
+	<a>4</a>
+	<a>5</a>
+</div>
+```
+
+# Navigation Bar
+![Navigation Bar](screenshots/navbar.png)
 ```css
 <nav>
   <a class="active">Home</a>
@@ -36,18 +144,26 @@ Show them some love
 </nav>
 ```
 
-#### Tables
-![Tables](screenshots/03_table.png)
+### Navigation Bar Responsive
+![Navigation Bar](screenshots/navbar_responsive.png)
 
-#### Tables with Event Colors
-![Tables with Event Colors](screenshots/04_table_event_colors.png)
+# Gallery
+![Gallery](screenshots/gallery.png)
+```css
+<div class="gallery">
+	<div class="box item">
+		<img class="thumb" src="thumb_001.jpg">
+	</div>
+	<div class="box item">
+		<img class="thumb" src="thumb_002.jpg">
+	</div>
+</div
+```
 
-#### Messages with Event Colors
-![Messages](screenshots/05_messages.png)
-
-#### Page Buttons
-![Page Buttons](screenshots/06_pages.png)
 
 # TODO
-* Fix the Navigation Bar for smaller screens
-* Whole lot of testing
+- [x] Fix the Navigation Bar for smaller screens
+- [ ] Port to SASS
+- [ ] Dark Theme
+- [ ] Code Clean Up
+- [ ] Testing
