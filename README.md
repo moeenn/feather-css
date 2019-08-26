@@ -4,7 +4,7 @@ Skeleton CSS is great but it is missing quite a few things. This is where this p
 # Credit
 All credit goes to the original creators of Skeleton CSS. Without their excellent work this project would not be possible.
 
-Show them some love 
+Show them some love
 * [Website](http://getskeleton.com/)
 * [Github](https://github.com/dhg/Skeleton/)
 
@@ -162,8 +162,11 @@ Event colors can be applied to various elements. They style the border, backgrou
 
 
 # TODO
-- [x] Fix the Navigation Bar for smaller screens
+- [ ] Inline Tags
+- [ ] Inline Badges / counters
+- [ ] Input Field Descriptions
+- [ ] Blockquotes
 - [ ] Port to SASS
 - [ ] Dark Theme
 - [ ] Code Clean Up
-- [ ] Testing
+- [ ] Testing, testing and testing!

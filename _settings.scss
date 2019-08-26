@@ -7,10 +7,14 @@ $background-active: rgba(0,0,0,0.07);
 $background-selection: rgba(204,225,254,1);
 
 // shadows
-$shadow-color: rgba(203,203,203,1);
-$shadow-radius-small: 0.3rem;
-$shadow-radius-normal: 0.6rem;
-$shadow-radius-large: 2rem;
+$shadow-radius-small: 0.08rem;
+$shadow-color-small: rgba(0,0,0,0.25);
+
+$shadow-radius-normal: 0.2rem;
+$shadow-color-normal: rgba(0,0,0,0.25);
+
+$shadow-radius-large: 1.5rem;
+$shadow-color-large: rgba(0,0,0,0.25);
 
 // event colors
 $positive-background: rgba(252,255,245,1);
@@ -36,7 +40,15 @@ $border-color: rgba(225,225,225,1);
 $border-color-dark: rgba(187,187,187,1);
 $border-radius: 4px;
 
+// spacing used for margins and paddings
+$spacing-1: 0.5rem;
+$spacing-2: 1.0rem;
+$spacing-3: 1.5rem;
+$spacing-4: 2.0rem;
+$spacing-5: 2.5rem;
+
 // fonts
+$bold: 600;
 $font-size-small: 1.1rem;
 $font-size-normal: 1.5rem;
 $font-size-large: 1.8rem;
@@ -51,9 +63,8 @@ $link-background-hover: transparent;
 $form-legend-font-size: 3rem;
 
 // navigation bar
-$navigation-bar-background: white;
+$navigation-bar-background: rgba(255,255,255,1);
 $navigation-bar-foreground: rgba(34,34,34,1);
-$navigation-bar-anchor-padding: 1.3rem 2rem 0.7rem 2rem;
 $navigation-bar-anchor-hover-background: $background-hover;
 $navigation-bar-border: solid $border-size-normal $border-color;
 $navigation-bar-border-hover: solid $border-size-large rgba(89,89,89,1);
