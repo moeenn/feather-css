@@ -1,0 +1,211 @@
+@import "settings";
+
+// navigation bar
+nav {
+    background: $navigation-bar-background;
+    font-size: 0;
+    padding: 0;
+    border-bottom: $navigation-bar-border;
+    a {
+        display: inline-block;
+        font-size: $font-size-normal;
+        color: $navigation-bar-foreground;
+        text-align: center;
+        padding: $navigation-bar-anchor-padding;
+        text-decoration: none;
+        font-size: $font-size-normal;
+        border-bottom: solid $border-size-large transparent;
+        margin-bottom: $border-size-normal - $border-size-large;
+    }
+    a:hover {
+        background: $navigation-bar-anchor-hover-background;
+        color: $navigation-bar-foreground;
+        border-bottom: $navigation-bar-border-hover;
+    }
+    .active {
+        font-weight: 600;
+        border-bottom: $navigation-bar-border-active;
+    }
+}
+
+// switch to mobile at small screen
+@media (max-width: 550px) {
+    nav a {
+        display: block;
+        text-align: left;
+        padding-left: 2rem;
+    }
+    nav a:hover { border-bottom: solid $border-size-large transparent; }
+    nav .active { border-bottom: solid $border-size-large transparent; }
+}
+
+.gallery {
+    font-size: 0px;
+    text-align: center;
+    .item {
+        display: inline-block;
+        width: $gallery-item-width;
+        height: $gallery-item-height;
+        border: solid $border-size-normal $border-color;
+        border-radius: $border-radius;
+        overflow: hidden;
+        margin: $gallery-item-gap;
+        box-sizing: border-box;
+    }
+    .thumb {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+// smaller tweaks
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-top: 1.5rem;
+    margin-bottom: 0rem;
+}
+
+hr {
+    margin: 1rem 0rem;
+}
+
+// text selection background
+::-moz-selection {
+    background: $background-selection;
+}
+
+::selection {
+    background: $background-selection;
+}
+
+a {
+    text-decoration: none;
+    background: $link-background-normal;
+    color: $link-foreground-normal;
+    &:hover {
+        background: $link-background-hover;
+        color: $link-foreground-hover;
+    }
+}
+
+table {
+    tbody tr:hover {
+        background: $background-hover;
+    }
+    th:first-child,
+    td:first-child {
+        padding-left: 2rem;
+    }
+    th:last-child,
+    td:last-child {
+        padding-right: 2rem;
+    }
+}
+
+form {
+    legend {
+        font-size: $form-legend-font-size;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+}
+
+.page-buttons {
+    display: inline-block;
+    border: solid $border-size-normal $border-color-dark;
+    border-radius: $border-radius;
+    overflow: hidden;
+    font-size: 0px;
+    a {
+        font-size: $font-size-normal;
+        display: inline-block;
+        border-radius: 0px;
+        padding: 0 1rem;
+    }
+    a:hover {
+        background: $background-hover;
+    }
+    .active {
+        background: $background-active;
+    }
+}
+
+// messages
+.message {
+    padding: 2rem;
+    margin: 1rem 0rem;
+    border-radius: $border-radius;
+    border: solid $border-size-normal $border-color-dark;
+    background: $background-hover;
+    header {
+        font-size: $font-size-normal;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+    p {
+        text-align: justify;
+        padding: 0px;
+        margin: 0px;
+    }
+}
+
+.box {
+    border-radius: $border-radius;
+    border: solid $border-size-normal $border-color-dark;
+    hr {
+        margin: 0rem;
+        padding: 0rem;
+    }
+}
+
+// strick element to top of the screen
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+// shadows
+.shadow-small {
+    box-shadow: 0rem 0rem $shadow-radius-small $shadow-color;
+}
+
+.shadow-normal {
+    box-shadow: 0rem 0rem $shadow-radius-normal $shadow-color;
+}
+
+.shadow-large {
+    box-shadow: 0rem 0rem $shadow-radius-large $shadow-color;
+}
+
+// event colors
+.positive {
+    background: #fcfff5;
+    color: #1a531b;
+    border-color: #a3c293;
+}
+
+.negative {
+    background: #fff6f6;
+    color: #912d2b;
+    border-color: #e0b4b4;
+}
+
+.alert {
+    background: #fffaf3;
+    color: #573a08;
+    border-color: #c9ba9b;
+}
+
+.info {
+    background: #f8ffff;
+    color: #478598;
+    border-color: #a9d5de;
+}
