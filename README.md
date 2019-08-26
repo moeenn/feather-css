@@ -9,11 +9,11 @@ Show them some love
 * [Github](https://github.com/dhg/Skeleton/)
 
 # Features and Changes
-# Event Colors
+## Event Colors
 Event colors can be applied to various elements. They style the border, background and font colors.
 ![Event Colors](screenshots/event_colors.png)
 
-# Buttons
+## Buttons
 ![Button Event Colors](screenshots/buttons.png)
 ```css
 <button class="button">Normal</button>
@@ -24,7 +24,7 @@ Event colors can be applied to various elements. They style the border, backgrou
 <button class="button info">Info</button>
 ```
 
-# Tables
+## Tables
 ![Tables](screenshots/table.png)
 ```css
 <table class="u-full-width">
@@ -96,7 +96,7 @@ Event colors can be applied to various elements. They style the border, backgrou
 </table>
 ```
 
-# Messages with Event Colors
+## Messages with Event Colors
 ![Messages](screenshots/messages.png)
 ```css
 <div class="message">
@@ -121,7 +121,7 @@ Event colors can be applied to various elements. They style the border, backgrou
 </div>
 ```
 
-# Page Buttons
+## Page Buttons
 ![Page Buttons](screenshots/pages.png)
 ```css
 <div class="pages">
@@ -133,7 +133,7 @@ Event colors can be applied to various elements. They style the border, backgrou
 </div>
 ```
 
-# Navigation Bar
+## Navigation Bar
 ![Navigation Bar](screenshots/navbar.png)
 ```css
 <nav>
@@ -147,7 +147,7 @@ Event colors can be applied to various elements. They style the border, backgrou
 ### Navigation Bar Responsive
 ![Navigation Bar](screenshots/navbar_responsive.png)
 
-# Gallery
+## Gallery
 ![Gallery](screenshots/gallery.png)
 ```css
 <div class="gallery">
