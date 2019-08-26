@@ -124,7 +124,7 @@ Event colors can be applied to various elements. They style the border, backgrou
 ## Page Buttons
 ![Page Buttons](screenshots/pages.png)
 ```css
-<div class="pages">
+<div class="page-buttons">
   <a>1</a>
   <a class="active">2</a>
   <a>3</a>
