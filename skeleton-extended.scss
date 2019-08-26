@@ -319,7 +319,7 @@ nav {
         display: inline-block;
         width: $gallery-item-width;
         height: $gallery-item-height;
-        border: solid $border-size-normal $border-color;
+        border: solid $border-size-normal $border-color-normal;
         border-radius: $border-radius;
         overflow: hidden;
         margin: $gallery-item-gap;
@@ -415,7 +415,7 @@ form {
     @extend .padding-4;
     @extend .margin-vertical-2;
     border-radius: $border-radius;
-    border: solid $border-size-normal $border-color-dark;
+    border: solid $border-size-normal $border-color-light;
     background: $background-hover;
     header {
         @extend .margin-bottom-1;
@@ -454,6 +454,20 @@ form {
 
 .shadow-large {
     box-shadow: 0 0 $shadow-radius-large $shadow-color-large;
+}
+
+// inline tags
+.tag {
+    font-size: inherit;
+    font-family: monospace;
+    line-height: 1.6rem;
+    border-radius: $border-radius;
+    border-width: $border-size-normal;
+    padding: 3px 6px !important;
+    border: 1px solid transparent;
+    border-radius: $border-radius;
+    border: solid $border-size-normal $border-color-light;
+    background: $background-hover;
 }
 
 // event colors

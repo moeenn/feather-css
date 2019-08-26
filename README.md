@@ -13,15 +13,14 @@ Show them some love
 Event colors can be applied to various elements. They style the border, background and font colors.
 ![Event Colors](screenshots/event_colors.png)
 
-## Buttons
-![Button Event Colors](screenshots/buttons.png)
+## Tags
+![Tags](screenshots/tags.png)
 ```css
-<button>Normal</button>
-<button class="button-primary">Primary</button>
-<button class="positive">Positive</button>
-<button class="negative">Negative</button>
-<button class="alert">Alert</button>
-<button class="info">Info</button>
+<span class="tag">Normal</span>
+<span class="positive tag">Normal</span>
+<span class="negative tag">Normal</span>
+<span class="alert tag">Normal</span>
+<span class="info tag">Normal</span>
 ```
 
 ## Tables
