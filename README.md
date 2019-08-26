@@ -1,5 +1,5 @@
 # Skeleton Extended
-__WORK IN PROGRESS__
+Skeleton CSS is great but it is missing quite a few things. This is where this project comes into the picture. Elements have been added that I felt were missing from the Skeleton CSS. This project is very much a **Work in Progress**.
 
 # Credit
 All credit goes to the original creators of Skeleton CSS. Without their excellent work this project would not be possible.
