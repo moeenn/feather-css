@@ -16,12 +16,12 @@ Event colors can be applied to various elements. They style the border, backgrou
 ## Buttons
 ![Button Event Colors](screenshots/buttons.png)
 ```css
-<button class="button">Normal</button>
+<button>Normal</button>
 <button class="button-primary">Primary</button>
-<button class="button positive">Positive</button>
-<button class="button negative">Negative</button>
-<button class="button alert">Alert</button>
-<button class="button info">Info</button>
+<button class="positive">Positive</button>
+<button class="negative">Negative</button>
+<button class="alert">Alert</button>
+<button class="info">Info</button>
 ```
 
 ## Tables
