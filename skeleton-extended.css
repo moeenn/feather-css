@@ -7,7 +7,7 @@ body {
   font-size: 1.4rem;
   line-height: 1.8;
   font-weight: 300;
-  font-family: "Rubik", sans-serif !important;
+  font-family: "Rubik", sans-serif;
   color: #222222;
 }
 
@@ -45,7 +45,7 @@ input[type=submit]:focus,
 input[type=reset]:focus,
 input[type=button]:focus {
   color: #333333;
-  border-color: #888;
+  border-color: #959595;
   outline: 0;
 }
 
@@ -56,7 +56,7 @@ input[type=reset].button-primary,
 input[type=button].button-primary {
   color: white;
   background-color: #33c3f0;
-  border-color: #33C3F0;
+  border-color: #10aee0;
 }
 
 .button.button-primary:hover,
@@ -70,8 +70,8 @@ input[type=submit].button-primary:focus,
 input[type=reset].button-primary:focus,
 input[type=button].button-primary:focus {
   color: white;
-  background-color: #1eaedb;
-  border-color: #1EAEDB;
+  background-color: #10aee0;
+  border-color: #10aee0;
 }
 
 input[type=email],
@@ -83,7 +83,6 @@ input[type=url],
 input[type=password],
 textarea,
 select {
-  padding: 6px 10px;
   height: 4rem;
   background-color: white;
   border: solid 1px #d1d1d1;
@@ -106,12 +105,12 @@ textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  resize: none;
 }
 
 textarea {
   min-height: 11.2rem;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  resize: none;
 }
 
 input[type=email]:focus,
@@ -163,12 +162,7 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
-  font-size: 90%;
-}
-
-li {
-  margin-bottom: 1rem;
+  font-size: 1.26rem;
 }
 
 code {
@@ -232,32 +226,35 @@ pre > code {
 
 .margin-vertical-0 {
   margin-top: 0;
-  margin-botton: 0;
+  margin-bottom: 0;
 }
 
 .margin-vertical-1 {
   margin-top: 0.5rem;
-  margin-botton: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .margin-vertical-2, .message, hr {
   margin-top: 1rem;
-  margin-botton: 1rem;
+  margin-bottom: 1rem;
 }
 
-.margin-vertical-3 {
+.margin-vertical-3, ul ul,
+ul ol,
+ol ol,
+ol ul {
   margin-top: 1.5rem;
-  margin-botton: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .margin-vertical-4 {
   margin-top: 2rem;
-  margin-botton: 2rem;
+  margin-bottom: 2rem;
 }
 
 .margin-vertical-5 {
   margin-top: 2.5rem;
-  margin-botton: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .margin-horizontal-0, hr {
@@ -285,7 +282,10 @@ pre > code {
   margin-right: 2rem;
 }
 
-.margin-horizontal-5 {
+.margin-horizontal-5, ul ul,
+ul ol,
+ol ol,
+ol ul {
   margin-left: 2.5rem;
   margin-right: 2.5rem;
 }
@@ -318,28 +318,16 @@ pre > code {
   margin-bottom: 0;
 }
 
-.margin-bottom-1, .message header, h1, h2, h3, h4, h5, h6, label,
-legend, input,
+.margin-bottom-1, .message header, h1, h2, h3, h4, h5, h6, legend,
+input,
 textarea,
 select,
 fieldset {
   margin-bottom: 0.5rem;
 }
 
-.margin-bottom-2, form p, button,
-.button {
-  margin-bottom: 1rem;
-}
-
-.margin-bottom-3 {
-  margin-bottom: 1.5rem;
-}
-
-.margin-bottom-4 {
-  margin-bottom: 2rem;
-}
-
-.margin-bottom-5, pre,
+.margin-bottom-2, li, button,
+.button, pre,
 blockquote,
 dl,
 figure,
@@ -347,6 +335,18 @@ table,
 ul,
 ol,
 form {
+  margin-bottom: 1rem;
+}
+
+.margin-bottom-3 {
+  margin-bottom: 1.5rem;
+}
+
+.margin-bottom-4, form p {
+  margin-bottom: 2rem;
+}
+
+.margin-bottom-5 {
   margin-bottom: 2.5rem;
 }
 
@@ -376,36 +376,44 @@ form {
 
 .padding-vertical-0, .page-buttons a {
   padding-top: 0;
-  padding-botton: 0;
+  padding-bottom: 0;
 }
 
 .padding-vertical-1, .button,
 button,
 input[type=submit],
 input[type=reset],
-input[type=button] {
+input[type=button], input[type=email],
+input[type=number],
+input[type=search],
+input[type=text],
+input[type=tel],
+input[type=url],
+input[type=password],
+textarea,
+select {
   padding-top: 0.5rem;
-  padding-botton: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .padding-vertical-2, pre > code {
   padding-top: 1rem;
-  padding-botton: 1rem;
+  padding-bottom: 1rem;
 }
 
 .padding-vertical-3 {
   padding-top: 1.5rem;
-  padding-botton: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .padding-vertical-4 {
   padding-top: 2rem;
-  padding-botton: 2rem;
+  padding-bottom: 2rem;
 }
 
 .padding-vertical-5 {
   padding-top: 2.5rem;
-  padding-botton: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .padding-horizontal-0 {
@@ -420,7 +428,15 @@ input[type=button] {
 
 .padding-horizontal-2, .page-buttons a, table th:last-child,
 table td:last-child, table th:first-child,
-table td:first-child {
+table td:first-child, input[type=email],
+input[type=number],
+input[type=search],
+input[type=text],
+input[type=tel],
+input[type=url],
+input[type=password],
+textarea,
+select {
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -636,11 +652,11 @@ hr {
 a {
   text-decoration: none;
   background: transparent;
-  color: #0c6d81;
+  color: #096481;
 }
 a:hover {
   background: transparent;
-  color: #095c6d;
+  color: #0d89b0;
 }
 
 table {

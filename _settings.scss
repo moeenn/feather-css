@@ -1,6 +1,6 @@
 // variables
 // fonts
-$font-families: "Rubik", sans-serif !important;
+$font-families: "Rubik", sans-serif;
 $font-size-small: 1.2rem;
 $font-size-normal: 1.4rem;
 $font-size-large: 1.8rem;
@@ -27,7 +27,7 @@ $button-foreground-hover: rgba(51,51,51,1);
 $button-primary-foreground: rgba(255,255,255,1);
 $button-primary-background: $primary-accent-color;
 $button-primary-hover-foreground: $button-primary-foreground;
-$button-primary-hover-background: rgba(30,174,219,1);
+$button-primary-hover-background: darken( $button-primary-background, 10% );
 
 
 // forms
@@ -83,9 +83,9 @@ $spacing-4: 2.0rem;
 $spacing-5: 2.5rem;
 
 // links
-$link-foreground-normal: rgba(12,109,129,1);
+$link-foreground-normal: darken( $primary-accent-color, 30% );
 $link-background-normal: transparent;
-$link-foreground-hover: rgba(9,92,109,1);
+$link-foreground-hover: darken( $primary-accent-color, 20% );
 $link-background-hover: transparent;
 
 // navigation bar
