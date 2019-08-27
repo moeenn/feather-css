@@ -1,5 +1,245 @@
 @import "settings";
 
+// base settings --------------------------------------------------------------
+html { font-size: 62.5%; }
+body {
+      font-size: $font-size-normal;
+      line-height: $line-height;
+      font-weight: $font-weight-normal;
+      font-family: $font-families;
+      color: $font-color-normal;
+}
+
+// import google Font: Rubik
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+// buttons --------------------------------------------------------------------
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    @extend .padding-horizontal-5;
+    @extend .padding-vertical-1;
+    display: inline-block;
+    height: $button-height;
+    color: $button-foreground;
+    text-align: center;
+    font-size: $font-size-small - 0.1rem;
+    font-weight: $font-weight-bold;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: $button-background;
+    border-radius: $border-radius;
+    border: solid $border-size-normal $border-color-dark;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+    color: $button-foreground-hover;
+    border-color: #888;     // TODO
+    outline: 0;
+}
+
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+    color: $button-primary-foreground;
+    background-color: $button-primary-background;
+    border-color: #33C3F0;          // TODO
+}
+
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+    color: $button-primary-hover-foreground;
+    background-color: $button-primary-hover-background;
+    border-color: #1EAEDB;          // TODO
+}
+
+
+// forms ----------------------------------------------------------------------
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+    padding: 6px 10px;      // TODO
+    height: $button-height;
+    background-color: $input-background;
+    border: solid $border-size-normal $input-border-normal;
+    border-radius: $border-radius;
+    box-shadow: none;
+    box-sizing: border-box;
+    font-size: $font-size-normal;
+    font-weight: $font-weight-normal;
+    resize: none;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+textarea {
+  min-height: $font-size-normal * 8;
+  padding-top: 6px;         // TODO
+  padding-bottom: 6px;
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border: solid $border-size-normal $input-border-focus;
+    outline: 0;
+}
+
+label,
+legend {
+    @extend .margin-bottom-1;
+    display: block;
+    font-weight: $font-weight-bold;
+}
+
+fieldset {
+    @extend .padding-0;
+    border-width: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline;
+}
+
+label > .label-body {
+    @extend .margin-horizontal-1;
+    display: inline-block;
+    font-weight: $font-weight-normal;
+}
+
+
+ // lists ---------------------------------------------------------------------
+ul      { list-style: circle inside; }
+ol      {list-style: decimal inside; }
+ol, ul  { @extend .margin-top-0; padding-left: 0; }
+ul ul,
+ul ol,
+ol ol,
+ol ul   { margin: 1.5rem 0 1.5rem 3rem; font-size: 90%; }   // TODO
+li      { margin-bottom: 1rem; }
+
+
+// code -----------------------------------------------------------------------
+code {
+    @extend .padding-1;
+    @extend .margin-1;
+    font-size: $font-size-normal * 0.9;
+    white-space: nowrap;
+    background: $code-background;
+    color: $code-foreground;
+    border: solid $border-size-normal $border-color-normal;
+    border-radius: $border-radius;
+}
+
+pre > code {
+    @extend .padding-vertical-2;
+    @extend .padding-horizontal-3;
+  display: block;
+  white-space: pre;
+}
+
+
+// tables ---------------------------------------------------------------------
+
+
+// spacing --------------------------------------------------------------------
+button,
+.button         { @extend .margin-bottom-2; }
+
+input,
+textarea,
+select,
+fieldset        { @extend .margin-bottom-1; }
+
+pre,
+blockquote,
+dl,
+figure,
+table,
+ul,
+ol,
+form            { @extend .margin-bottom-5; }
+
+
+// utilities ------------------------------------------------------------------
+.u-full-width {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+// auto clearing --------------------------------------------------------------
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+// break-points ---------------------------------------------------------------
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
 
 // margin and padding ---------------------------------------------------------
 .margin-padding-0       { margin: 0; padding: 0; }
@@ -93,7 +333,7 @@ nav {
         border-bottom: $navigation-bar-border-hover;
     }
     .active {
-        font-weight: $bold;
+        font-weight: $font-weight-bold;
         border-bottom: $navigation-bar-border-active;
     }
 }
@@ -132,20 +372,43 @@ nav {
     }
 }
 
-// misc tweaks ----------------------------------------------------------------
+// headings -------------------------------------------------------------------
 h1, h2, h3, h4, h5, h6 {
+    @extend .margin-top-0;
     @extend .margin-bottom-1;
+    font-weight: 300;
 }
 
+// font sizes
+h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
+h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
+h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
+h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
+h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
+h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+
+// adjust for mobile
+@media (min-width: 550px) {
+  h1 { font-size: 5.0rem; }
+  h2 { font-size: 4.2rem; }
+  h3 { font-size: 3.6rem; }
+  h4 { font-size: 3.0rem; }
+  h5 { font-size: 2.4rem; }
+  h6 { font-size: 1.5rem; }
+}
+
+// misc tweaks ----------------------------------------------------------------
 p {
     @extend .margin-top-3;
     @extend .margin-bottom-0;
+    font-size: $font-size-normal;
 }
 
 hr {
     @extend .margin-vertical-2;
     @extend .margin-horizontal-0;
-    border-top: solid $border-color-normal $border-color-light;
+    border-width: 0;
+    border-top: solid $border-size-normal $border-color-light;
 }
 
 // text selection background
@@ -169,34 +432,31 @@ a {
 
 // table ----------------------------------------------------------------------
 table {
+    font-size: $font-size-normal;
     tbody tr:hover {
         background: $background-hover;
     }
+    th,
+    td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: solid $border-size-normal $input-border-normal;
+    }
     th:first-child,
-    td:first-child {
-        @extend .padding-horizontal-4;
-    }
+    td:first-child          { @extend .padding-horizontal-2; }
     th:last-child,
-    td:last-child {
-        @extend .padding-horizontal-4;
-    }
+    td:last-child           { @extend .padding-horizontal-2; }
 }
 
 // forms ----------------------------------------------------------------------
 form {
-    input {
-        @extend .margin-bottom-1;
-    }
-
-    legend {
-        @extend h1;     // TODO: This doesn't work
-        font-size: $form-legend-font-size;
-    }
+    // field descriptions
     p {
         @extend .margin-top-0;
         @extend .margin-bottom-2;
         color: $font-color-dull;
         font-size: $font-size-small;
+        font-weight: 500;
         text-align: justify;
         display: block;
     }
@@ -205,7 +465,7 @@ form {
 // page buttons ---------------------------------------------------------------
 .page-buttons {
     display: inline-block;
-    border: solid $border-size-normal $border-color-dark;
+    border: solid $border-size-normal $border-color-normal;
     border-radius: $border-radius;
     overflow: hidden;
     font-size: 0px;
@@ -234,7 +494,7 @@ form {
     color: $font-color-dull;
     header {
         @extend .margin-bottom-1;
-        font-weight: $bold;
+        font-weight: $font-weight-bold;
         font-size: $font-size-normal;
     }
     p {
@@ -274,13 +534,13 @@ form {
 
 // inline tags ----------------------------------------------------------------
 .tag {
-    font-size: inherit;
+    font-size: $font-size-small;
     font-family: monospace;
     color: $font-color-dull;
-    line-height: 1.6rem;
+    line-height: $line-height - 0.2rem;
     border-radius: $border-radius;
     border-width: $border-size-normal;
-    padding: 3px 6px !important;
+    padding: 3px 6px;
     border: 1px solid transparent;
     border-radius: $border-radius;
     border: solid $border-size-normal $border-color-light;

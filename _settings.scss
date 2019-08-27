@@ -1,10 +1,44 @@
 // variables
+// fonts
+$font-families: "Rubik", sans-serif !important;
+$font-size-small: 1.2rem;
+$font-size-normal: 1.4rem;
+$font-size-large: 1.8rem;
+$font-color-normal: rgba(34,34,34,1);
+$font-color-dull: rgba(69,69,69,1);
+$line-height: 1.8;
+$letter-spacing: 0.1rem;
+$font-weight-normal: 300;
+$font-weight-bold: 600;
+
 // colors
 $background-page-base: rgba(251,251,251,1);
 $background-container: rgba(255,255,255,1);
 $background-hover: rgba(0,0,0,0.02);
 $background-active: rgba(0,0,0,0.07);
 $background-selection: rgba(204,225,254,1);
+$primary-accent-color: rgba(51,195,240,1);
+
+// buttons
+$button-height: 4rem;
+$button-foreground: rgba(85,85,85,1);
+$button-background: transparent;
+$button-foreground-hover: rgba(51,51,51,1);
+$button-primary-foreground: rgba(255,255,255,1);
+$button-primary-background: $primary-accent-color;
+$button-primary-hover-foreground: $button-primary-foreground;
+$button-primary-hover-background: rgba(30,174,219,1);
+
+
+// forms
+$input-background: rgba(255,255,255,1);
+$input-border-normal: rgba(209,209,209,1);
+$input-border-focus: $primary-accent-color;
+
+
+// code
+$code-background: rgba(241,241,241,1);
+$code-foreground: $font-color-normal;
 
 // shadows
 $shadow-radius-small: 0.08rem;
@@ -48,21 +82,11 @@ $spacing-3: 1.5rem;
 $spacing-4: 2.0rem;
 $spacing-5: 2.5rem;
 
-// fonts
-$bold: 600;
-$font-color-dull: rgba(69,69,69,1);
-$font-size-small: 1.1rem;
-$font-size-normal: 1.5rem;
-$font-size-large: 1.8rem;
-
 // links
 $link-foreground-normal: rgba(12,109,129,1);
 $link-background-normal: transparent;
 $link-foreground-hover: rgba(9,92,109,1);
 $link-background-hover: transparent;
-
-// forms
-$form-legend-font-size: 3rem;
 
 // navigation bar
 $navigation-bar-background: rgba(255,255,255,1);
