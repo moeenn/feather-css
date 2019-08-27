@@ -384,7 +384,7 @@ table {
 
 form {
     legend {
-        @extend h1;
+        @extend h1;     // TODO: This doesn't work
         font-size: $form-legend-font-size;
     }
 }

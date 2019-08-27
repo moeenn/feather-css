@@ -150,10 +150,10 @@ Event colors can be applied to various elements. They style the border, backgrou
 ![Gallery](screenshots/gallery.png)
 ```css
 <div class="gallery">
-  <div class="box item">
+  <div class="item">
     <img class="thumb" src="thumb_001.jpg">
   </div>
-  <div class="box item">
+  <div class="item">
     <img class="thumb" src="thumb_002.jpg">
   </div>
 </div
@@ -161,10 +161,12 @@ Event colors can be applied to various elements. They style the border, backgrou
 
 
 # TODO
-- [ ] Inline Tags
+- [x] Inline Tags
 - [ ] Inline Badges / counters
 - [ ] Input Field Descriptions
 - [ ] Blockquotes
+- [ ] Checkboxes
+- [ ] Content Alignment
 - [ ] Port to SASS
 - [ ] Dark Theme
 - [ ] Code Clean Up
