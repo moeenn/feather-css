@@ -23,6 +23,20 @@ Event colors can be applied to various elements. They style the border, backgrou
 <span class="info tag">Normal</span>
 ```
 
+## Field Descriptions
+![Field Descriptions](screenshots/field_description.png)
+```css
+<form>
+  <label for="name">Name</label>
+  <input class="u-full-width" type="text" name="name">
+  <p>Enter your full name e.g. John Smith</p>
+  <label for="password">Password</label>
+  <input class="u-full-width" type="password" name="password">
+  <p>Enter an alpha-numeric password that is atleast 8-characters long</p>
+  <input class="button-primary" type="submit" value="Login">
+</form>
+```
+
 ## Tables
 ![Tables](screenshots/table.png)
 ```css
@@ -163,7 +177,7 @@ Event colors can be applied to various elements. They style the border, backgrou
 # TODO
 - [x] Inline Tags
 - [ ] Inline Badges / counters
-- [ ] Input Field Descriptions
+- [x] Input Field Descriptions
 - [ ] Blockquotes
 - [ ] Checkboxes
 - [ ] Content Alignment

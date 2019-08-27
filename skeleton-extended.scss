@@ -1,278 +1,75 @@
 @import "settings";
 
-.margin-padding-0 {
-    margin: 0;
-    padding: 0;
-}
 
-// margins
-.margin-0 {
-    margin: 0;
-}
+// margin and padding ---------------------------------------------------------
+.margin-padding-0       { margin: 0; padding: 0; }
 
-.margin-1 {
-    margin: $spacing-1;
-}
+// margins --------------------------------------------------------------------
+.margin-0               { margin: 0; }
+.margin-1               { margin: $spacing-1; }
+.margin-2               { margin: $spacing-2; }
+.margin-3               { margin: $spacing-3; }
+.margin-4               { margin: $spacing-4; }
+.margin-5               { margin: $spacing-5; }
+.margin-vertical-0      { margin-top: 0; margin-botton: 0; }
+.margin-vertical-1      { margin-top: $spacing-1; margin-botton: $spacing-1; }
+.margin-vertical-2      { margin-top: $spacing-2; margin-botton: $spacing-2; }
+.margin-vertical-3      { margin-top: $spacing-3; margin-botton: $spacing-3; }
+.margin-vertical-4      { margin-top: $spacing-4; margin-botton: $spacing-4; }
+.margin-vertical-5      { margin-top: $spacing-5; margin-botton: $spacing-5; }
+.margin-horizontal-0    { margin-left: 0; margin-right: 0; }
+.margin-horizontal-1    { margin-left: $spacing-1; margin-right: $spacing-1; }
+.margin-horizontal-2    { margin-left: $spacing-2; margin-right: $spacing-2; }
+.margin-horizontal-3    { margin-left: $spacing-3; margin-right: $spacing-3; }
+.margin-horizontal-4    { margin-left: $spacing-4; margin-right: $spacing-4; }
+.margin-horizontal-5    { margin-left: $spacing-5; margin-right: $spacing-5; }
+.margin-top-0           { margin-top: 0; }
+.margin-top-1           { margin-top: $spacing-1; }
+.margin-top-2           { margin-top: $spacing-2; }
+.margin-top-3           { margin-top: $spacing-3; }
+.margin-top-4           { margin-top: $spacing-4; }
+.margin-top-5           { margin-top: $spacing-5; }
+.margin-bottom-0        { margin-bottom: 0; }
+.margin-bottom-1        { margin-bottom: $spacing-1; }
+.margin-bottom-2        { margin-bottom: $spacing-2; }
+.margin-bottom-3        { margin-bottom: $spacing-3; }
+.margin-bottom-4        { margin-bottom: $spacing-4; }
+.margin-bottom-5        { margin-bottom: $spacing-5; }
 
-.margin-2 {
-    margin: $spacing-2;
-}
+// padding --------------------------------------------------------------------
+.padding-0               { padding: 0; }
+.padding-1               { padding: $spacing-1; }
+.padding-2               { padding: $spacing-2; }
+.padding-3               { padding: $spacing-3; }
+.padding-4               { padding: $spacing-4; }
+.padding-5               { padding: $spacing-5; }
+.padding-vertical-0      { padding-top: 0; padding-botton: 0; }
+.padding-vertical-1      { padding-top: $spacing-1; padding-botton: $spacing-1; }
+.padding-vertical-2      { padding-top: $spacing-2; padding-botton: $spacing-2; }
+.padding-vertical-3      { padding-top: $spacing-3; padding-botton: $spacing-3; }
+.padding-vertical-4      { padding-top: $spacing-4; padding-botton: $spacing-4; }
+.padding-vertical-5      { padding-top: $spacing-5; padding-botton: $spacing-5; }
+.padding-horizontal-0    { padding-left: 0; padding-right: 0; }
+.padding-horizontal-1    { padding-left: $spacing-1; padding-right: $spacing-1; }
+.padding-horizontal-2    { padding-left: $spacing-2; padding-right: $spacing-2; }
+.padding-horizontal-3    { padding-left: $spacing-3; padding-right: $spacing-3; }
+.padding-horizontal-4    { padding-left: $spacing-4; padding-right: $spacing-4; }
+.padding-horizontal-5    { padding-left: $spacing-5; padding-right: $spacing-5; }
+.padding-top-0           { padding-top: 0; }
+.padding-top-1           { padding-top: $spacing-1; }
+.padding-top-2           { padding-top: $spacing-2; }
+.padding-top-3           { padding-top: $spacing-3; }
+.padding-top-4           { padding-top: $spacing-4; }
+.padding-top-5           { padding-top: $spacing-5; }
+.padding-bottom-0        { padding-bottom: 0; }
+.padding-bottom-1        { padding-bottom: $spacing-1; }
+.padding-bottom-2        { padding-bottom: $spacing-2; }
+.padding-bottom-3        { padding-bottom: $spacing-3; }
+.padding-bottom-4        { padding-bottom: $spacing-4; }
+.padding-bottom-5        { padding-bottom: $spacing-5; }
 
-.margin-3 {
-    margin: $spacing-3;
-}
-
-.margin-4 {
-    margin: $spacing-4;
-}
-
-.margin-5 {
-    margin: $spacing-5;
-}
-
-.margin-vertical-0 {
-    margin-top: 0;
-    margin-botton: 0;
-}
-
-.margin-vertical-1 {
-    margin-top: $spacing-1;
-    margin-botton: $spacing-1;
-}
-
-.margin-vertical-2 {
-    margin-top: $spacing-2;
-    margin-botton: $spacing-2;
-}
-
-.margin-vertical-3 {
-    margin-top: $spacing-3;
-    margin-botton: $spacing-3;
-}
-
-.margin-vertical-4 {
-    margin-top: $spacing-4;
-    margin-botton: $spacing-4;
-}
-
-.margin-vertical-5 {
-    margin-top: $spacing-5;
-    margin-botton: $spacing-5;
-}
-
-.margin-horizontal-0 {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.margin-horizontal-1 {
-    margin-left: $spacing-1;
-    margin-right: $spacing-1;
-}
-
-.margin-horizontal-2 {
-    margin-left: $spacing-2;
-    margin-right: $spacing-2;
-}
-
-.margin-horizontal-3 {
-    margin-left: $spacing-3;
-    margin-right: $spacing-3;
-}
-
-.margin-horizontal-4 {
-    margin-left: $spacing-4;
-    margin-right: $spacing-4;
-}
-
-.margin-horizontal-5 {
-    margin-left: $spacing-5;
-    margin-right: $spacing-5;
-}
-
-.margin-top-0 {
-    margin-top: 0;
-}
-
-.margin-top-1 {
-    margin-top: $spacing-1;
-}
-
-.margin-top-2 {
-    margin-top: $spacing-2;
-}
-
-.margin-top-3 {
-    margin-top: $spacing-3;
-}
-
-.margin-top-4 {
-    margin-top: $spacing-4;
-}
-
-.margin-top-5 {
-    margin-top: $spacing-5;
-}
-
-.margin-bottom-0 {
-    margin-bottom: 0;
-}
-
-.margin-bottom-1 {
-    margin-bottom: $spacing-1;
-}
-
-.margin-bottom-2 {
-    margin-bottom: $spacing-2;
-}
-
-.margin-bottom-3 {
-    margin-bottom: $spacing-3;
-}
-
-.margin-bottom-4 {
-    margin-bottom: $spacing-4;
-}
-
-.margin-bottom-5 {
-    margin-bottom: $spacing-5;
-}
-
-// padding
-.padding-0 {
-    padding: 0;
-}
-
-.padding-1 {
-    padding: $spacing-1;
-}
-
-.padding-2 {
-    padding: $spacing-2;
-}
-
-.padding-3 {
-    padding: $spacing-3;
-}
-
-.padding-4 {
-    padding: $spacing-4;
-}
-
-.padding-5 {
-    padding: $spacing-5;
-}
-
-.padding-vertical-0 {
-    padding-top: 0;
-    padding-botton: 0;
-}
-
-.padding-vertical-1 {
-    padding-top: $spacing-1;
-    padding-botton: $spacing-1;
-}
-
-.padding-vertical-2 {
-    padding-top: $spacing-2;
-    padding-botton: $spacing-2;
-}
-
-.padding-vertical-3 {
-    padding-top: $spacing-3;
-    padding-botton: $spacing-3;
-}
-
-.padding-vertical-4 {
-    padding-top: $spacing-4;
-    padding-botton: $spacing-4;
-}
-
-.padding-vertical-5 {
-    padding-top: $spacing-5;
-    padding-botton: $spacing-5;
-}
-
-.padding-horizontal-0 {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.padding-horizontal-1 {
-    padding-left: $spacing-1;
-    padding-right: $spacing-1;
-}
-
-.padding-horizontal-2 {
-    padding-left: $spacing-2;
-    padding-right: $spacing-2;
-}
-
-.padding-horizontal-3 {
-    padding-left: $spacing-3;
-    padding-right: $spacing-3;
-}
-
-.padding-horizontal-4 {
-    padding-left: $spacing-4;
-    padding-right: $spacing-4;
-}
-
-.padding-horizontal-5 {
-    padding-left: $spacing-5;
-    padding-right: $spacing-5;
-}
-
-.padding-top-0 {
-    padding-top: 0;
-}
-
-.padding-top-1 {
-    padding-top: $spacing-1;
-}
-
-.padding-top-2 {
-    padding-top: $spacing-2;
-}
-
-.padding-top-3 {
-    padding-top: $spacing-3;
-}
-
-.padding-top-4 {
-    padding-top: $spacing-4;
-}
-
-.padding-top-5 {
-    padding-top: $spacing-5;
-}
-
-.padding-bottom-0 {
-    padding-bottom: 0;
-}
-
-.padding-bottom-1 {
-    padding-bottom: $spacing-1;
-}
-
-.padding-bottom-2 {
-    padding-bottom: $spacing-2;
-}
-
-.padding-bottom-3 {
-    padding-bottom: $spacing-3;
-}
-
-.padding-bottom-4 {
-    padding-bottom: $spacing-4;
-}
-
-.padding-bottom-5 {
-    padding-bottom: $spacing-5;
-}
-
-// elements
-// navigation bar
+// elements -------------------------------------------------------------------
+// navigation bar -------------------------------------------------------------
 nav {
     background: $navigation-bar-background;
     font-size: 0;
@@ -286,7 +83,7 @@ nav {
         color: $navigation-bar-foreground;
         text-align: center;
         text-decoration: none;
-        font-size: $font-size-normal;
+        font-size: $font-size-small;
         border-bottom: solid $border-size-large transparent;
         margin-bottom: $border-size-normal - $border-size-large;
     }
@@ -312,6 +109,7 @@ nav {
     nav .active { border-bottom: solid $border-size-large transparent; }
 }
 
+// gallery stylings -----------------------------------------------------------
 .gallery {
     font-size: 0px;
     text-align: center;
@@ -334,7 +132,7 @@ nav {
     }
 }
 
-// smaller tweaks
+// misc tweaks ----------------------------------------------------------------
 h1, h2, h3, h4, h5, h6 {
     @extend .margin-bottom-1;
 }
@@ -347,6 +145,7 @@ p {
 hr {
     @extend .margin-vertical-2;
     @extend .margin-horizontal-0;
+    border-top: solid $border-color-normal $border-color-light;
 }
 
 // text selection background
@@ -368,6 +167,7 @@ a {
     }
 }
 
+// table ----------------------------------------------------------------------
 table {
     tbody tr:hover {
         background: $background-hover;
@@ -382,13 +182,27 @@ table {
     }
 }
 
+// forms ----------------------------------------------------------------------
 form {
+    input {
+        @extend .margin-bottom-1;
+    }
+
     legend {
         @extend h1;     // TODO: This doesn't work
         font-size: $form-legend-font-size;
     }
+    p {
+        @extend .margin-top-0;
+        @extend .margin-bottom-2;
+        color: $font-color-dull;
+        font-size: $font-size-small;
+        text-align: justify;
+        display: block;
+    }
 }
 
+// page buttons ---------------------------------------------------------------
 .page-buttons {
     display: inline-block;
     border: solid $border-size-normal $border-color-dark;
@@ -410,13 +224,14 @@ form {
     }
 }
 
-// messages
+// message and boxes ----------------------------------------------------------
 .message {
     @extend .padding-4;
     @extend .margin-vertical-2;
     border-radius: $border-radius;
     border: solid $border-size-normal $border-color-light;
     background: $background-hover;
+    color: $font-color-dull;
     header {
         @extend .margin-bottom-1;
         font-weight: $bold;
@@ -436,14 +251,15 @@ form {
     }
 }
 
-// strick element to top of the screen
+// strick element to top of the screen ----------------------------------------
 .sticky {
     position: sticky;
     top: 0;
     z-index: 1;
 }
 
-// shadows (TODO: Finalize the Damn shadows)
+// shadows --------------------------------------------------------------------
+// (TODO: Finalize the Damn shadows)
 .shadow-small {
     box-shadow: 0 0 $shadow-radius-small $shadow-color-small;
 }
@@ -456,10 +272,11 @@ form {
     box-shadow: 0 0 $shadow-radius-large $shadow-color-large;
 }
 
-// inline tags
+// inline tags ----------------------------------------------------------------
 .tag {
     font-size: inherit;
     font-family: monospace;
+    color: $font-color-dull;
     line-height: 1.6rem;
     border-radius: $border-radius;
     border-width: $border-size-normal;
@@ -470,7 +287,7 @@ form {
     background: $background-hover;
 }
 
-// event colors
+// event colors ---------------------------------------------------------------
 .positive {
     background: $positive-background;
     color: $positive-foreground;
@@ -494,3 +311,5 @@ form {
     color: $info-foreground;
     border-color: $info-border-color;
 }
+
+// ----------------------------------------------------------------------------
