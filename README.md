@@ -180,8 +180,10 @@ Event colors can be applied to various elements. They style the border, backgrou
 - [x] Input Field Descriptions
 - [ ] Blockquotes
 - [ ] Checkboxes
-- [ ] Content Alignment
-- [ ] Port to SASS
+- [x] Content Alignment
+- [x] Hover Transitions
+- [x] Port to SASS
+- [ ] New Grid System
 - [ ] Dark Theme
 - [ ] Code Clean Up
 - [ ] Testing, testing and testing!

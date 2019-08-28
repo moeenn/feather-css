@@ -1,6 +1,6 @@
 // variables
 // fonts
-$font-families: "Rubik", sans-serif;
+$primary-font: "Rubik";
 $font-size-small: 1.2rem;
 $font-size-normal: 1.4rem;
 $font-size-large: 1.8rem;
@@ -17,7 +17,15 @@ $background-container: rgba(255,255,255,1);
 $background-hover: rgba(0,0,0,0.02);
 $background-active: rgba(0,0,0,0.07);
 $background-selection: rgba(204,225,254,1);
-$primary-accent-color: rgba(51,195,240,1);
+$primary-accent-color: rgba(74,144,226,1);
+
+// borders
+$border-size-normal: 1px;
+$border-size-large: 2px;
+$border-color-light: rgba(230,230,230,1);
+$border-color-normal: rgba(236,236,236,1);
+$border-color-dark: rgba(187,187,187,1);
+$border-radius: 4px;
 
 // buttons
 $button-height: 4rem;
@@ -27,14 +35,12 @@ $button-foreground-hover: rgba(51,51,51,1);
 $button-primary-foreground: rgba(255,255,255,1);
 $button-primary-background: $primary-accent-color;
 $button-primary-hover-foreground: $button-primary-foreground;
-$button-primary-hover-background: darken( $button-primary-background, 10% );
-
+$button-primary-hover-background: darken( $button-primary-background, 5% );
 
 // forms
-$input-background: rgba(255,255,255,1);
-$input-border-normal: rgba(209,209,209,1);
+$input-background: rgba(252,252,252,1);
+$input-border-normal: $border-color-normal;
 $input-border-focus: $primary-accent-color;
-
 
 // code
 $code-background: rgba(241,241,241,1);
@@ -67,14 +73,6 @@ $info-background: rgba(248,255,255,1);
 $info-foreground: rgba(38,129,178,1);
 $info-border-color: rgba(209,232,250,1);
 
-// borders
-$border-size-normal: 1px;
-$border-size-large: 2px;
-$border-color-light: rgba(230,230,230,1);
-$border-color-normal: rgba(225,225,225,1);
-$border-color-dark: rgba(187,187,187,1);
-$border-radius: 4px;
-
 // spacing used for margins and paddings
 $spacing-1: 0.5rem;
 $spacing-2: 1.0rem;
@@ -83,9 +81,9 @@ $spacing-4: 2.0rem;
 $spacing-5: 2.5rem;
 
 // links
-$link-foreground-normal: darken( $primary-accent-color, 30% );
+$link-foreground-normal: rgba(213,62,60,1);
 $link-background-normal: transparent;
-$link-foreground-hover: darken( $primary-accent-color, 20% );
+$link-foreground-hover: darken( $link-foreground-normal, 10% );
 $link-background-hover: transparent;
 
 // navigation bar
@@ -93,8 +91,8 @@ $navigation-bar-background: rgba(255,255,255,1);
 $navigation-bar-foreground: rgba(34,34,34,1);
 $navigation-bar-anchor-hover-background: $background-hover;
 $navigation-bar-border: solid $border-size-normal $border-color-normal;
-$navigation-bar-border-hover: solid $border-size-large rgba(89,89,89,1);
-$navigation-bar-border-active: solid $border-size-large rgba(117,117,117,1);
+$navigation-bar-border-hover: solid $border-size-large darken($border-color-normal, 30%);
+$navigation-bar-border-active: solid $border-size-large darken($border-color-normal, 40%);
 
 // gallery
 $gallery-item-width: 22rem;

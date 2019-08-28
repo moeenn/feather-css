@@ -6,12 +6,15 @@ body {
       font-size: $font-size-normal;
       line-height: $line-height;
       font-weight: $font-weight-normal;
-      font-family: $font-families;
+      font-family: $primary-font, sans-serif;
       color: $font-color-normal;
 }
 
 // import google Font: Rubik
-@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');      // fix Firefox Import Issues
+
+// transition
+.transition { transition: all 0.3s ease; }
 
 // buttons --------------------------------------------------------------------
 .button,
@@ -21,6 +24,7 @@ input[type="reset"],
 input[type="button"] {
     @extend .padding-horizontal-5;
     @extend .padding-vertical-1;
+    @extend .transition;
     display: inline-block;
     height: $button-height;
     color: $button-foreground;
@@ -92,6 +96,7 @@ textarea,
 select {
     @extend .padding-vertical-1;
     @extend .padding-horizontal-2;
+    @extend .transition;
     height: $button-height;
     background-color: $input-background;
     border: solid $border-size-normal $input-border-normal;
@@ -119,6 +124,7 @@ textarea {
 
 textarea {
     @extend .padding-vertical-1;
+    @extend .transition;
     min-height: $font-size-normal * 8;
     resize: none;
 }
@@ -219,6 +225,10 @@ form            { @extend .margin-bottom-2; }
     box-sizing: border-box;
 }
 
+// align content inside the parent element
+.content-align-center   { text-align: center; }
+.content-align-left     { text-align: left; }
+.content-align-right    { text-align: right; }
 
 // auto clearing --------------------------------------------------------------
 .container:after {
@@ -321,6 +331,7 @@ nav {
         @extend .padding-horizontal-4;
         @extend .padding-top-2;
         @extend .padding-bottom-1;
+        @extend .transition;
         display: inline-block;
         font-size: $font-size-normal;
         color: $navigation-bar-foreground;
@@ -436,9 +447,9 @@ a {
 // table ----------------------------------------------------------------------
 table {
     font-size: $font-size-normal;
-    tbody tr:hover {
-        background: $background-hover;
-    }
+
+    tbody tr        { @extend .transition; }
+    tbody tr:hover  { background: $background-hover; }
     th,
     td {
         padding: 12px 15px;
@@ -475,12 +486,14 @@ form {
     a {
         @extend .padding-horizontal-2;
         @extend .padding-vertical-0;
+        @extend .transition;
         font-size: $font-size-normal;
         display: inline-block;
         border-radius: 0px;
+        color: lighten( $font-color-dull, 15%);
     }
     a:hover {
-        background: $background-hover;
+        background: $background-active;
     }
     .active {
         background: $background-active;
@@ -535,15 +548,12 @@ form {
 }
 
 // inline tags ----------------------------------------------------------------
-.tag {
+.tag {                                                                          // Fix Line Alignment
     font-size: $font-size-small;
     font-family: monospace;
     color: $font-color-dull;
     line-height: $line-height - 0.2rem;
-    border-radius: $border-radius;
-    border-width: $border-size-normal;
     padding: 3px 6px;
-    border: 1px solid transparent;
     border-radius: $border-radius;
     border: solid $border-size-normal $border-color-light;
     background: $background-hover;
