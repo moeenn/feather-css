@@ -16,11 +16,15 @@ Event colors can be applied to various elements. They style the border, backgrou
 ## Margins and Paddings
 Margins and Paddings can be added to elements conveniently using these special classes
 
-| Margins    |                     | Padding     |                      |   |
-|------------|---------------------|-------------|----------------------|---|
-| .margin-xx | Margin on all sides | .padding-xx | Padding on all sides |   |
-|            |                     |             |                      |   |
-|            |                     |             |                      |   |
+| Margins               |                          | Padding              |                           |
+|-----------------------|--------------------------|----------------------|---------------------------|
+| .margin-xx            | Margin on all sides      | .padding-xx          | Padding on all sides      |
+| .margin-vertical-xx   | Margin on Top and Bottom | .padding-vertical-xx | Padding on Top and Bottom |
+| .margin-horizontal-xx | Margin on Left and Right | .padding-vertical-xx | Padding on Left and Right |
+| .margin-top-xx        | Margin on Top            | .padding-top-xx      | Padding on Top            |
+| .margin-bottom-xx     | Margin on Bottom         | .padding-bottom-xx   | Padding on Bottom         |
+
+**Note**: xx takes values between 0 and 5 inclusive.
 
 ## Tags
 ![Tags](screenshots/tags.png)
