@@ -2,16 +2,25 @@
 Skeleton CSS is great but it is missing quite a few things. This is where this project comes into the picture. Elements have been added that I felt were missing from the Skeleton CSS. This project is very much a **Work in Progress**.
 
 # Credit
-All credit goes to the original creators of Skeleton CSS. Without their excellent work this project would not be possible.
+* All credit goes to the original creators of Skeleton CSS. Without their excellent work this project would not be possible. Show them some love
+  * [Website](http://getskeleton.com/)
+  * [Github](https://github.com/dhg/Skeleton/)
 
-Show them some love
-* [Website](http://getskeleton.com/)
-* [Github](https://github.com/dhg/Skeleton/)
+* Font **Rubik** is used for typography. The font was designed by **Meir Sadan** of **Hubert and Fischer** and can be found on [Google Fonts](https://fonts.google.com/specimen/Rubik) 
 
 # Features and Changes
 ## Event Colors
 Event colors can be applied to various elements. They style the border, background and font colors.
 ![Event Colors](screenshots/event_colors.png)
+
+## Margins and Paddings
+Margins and Paddings can be added to elements conveniently using these special classes
+
+| Margins    |                     | Padding     |                      |   |
+|------------|---------------------|-------------|----------------------|---|
+| .margin-xx | Margin on all sides | .padding-xx | Padding on all sides |   |
+|            |                     |             |                      |   |
+|            |                     |             |                      |   |
 
 ## Tags
 ![Tags](screenshots/tags.png)
@@ -164,10 +173,10 @@ Event colors can be applied to various elements. They style the border, backgrou
 ![Gallery](screenshots/gallery.png)
 ```css
 <div class="gallery">
-  <div class="item">
+  <div class="item shadow-large">
     <img class="thumb" src="thumb_001.jpg">
   </div>
-  <div class="item">
+  <div class="item shadow-large">
     <img class="thumb" src="thumb_002.jpg">
   </div>
 </div
@@ -180,7 +189,7 @@ Event colors can be applied to various elements. They style the border, backgrou
 - [x] Input Field Descriptions
 - [ ] Blockquotes
 - [ ] Checkboxes
-- [x] Content Alignment
+- [ ] Content Alignment
 - [x] Hover Transitions
 - [x] Port to SASS
 - [ ] New Grid System
