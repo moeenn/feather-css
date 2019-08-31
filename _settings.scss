@@ -1,5 +1,5 @@
-// variables
-// fonts
+// variables ------------------------------------------------------------------
+// fonts ----------------------------------------------------------------------
 $primary-font: "Rubik";
 $font-size-small: 1.2rem;
 $font-size-normal: 1.4rem;
@@ -11,7 +11,7 @@ $letter-spacing: 0.1rem;
 $font-weight-normal: 300;
 $font-weight-bold: 600;
 
-// colors
+// colors ---------------------------------------------------------------------
 $background-page-base: rgba(251,251,251,1);
 $background-container: rgba(255,255,255,1);
 $background-hover: rgba(0,0,0,0.02);
@@ -19,7 +19,7 @@ $background-active: rgba(0,0,0,0.07);
 $background-selection: rgba(204,225,254,1);
 $primary-accent-color: rgba(74,144,226,1);
 
-// borders
+// borders --------------------------------------------------------------------
 $border-size-normal: 1px;
 $border-size-large: 2px;
 $border-color-light: rgba(230,230,230,1);
@@ -27,7 +27,7 @@ $border-color-normal: rgba(236,236,236,1);
 $border-color-dark: rgba(187,187,187,1);
 $border-radius: 4px;
 
-// buttons
+// buttons --------------------------------------------------------------------
 $button-height: 4rem;
 $button-foreground: rgba(85,85,85,1);
 $button-background: transparent;
@@ -37,16 +37,17 @@ $button-primary-background: $primary-accent-color;
 $button-primary-hover-foreground: $button-primary-foreground;
 $button-primary-hover-background: darken( $button-primary-background, 5% );
 
-// forms
+// forms ----------------------------------------------------------------------
 $input-background: rgba(252,252,252,1);
 $input-border-normal: $border-color-normal;
 $input-border-focus: $primary-accent-color;
+$input-foreground-placeholder: $input-border-normal;
 
-// code
+// code -----------------------------------------------------------------------
 $code-background: rgba(241,241,241,1);
 $code-foreground: $font-color-normal;
 
-// shadows
+// shadows --------------------------------------------------------------------
 $shadow-radius-small: 0.08rem;
 $shadow-color-small: rgba(0,0,0,0.25);
 
@@ -56,7 +57,7 @@ $shadow-color-normal: rgba(0,0,0,0.25);
 $shadow-radius-large: 1.5rem;
 $shadow-color-large: rgba(0,0,0,0.25);
 
-// event colors
+// event colors ---------------------------------------------------------------
 $positive-background: rgba(252,255,245,1);
 $positive-foreground: rgba(57,165,34,1);
 $positive-border-color: rgba(211,250,209,1);
@@ -73,20 +74,20 @@ $info-background: rgba(248,255,255,1);
 $info-foreground: rgba(38,129,178,1);
 $info-border-color: rgba(209,232,250,1);
 
-// spacing used for margins and paddings
+// spacing for margins and paddings -------------------------------------------
 $spacing-1: 0.5rem;
 $spacing-2: 1.0rem;
 $spacing-3: 1.5rem;
 $spacing-4: 2.0rem;
 $spacing-5: 2.5rem;
 
-// links
+// links ----------------------------------------------------------------------
 $link-foreground-normal: rgba(213,62,60,1);
 $link-background-normal: transparent;
 $link-foreground-hover: darken( $link-foreground-normal, 10% );
 $link-background-hover: transparent;
 
-// navigation bar
+// navigation bar -------------------------------------------------------------
 $navigation-bar-background: rgba(255,255,255,1);
 $navigation-bar-foreground: rgba(34,34,34,1);
 $navigation-bar-anchor-hover-background: $background-hover;
@@ -94,7 +95,7 @@ $navigation-bar-border: solid $border-size-normal $border-color-normal;
 $navigation-bar-border-hover: solid $border-size-large darken($border-color-normal, 30%);
 $navigation-bar-border-active: solid $border-size-large darken($border-color-normal, 40%);
 
-// gallery
+// gallery --------------------------------------------------------------------
 $gallery-item-width: 22rem;
 $gallery-item-height: 15rem;
 $gallery-item-gap: 1rem;

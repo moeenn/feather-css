@@ -16,6 +16,9 @@ body {
 // transition
 .transition { transition: all 0.3s ease; }
 
+// section
+section     { @extend .margin-top-4; }
+
 // buttons --------------------------------------------------------------------
 .button,
 button,
@@ -142,10 +145,10 @@ select:focus {
     outline: 0;
 }
 
-label,
-legend {
-    display: block;
+label {
+    @extend .margin-top-4;
     font-weight: $font-weight-bold;
+    display: block;
 }
 
 fieldset {
@@ -162,6 +165,10 @@ label > .label-body {
     @extend .margin-horizontal-1;
     display: inline-block;
     font-weight: $font-weight-normal;
+}
+
+input::placeholder {
+    color: darken($input-foreground-placeholder,10%);
 }
 
 
@@ -239,7 +246,7 @@ form            { @extend .margin-bottom-2; }
 
 // break-points ---------------------------------------------------------------
 /* Larger than mobile */
-@media (min-width: 400px) {}
+// @media (min-width: 400px) {}
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {}
@@ -466,8 +473,7 @@ table {
 form {
     // field descriptions
     p {
-        @extend .margin-top-0;
-        @extend .margin-bottom-4;
+        @extend .margin-vertical-0;
         color: $font-color-dull;
         font-size: $font-size-small;
         font-weight: 500;

@@ -11,6 +11,22 @@ body {
   color: #222222;
 }
 
+.transition, .page-buttons a, table tbody tr, nav a, input[type=email],
+input[type=number],
+input[type=search],
+input[type=text],
+input[type=tel],
+input[type=url],
+input[type=password],
+textarea,
+select, .button,
+button,
+input[type=submit],
+input[type=reset],
+input[type=button] {
+  transition: all 0.3s ease;
+}
+
 .button,
 button,
 input[type=submit],
@@ -45,7 +61,7 @@ input[type=submit]:focus,
 input[type=reset]:focus,
 input[type=button]:focus {
   color: #333333;
-  border-color: #959595;
+  border-color: #a0a0a0;
   outline: 0;
 }
 
@@ -55,8 +71,8 @@ input[type=submit].button-primary,
 input[type=reset].button-primary,
 input[type=button].button-primary {
   color: white;
-  background-color: #33c3f0;
-  border-color: #10aee0;
+  background-color: #4a90e2;
+  border-color: #2275d7;
 }
 
 .button.button-primary:hover,
@@ -70,8 +86,8 @@ input[type=submit].button-primary:focus,
 input[type=reset].button-primary:focus,
 input[type=button].button-primary:focus {
   color: white;
-  background-color: #10aee0;
-  border-color: #10aee0;
+  background-color: #3483de;
+  border-color: #2275d7;
 }
 
 input[type=email],
@@ -84,8 +100,8 @@ input[type=password],
 textarea,
 select {
   height: 4rem;
-  background-color: white;
-  border: solid 1px #d1d1d1;
+  background-color: #fcfcfc;
+  border: solid 1px #ececec;
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
@@ -122,14 +138,13 @@ input[type=url]:focus,
 input[type=password]:focus,
 textarea:focus,
 select:focus {
-  border: solid 1px #33c3f0;
+  border: solid 1px #4a90e2;
   outline: 0;
 }
 
-label,
-legend {
-  display: block;
+label {
   font-weight: 600;
+  display: block;
 }
 
 fieldset {
@@ -170,7 +185,7 @@ code {
   white-space: nowrap;
   background: #f1f1f1;
   color: #222222;
-  border: solid 1px #e1e1e1;
+  border: solid 1px #ececec;
   border-radius: 4px;
 }
 
@@ -182,6 +197,18 @@ pre > code {
 .u-full-width {
   width: 100%;
   box-sizing: border-box;
+}
+
+.content-align-center {
+  text-align: center;
+}
+
+.content-align-left {
+  text-align: left;
+}
+
+.content-align-right {
+  text-align: right;
 }
 
 .container:after {
@@ -306,7 +333,7 @@ ol ul {
   margin-top: 1.5rem;
 }
 
-.margin-top-4 {
+.margin-top-4, section {
   margin-top: 2rem;
 }
 
@@ -511,7 +538,7 @@ input[type=button] {
 nav {
   background: white;
   font-size: 0;
-  border-bottom: solid 1px #e1e1e1;
+  border-bottom: solid 1px #ececec;
 }
 nav a {
   display: inline-block;
@@ -526,11 +553,11 @@ nav a {
 nav a:hover {
   background: rgba(0, 0, 0, 0.02);
   color: #222222;
-  border-bottom: solid 2px #595959;
+  border-bottom: solid 2px #a0a0a0;
 }
 nav .active {
   font-weight: 600;
-  border-bottom: solid 2px #757575;
+  border-bottom: solid 2px #868686;
 }
 
 @media (max-width: 550px) {
@@ -555,7 +582,7 @@ nav .active {
   display: inline-block;
   width: 22rem;
   height: 15rem;
-  border: solid 1px #e1e1e1;
+  border: solid 1px #ececec;
   border-radius: 4px;
   overflow: hidden;
   margin: 1rem;
@@ -652,11 +679,11 @@ hr {
 a {
   text-decoration: none;
   background: transparent;
-  color: #096481;
+  color: #d53e3c;
 }
 a:hover {
   background: transparent;
-  color: #0d89b0;
+  color: #b72927;
 }
 
 table {
@@ -669,7 +696,7 @@ table th,
 table td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: solid 1px #d1d1d1;
+  border-bottom: solid 1px #ececec;
 }
 form p {
   color: #454545;
@@ -681,7 +708,7 @@ form p {
 
 .page-buttons {
   display: inline-block;
-  border: solid 1px #e1e1e1;
+  border: solid 1px #ececec;
   border-radius: 4px;
   overflow: hidden;
   font-size: 0px;
@@ -690,9 +717,10 @@ form p {
   font-size: 1.4rem;
   display: inline-block;
   border-radius: 0px;
+  color: #6b6b6b;
 }
 .page-buttons a:hover {
-  background: rgba(0, 0, 0, 0.02);
+  background: rgba(0, 0, 0, 0.07);
 }
 .page-buttons .active {
   background: rgba(0, 0, 0, 0.07);
@@ -739,10 +767,7 @@ form p {
   font-family: monospace;
   color: #454545;
   line-height: 1.6rem;
-  border-radius: 4px;
-  border-width: 1px;
   padding: 3px 6px;
-  border: 1px solid transparent;
   border-radius: 4px;
   border: solid 1px #e6e6e6;
   background: rgba(0, 0, 0, 0.02);
