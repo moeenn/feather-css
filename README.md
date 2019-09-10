@@ -2,11 +2,9 @@
 Skeleton CSS is great but it is missing quite a few things. This is where this project comes into the picture. Elements have been added that I felt were missing from the Skeleton CSS. This project is very much a **Work in Progress**.
 
 # Credit
-* All credit goes to the original creators of Skeleton CSS. Without their excellent work this project would not be possible. Show them some love
+All credit goes to the original creators of Skeleton CSS. Without their excellent work this project would not be possible. Show them some love
   * [Website](http://getskeleton.com/)
   * [Github](https://github.com/dhg/Skeleton/)
-
-* Font **Rubik** is used for typography. The font was designed by **Meir Sadan** of **Hubert and Fischer** and can be found on [Google Fonts](https://fonts.google.com/specimen/Rubik)
 
 # Features and Changes
 ## Event Colors
@@ -40,13 +38,17 @@ Margins and Paddings can be added to elements conveniently using these special c
 ![Field Descriptions](screenshots/field_description.png)
 ```css
 <form>
-  <label for="name">Name</label>
-  <input class="u-full-width" type="text" name="name">
-  <p>Enter your full name e.g. John Smith</p>
-  <label for="password">Password</label>
-  <input class="u-full-width" type="password" name="password">
-  <p>Enter an alpha-numeric password that is atleast 8-characters long</p>
-  <input class="button-primary" type="submit" value="Login">
+  <fieldset> 
+    <label for="name">Name</label>
+    <input class="u-full-width" type="text" name="name">
+    <p>Enter your full name e.g. John Smith</p>
+  </fieldset>
+  <fieldset>
+    <label for="password">Password</label>
+    <input class="u-full-width" type="password" name="password">
+    <p>Enter an alpha-numeric password that is atleast 8-characters long</p>
+    <input class="button-primary" type="submit" value="Login">
+  </fieldset>
 </form>
 ```
 
