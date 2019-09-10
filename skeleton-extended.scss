@@ -146,13 +146,13 @@ select:focus {
 }
 
 label {
-	@extend .margin-top-4;
 	font-weight: $font-weight-bold;
 	display: block;
 }
 
 fieldset {
 	@extend .margin-padding-0;
+	@extend .margin-top-4;
 	border-width: 0;
 }
 
