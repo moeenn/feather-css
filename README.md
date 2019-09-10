@@ -2,16 +2,29 @@
 Skeleton CSS is great but it is missing quite a few things. This is where this project comes into the picture. Elements have been added that I felt were missing from the Skeleton CSS. This project is very much a **Work in Progress**.
 
 # Credit
-All credit goes to the original creators of Skeleton CSS. Without their excellent work this project would not be possible.
+* All credit goes to the original creators of Skeleton CSS. Without their excellent work this project would not be possible. Show them some love
+  * [Website](http://getskeleton.com/)
+  * [Github](https://github.com/dhg/Skeleton/)
 
-Show them some love
-* [Website](http://getskeleton.com/)
-* [Github](https://github.com/dhg/Skeleton/)
+* Font **Rubik** is used for typography. The font was designed by **Meir Sadan** of **Hubert and Fischer** and can be found on [Google Fonts](https://fonts.google.com/specimen/Rubik) 
 
 # Features and Changes
 ## Event Colors
 Event colors can be applied to various elements. They style the border, background and font colors.
 ![Event Colors](screenshots/event_colors.png)
+
+## Margins and Paddings
+Margins and Paddings can be added to elements conveniently using these special classes
+
+| Margins               |                          | Padding              |                           |
+|-----------------------|--------------------------|----------------------|---------------------------|
+| .margin-xx            | Margin on all sides      | .padding-xx          | Padding on all sides      |
+| .margin-vertical-xx   | Margin on Top and Bottom | .padding-vertical-xx | Padding on Top and Bottom |
+| .margin-horizontal-xx | Margin on Left and Right | .padding-vertical-xx | Padding on Left and Right |
+| .margin-top-xx        | Margin on Top            | .padding-top-xx      | Padding on Top            |
+| .margin-bottom-xx     | Margin on Bottom         | .padding-bottom-xx   | Padding on Bottom         |
+
+**Note**: xx takes values between 0 and 5 inclusive.
 
 ## Tags
 ![Tags](screenshots/tags.png)
@@ -33,7 +46,6 @@ Event colors can be applied to various elements. They style the border, backgrou
   <label for="password">Password</label>
   <input class="u-full-width" type="password" name="password">
   <p>Enter an alpha-numeric password that is atleast 8-characters long</p>
-  <br>
   <input class="button-primary" type="submit" value="Login">
 </form>
 ```
@@ -165,10 +177,10 @@ Event colors can be applied to various elements. They style the border, backgrou
 ![Gallery](screenshots/gallery.png)
 ```css
 <div class="gallery">
-  <div class="item">
+  <div class="item shadow-large">
     <img class="thumb" src="thumb_001.jpg">
   </div>
-  <div class="item">
+  <div class="item shadow-large">
     <img class="thumb" src="thumb_002.jpg">
   </div>
 </div
@@ -179,8 +191,8 @@ Event colors can be applied to various elements. They style the border, backgrou
 - [x] Inline Tags
 - [ ] Inline Badges / counters
 - [x] Input Field Descriptions
-- [x] Checkboxes / Toggles
-- [x] Date Fields
+- [ ] Blockquotes
+- [ ] Checkboxes
 - [ ] Content Alignment
 - [x] Hover Transitions
 - [x] Port to SASS
