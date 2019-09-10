@@ -3,11 +3,15 @@
 // base settings --------------------------------------------------------------
 html { font-size: 62.5%; }
 body {
-	  font-size: $font-size-normal;
-	  line-height: $line-height;
-	  font-weight: $font-weight-normal;
-	  font-family: $primary-font, sans-serif;
-	  color: $font-color-normal;
+	font-size: $font-size-normal;
+	line-height: $line-height;
+	color: $font-color-normal;
+}
+
+@font-face {
+	font-family: $primary-font, sans-serif;
+	font-weight: $font-weight-normal;
+	text-rendering: optimizeLegibility;
 }
 
 // transition
@@ -349,11 +353,10 @@ nav {
 		@extend .padding-bottom-1;
 		@extend .transition;
 		display: inline-block;
-		font-size: $font-size-normal;
+		font-size: $font-size-small;
 		color: $navigation-bar-foreground;
 		text-align: center;
 		text-decoration: none;
-		font-size: $font-size-small;
 		border-bottom: solid $border-size-large transparent;
 		margin-bottom: $border-size-normal - $border-size-large;
 	}
@@ -406,7 +409,7 @@ nav {
 h1, h2, h3, h4, h5, h6 {
 	@extend .margin-top-0;
 	@extend .margin-bottom-1;
-	font-weight: 200;
+	font-weight: $font-weight-normal;
 }
 
 // font sizes

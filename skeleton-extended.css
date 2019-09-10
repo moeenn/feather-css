@@ -5,11 +5,14 @@ html {
 body {
   font-size: 1.5rem;
   line-height: 2.4rem;
-  font-weight: 300;
-  font-family: arial, sans-serif;
   color: #222222;
 }
 
+@font-face {
+  font-family: arial, sans-serif;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
 .transition, .page-buttons a, input[type=checkbox]:empty ~ label:before,
 input[type=checkbox]:empty ~ label:after, table tbody tr, nav a, input[type=email],
 input[type=number],
@@ -109,7 +112,7 @@ select {
   box-shadow: none;
   box-sizing: border-box;
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: normal;
   resize: none;
 }
 
@@ -163,7 +166,7 @@ input[type=radio] {
 
 label > .label-body {
   display: inline-block;
-  font-weight: 300;
+  font-weight: normal;
 }
 
 input::placeholder {
@@ -555,11 +558,10 @@ nav {
 }
 nav a {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #222222;
   text-align: center;
   text-decoration: none;
-  font-size: 1.2rem;
   border-bottom: solid 2px transparent;
   margin-bottom: -1px;
 }
@@ -608,7 +610,7 @@ nav .active {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 200;
+  font-weight: normal;
 }
 
 h1 {
@@ -726,7 +728,7 @@ input[type=checkbox]:empty {
 
 input[type=checkbox]:empty ~ label {
   line-height: 2.5rem;
-  font-weight: 300;
+  font-weight: normal;
   position: relative;
   text-indent: 6rem;
   cursor: pointer;
