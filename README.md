@@ -6,7 +6,7 @@ Skeleton CSS is great but it is missing quite a few things. This is where this p
   * [Website](http://getskeleton.com/)
   * [Github](https://github.com/dhg/Skeleton/)
 
-* Font **Rubik** is used for typography. The font was designed by **Meir Sadan** of **Hubert and Fischer** and can be found on [Google Fonts](https://fonts.google.com/specimen/Rubik) 
+* Font **Rubik** is used for typography. The font was designed by **Meir Sadan** of **Hubert and Fischer** and can be found on [Google Fonts](https://fonts.google.com/specimen/Rubik)
 
 # Features and Changes
 ## Event Colors
@@ -192,7 +192,8 @@ Margins and Paddings can be added to elements conveniently using these special c
 - [ ] Inline Badges / counters
 - [x] Input Field Descriptions
 - [ ] Blockquotes
-- [ ] Checkboxes
+- [x] Input Date
+- [x] Checkboxes
 - [ ] Content Alignment
 - [x] Hover Transitions
 - [x] Port to SASS
