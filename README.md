@@ -33,6 +33,7 @@ Event colors can be applied to various elements. They style the border, backgrou
   <label for="password">Password</label>
   <input class="u-full-width" type="password" name="password">
   <p>Enter an alpha-numeric password that is atleast 8-characters long</p>
+  <br>
   <input class="button-primary" type="submit" value="Login">
 </form>
 ```
@@ -178,9 +179,9 @@ Event colors can be applied to various elements. They style the border, backgrou
 - [x] Inline Tags
 - [ ] Inline Badges / counters
 - [x] Input Field Descriptions
-- [ ] Blockquotes
-- [ ] Checkboxes
-- [x] Content Alignment
+- [x] Checkboxes / Toggles
+- [x] Date Fields
+- [ ] Content Alignment
 - [x] Hover Transitions
 - [x] Port to SASS
 - [ ] New Grid System

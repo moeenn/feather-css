@@ -3,18 +3,15 @@
 // base settings --------------------------------------------------------------
 html { font-size: 62.5%; }
 body {
-      font-size: $font-size-normal;
-      line-height: $line-height;
-      font-weight: $font-weight-normal;
-      font-family: $primary-font, sans-serif;
-      color: $font-color-normal;
+	  font-size: $font-size-normal;
+	  line-height: $line-height;
+	  font-weight: $font-weight-normal;
+	  font-family: $primary-font, sans-serif;
+	  color: $font-color-normal;
 }
 
-// import google Font: Rubik
-@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');      // fix Firefox Import Issues
-
 // transition
-.transition { transition: all 0.3s ease; }
+.transition { -webkit-transition: 0.3s; transition: 0.3s; }
 
 // section
 section     { @extend .margin-top-4; }
@@ -25,25 +22,25 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-    @extend .padding-horizontal-5;
-    @extend .padding-vertical-1;
-    @extend .transition;
-    display: inline-block;
-    height: $button-height;
-    color: $button-foreground;
-    text-align: center;
-    font-size: $font-size-small - 0.1rem;
-    font-weight: $font-weight-bold;
-    line-height: $line-height;
-    letter-spacing: $letter-spacing;
-    text-transform: uppercase;
-    text-decoration: none;
-    white-space: nowrap;
-    background-color: $button-background;
-    border-radius: $border-radius;
-    border: solid $border-size-normal $border-color-dark;
-    cursor: pointer;
-    box-sizing: border-box;
+	@extend .padding-horizontal-5;
+	@extend .padding-vertical-1;
+	@extend .transition;
+	display: inline-block;
+	height: $button-height;
+	color: $button-foreground;
+	text-align: center;
+	font-size: $font-size-small - 0.1rem;
+	font-weight: $font-weight-bold;
+	line-height: $line-height;
+	letter-spacing: $letter-spacing;
+	text-transform: uppercase;
+	text-decoration: none;
+	white-space: nowrap;
+	background-color: $button-background;
+	border-radius: $border-radius;
+	border: solid $border-size-normal $border-color-dark;
+	cursor: pointer;
+	box-sizing: border-box;
 }
 
 .button:hover,
@@ -56,9 +53,9 @@ button:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
-    color: $button-foreground-hover;
-    border-color: darken( $border-color-normal, 30% );
-    outline: 0;
+	color: $button-foreground-hover;
+	border-color: darken( $border-color-normal, 30% );
+	outline: 0;
 }
 
 .button.button-primary,
@@ -66,9 +63,9 @@ button.button-primary,
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
-    color: $button-primary-foreground;
-    background-color: $button-primary-background;
-    border-color: darken($button-primary-background, 10%);
+	color: $button-primary-foreground;
+	background-color: $button-primary-background;
+	border-color: darken($button-primary-background, 10%);
 }
 
 .button.button-primary:hover,
@@ -81,9 +78,9 @@ button.button-primary:focus,
 input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
-    color: $button-primary-hover-foreground;
-    background-color: $button-primary-hover-background;
-    border-color: darken( $button-primary-background, 10% );
+	color: $button-primary-hover-foreground;
+	background-color: $button-primary-hover-background;
+	border-color: darken( $button-primary-background, 10% );
 }
 
 
@@ -94,21 +91,22 @@ input[type="search"],
 input[type="text"],
 input[type="tel"],
 input[type="url"],
+input[type="date"],
 input[type="password"],
 textarea,
 select {
-    @extend .padding-vertical-1;
-    @extend .padding-horizontal-2;
-    @extend .transition;
-    height: $button-height;
-    background-color: $input-background;
-    border: solid $border-size-normal $input-border-normal;
-    border-radius: $border-radius;
-    box-shadow: none;
-    box-sizing: border-box;
-    font-size: $font-size-normal;
-    font-weight: $font-weight-normal;
-    resize: none;
+	@extend .padding-vertical-1;
+	@extend .padding-horizontal-2;
+	@extend .transition;
+	height: $button-height;
+	background-color: $input-background;
+	border: solid $border-size-normal $input-border-normal;
+	border-radius: $border-radius;
+	box-shadow: none;
+	box-sizing: border-box;
+	font-size: $font-size-normal;
+	font-weight: $font-weight-normal;
+	resize: none;
 }
 
 input[type="email"],
@@ -116,20 +114,21 @@ input[type="number"],
 input[type="search"],
 input[type="text"],
 input[type="tel"],
+input[type="date"],
 input[type="url"],
 input[type="password"],
 textarea {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    resize: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	resize: none;
 }
 
 textarea {
-    @extend .padding-vertical-1;
-    @extend .transition;
-    min-height: $font-size-normal * 8;
-    resize: none;
+	@extend .padding-vertical-1;
+	@extend .transition;
+	min-height: $font-size-normal * 8;
+	resize: none;
 }
 
 input[type="email"]:focus,
@@ -138,39 +137,49 @@ input[type="search"]:focus,
 input[type="text"]:focus,
 input[type="tel"]:focus,
 input[type="url"]:focus,
+input[type="date"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-    border: solid $border-size-normal $input-border-focus;
-    outline: 0;
+	border: solid $border-size-normal $input-border-focus;
+	outline: 0;
 }
 
 label {
-    @extend .margin-top-4;
-    font-weight: $font-weight-bold;
-    display: block;
+	@extend .margin-top-4;
+	font-weight: $font-weight-bold;
+	display: block;
 }
 
 fieldset {
-    @extend .padding-0;
-    border-width: 0;
+	@extend .margin-padding-0;
+	border-width: 0;
+}
+
+fieldset > input,
+fieldset > textarea,
+fieldset > select {
+	@extend .u-full-width;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-    display: inline;
+	display: inline;
+}
+
+select {
+	@extend .padding-horizontal-1;
 }
 
 label > .label-body {
-    @extend .margin-horizontal-1;
-    display: inline-block;
-    font-weight: $font-weight-normal;
+	@extend .margin-horizontal-1;
+	display: inline-block;
+	font-weight: $font-weight-normal;
 }
 
 input::placeholder {
-    color: darken($input-foreground-placeholder,10%);
+	color: darken($input-foreground-placeholder,10%);
 }
-
 
 // lists ----------------------------------------------------------------------
 li      { @extend .margin-bottom-2; }
@@ -181,29 +190,29 @@ ul ul,
 ul ol,
 ol ol,
 ol ul   {
-    @extend .margin-vertical-3;
-    @extend .margin-horizontal-5;
-    font-size: $font-size-normal * 0.9;
+	@extend .margin-vertical-3;
+	@extend .margin-horizontal-5;
+	font-size: $font-size-normal * 0.9;
 }
 
 
 // code -----------------------------------------------------------------------
 code {
-    @extend .padding-1;
-    @extend .margin-1;
-    font-size: $font-size-normal * 0.9;
-    white-space: nowrap;
-    background: $code-background;
-    color: $code-foreground;
-    border: solid $border-size-normal $border-color-normal;
-    border-radius: $border-radius;
+	@extend .padding-1;
+	@extend .margin-1;
+	font-size: $font-size-normal * 0.9;
+	white-space: nowrap;
+	background: $code-background;
+	color: $code-foreground;
+	border: solid $border-size-normal $border-color-normal;
+	border-radius: $border-radius;
 }
 
 pre > code {
-    @extend .padding-vertical-2;
-    @extend .padding-horizontal-3;
-    display: block;
-    white-space: pre;
+	@extend .padding-vertical-2;
+	@extend .padding-horizontal-3;
+	display: block;
+	white-space: pre;
 }
 
 // spacing --------------------------------------------------------------------
@@ -228,8 +237,8 @@ form            { @extend .margin-bottom-2; }
 
 // utilities ------------------------------------------------------------------
 .u-full-width {
-    width: 100%;
-    box-sizing: border-box;
+	width: 100%;
+	box-sizing: border-box;
 }
 
 // align content inside the parent element
@@ -239,9 +248,9 @@ form            { @extend .margin-bottom-2; }
 
 // auto clearing --------------------------------------------------------------
 .container:after {
-    content: "";
-    display: table;
-    clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 // break-points ---------------------------------------------------------------
@@ -331,82 +340,82 @@ form            { @extend .margin-bottom-2; }
 // elements -------------------------------------------------------------------
 // navigation bar -------------------------------------------------------------
 nav {
-    background: $navigation-bar-background;
-    font-size: 0;
-    border-bottom: $navigation-bar-border;
-    a {
-        @extend .padding-horizontal-4;
-        @extend .padding-top-2;
-        @extend .padding-bottom-1;
-        @extend .transition;
-        display: inline-block;
-        font-size: $font-size-normal;
-        color: $navigation-bar-foreground;
-        text-align: center;
-        text-decoration: none;
-        font-size: $font-size-small;
-        border-bottom: solid $border-size-large transparent;
-        margin-bottom: $border-size-normal - $border-size-large;
-    }
-    a:hover {
-        background: $navigation-bar-anchor-hover-background;
-        color: $navigation-bar-foreground;
-        border-bottom: $navigation-bar-border-hover;
-    }
-    .active {
-        font-weight: $font-weight-bold;
-        border-bottom: $navigation-bar-border-active;
-    }
+	background: $navigation-bar-background;
+	font-size: 0;
+	border-bottom: $navigation-bar-border;
+	a {
+		@extend .padding-horizontal-4;
+		@extend .padding-top-2;
+		@extend .padding-bottom-1;
+		@extend .transition;
+		display: inline-block;
+		font-size: $font-size-normal;
+		color: $navigation-bar-foreground;
+		text-align: center;
+		text-decoration: none;
+		font-size: $font-size-small;
+		border-bottom: solid $border-size-large transparent;
+		margin-bottom: $border-size-normal - $border-size-large;
+	}
+	a:hover {
+		background: $navigation-bar-anchor-hover-background;
+		color: $navigation-bar-foreground;
+		border-bottom: $navigation-bar-border-hover;
+	}
+	.active {
+		font-weight: $font-weight-bold;
+		border-bottom: $navigation-bar-border-active;
+	}
 }
 
 // switch to mobile at small screen
 @media (max-width: 550px) {
-    nav a {
-        @extend .padding-horizontal-4;
-        display: block;
-        text-align: left;
-    }
-    nav a:hover { border-bottom: solid $border-size-large transparent; }
-    nav .active { border-bottom: solid $border-size-large transparent; }
+	nav a {
+		@extend .padding-horizontal-4;
+		display: block;
+		text-align: left;
+	}
+	nav a:hover { border-bottom: solid $border-size-large transparent; }
+	nav .active { border-bottom: solid $border-size-large transparent; }
 }
 
 // gallery stylings -----------------------------------------------------------
 .gallery {
-    font-size: 0px;
-    text-align: center;
-    .item {
-        display: inline-block;
-        width: $gallery-item-width;
-        height: $gallery-item-height;
-        border: solid $border-size-normal $border-color-normal;
-        border-radius: $border-radius;
-        overflow: hidden;
-        margin: $gallery-item-gap;
-        box-sizing: border-box;
-    }
-    .thumb {
-        @extend .margin-0;
-        @extend .padding-0;
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
+	font-size: 0px;
+	text-align: center;
+	.item {
+		display: inline-block;
+		width: $gallery-item-width;
+		height: $gallery-item-height;
+		border: solid $border-size-normal $border-color-normal;
+		border-radius: $border-radius;
+		overflow: hidden;
+		margin: $gallery-item-gap;
+		box-sizing: border-box;
+	}
+	.thumb {
+		@extend .margin-0;
+		@extend .padding-0;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
 }
 
 // headings -------------------------------------------------------------------
 h1, h2, h3, h4, h5, h6 {
-    @extend .margin-top-0;
-    @extend .margin-bottom-1;
-    font-weight: 300;
+	@extend .margin-top-0;
+	@extend .margin-bottom-1;
+	font-weight: 200;
 }
 
 // font sizes
-h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -.1rem;}
-h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -.1rem; }
-h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -.1rem; }
-h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -.08rem; }
-h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -.05rem; }
-h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
+h1 { font-size: 4.0rem; line-height: 1.2;  letter-spacing: -0.1rem;}
+h2 { font-size: 3.6rem; line-height: 1.25; letter-spacing: -0.1rem; }
+h3 { font-size: 3.0rem; line-height: 1.3;  letter-spacing: -0.1rem; }
+h4 { font-size: 2.4rem; line-height: 1.35; letter-spacing: -0.08rem; }
+h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -0.05rem; }
+h6 { font-size: 1.6rem; line-height: 1.6;  letter-spacing: -0.02rem; }
 
 // adjust for mobile
 @media (min-width: 550px) {
@@ -420,174 +429,226 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 
 // misc tweaks ----------------------------------------------------------------
 p {
-    @extend .margin-top-3;
-    @extend .margin-bottom-0;
-    font-size: $font-size-normal;
+	@extend .margin-top-3;
+	@extend .margin-bottom-0;
+	font-size: $font-size-normal;
 }
 
 hr {
-    @extend .margin-vertical-2;
-    @extend .margin-horizontal-0;
-    border-width: 0;
-    border-top: solid $border-size-normal $border-color-light;
+	@extend .margin-vertical-2;
+	@extend .margin-horizontal-0;
+	border-width: 0;
+	border-top: solid $border-size-normal $border-color-light;
 }
 
 // text selection background
 ::-moz-selection {
-    background: $background-selection;
+	background: $background-selection;
 }
 
 ::selection {
-    background: $background-selection;
+	background: $background-selection;
 }
 
 a {
-    text-decoration: none;
-    background: $link-background-normal;
-    color: $link-foreground-normal;
-    &:hover {
-        background: $link-background-hover;
-        color: $link-foreground-hover;
-    }
+	text-decoration: none;
+	background: $link-background-normal;
+	color: $link-foreground-normal;
+	&:hover {
+		background: $link-background-hover;
+		color: $link-foreground-hover;
+	}
 }
 
 // table ----------------------------------------------------------------------
 table {
-    font-size: $font-size-normal;
+	font-size: $font-size-normal;
 
-    tbody tr        { @extend .transition; }
-    tbody tr:hover  { background: $background-hover; }
-    th,
-    td {
-        padding: 12px 15px;
-        text-align: left;
-        border-bottom: solid $border-size-normal $input-border-normal;
-    }
-    th:first-child,
-    td:first-child          { @extend .padding-horizontal-2; }
-    th:last-child,
-    td:last-child           { @extend .padding-horizontal-2; }
+	tbody tr        { @extend .transition; }
+	tbody tr:hover  { background: $background-hover; }
+	th,
+	td {
+		padding: 12px 15px;
+		text-align: left;
+		border-bottom: solid $border-size-normal $input-border-normal;
+	}
+	th:first-child,
+	td:first-child          { @extend .padding-horizontal-2; }
+	th:last-child,
+	td:last-child           { @extend .padding-horizontal-2; }
 }
 
 // forms ----------------------------------------------------------------------
 form {
-    // field descriptions
-    p {
-        @extend .margin-vertical-0;
-        color: $font-color-dull;
-        font-size: $font-size-small;
-        font-weight: 500;
-        text-align: justify;
-        display: block;
-    }
+	// field descriptions
+	p {
+		@extend .margin-vertical-0;
+		color: $font-color-dull;
+		font-size: $font-size-small;
+		font-weight: 500;
+		line-height: $line-height - 0.4rem;
+		text-align: justify;
+		display: block;
+	}
+}
+
+
+// switches -------------------------------------------------------------------
+input[type="checkbox"]:empty { display: none; }
+
+input[type="checkbox"]:empty ~ label {
+	@extend .margin-vertical-1;
+	line-height: $switch-height;
+	font-weight: $font-weight-normal;
+	position: relative;
+	text-indent: $switch-width + $switch-label-margin;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+input[type="checkbox"]:empty ~ label:before,
+input[type="checkbox"]:empty ~ label:after {
+	@extend .transition;
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: "";
+	width: $switch-width;
+	background-color: $background-active;
+	border: solid $border-size-normal $input-border-normal;
+	border-radius: $border-radius;
+}
+
+input[type="checkbox"]:empty ~ label:after {
+	width: $switch-height - $switch-padding;
+	top: $switch-padding;
+	bottom: $switch-padding;
+	margin-left: $switch-padding;
+	background-color: $background-container;
+	border-radius: $border-radius;
+	border: solid $border-size-normal $input-border-normal;
+}
+
+input[type="checkbox"]:checked ~ label:before {
+	background-color: $primary-accent-color;
+	border: solid $border-size-normal darken($primary-accent-color, 10%);
+}
+
+input[type="checkbox"]:checked ~ label:after {
+	margin-left: $switch-width - $switch-height;
 }
 
 // page buttons ---------------------------------------------------------------
 .page-buttons {
-    display: inline-block;
-    border: solid $border-size-normal $border-color-normal;
-    border-radius: $border-radius;
-    overflow: hidden;
-    font-size: 0px;
-    a {
-        @extend .padding-horizontal-2;
-        @extend .padding-vertical-0;
-        @extend .transition;
-        font-size: $font-size-normal;
-        display: inline-block;
-        border-radius: 0px;
-        color: lighten( $font-color-dull, 15%);
-    }
-    a:hover {
-        background: $background-active;
-    }
-    .active {
-        background: $background-active;
-    }
+	display: inline-block;
+	border: solid $border-size-normal $border-color-normal;
+	border-radius: $border-radius;
+	overflow: hidden;
+	font-size: 0px;
+	a {
+		@extend .padding-horizontal-2;
+		@extend .padding-vertical-0;
+		@extend .transition;
+		font-size: $font-size-normal;
+		display: inline-block;
+		border-radius: 0px;
+		color: lighten( $font-color-dull, 15%);
+	}
+	a:hover {
+		background: $background-active;
+	}
+	.active {
+		background: $background-active;
+	}
 }
 
 // message and boxes ----------------------------------------------------------
 .message {
-    @extend .padding-4;
-    @extend .margin-vertical-2;
-    border-radius: $border-radius;
-    border: solid $border-size-normal $border-color-light;
-    background: $background-hover;
-    color: $font-color-dull;
-    header {
-        @extend .margin-bottom-1;
-        font-weight: $font-weight-bold;
-        font-size: $font-size-normal;
-    }
-    p {
-        @extend .margin-padding-0;
-        text-align: justify;
-    }
+	@extend .padding-4;
+	@extend .margin-vertical-2;
+	border-radius: $border-radius;
+	border: solid $border-size-normal $border-color-light;
+	background: $background-hover;
+	color: $font-color-dull;
+	header {
+		@extend .margin-bottom-1;
+		font-weight: $font-weight-bold;
+		font-size: $font-size-normal;
+	}
+	p {
+		@extend .margin-padding-0;
+		text-align: justify;
+	}
 }
 
 .box {
-    border-radius: $border-radius;
-    border: solid $border-size-normal $border-color-dark;
-    hr {
-        @extend .margin-padding-0;
-    }
+	border-radius: $border-radius;
+	border: solid $border-size-normal $border-color-dark;
+	hr {
+		@extend .margin-padding-0;
+	}
 }
 
 // strick element to top of the screen ----------------------------------------
 .sticky {
-    position: sticky;
-    top: 0;
-    z-index: 1;
+	position: sticky;
+	top: 0;
+	z-index: 1;
 }
 
 // shadows --------------------------------------------------------------------
 .shadow-small {
-    box-shadow: 0 0 $shadow-radius-small $shadow-color-small;
+	box-shadow: 0 0 $shadow-radius-small $shadow-color-small;
 }
 
 .shadow-normal {
-    box-shadow: 0 0 $shadow-radius-normal $shadow-color-normal;
+	box-shadow: 0 0 $shadow-radius-normal $shadow-color-normal;
 }
 
 .shadow-large {
-    box-shadow: 0 0 $shadow-radius-large $shadow-color-large;
+	box-shadow: 0 0 $shadow-radius-large $shadow-color-large;
 }
 
 // inline tags ----------------------------------------------------------------
-.tag {                                                                          // Fix Line Alignment
-    font-size: $font-size-small;
-    font-family: monospace;
-    color: $font-color-dull;
-    line-height: $line-height - 0.2rem;
-    padding: 3px 6px;
-    border-radius: $border-radius;
-    border: solid $border-size-normal $border-color-light;
-    background: $background-hover;
+.tag {          																// Fix Line Alignment
+	@extend .padding-1;
+	font-size: $font-size-small;
+	font-family: monospace;
+	color: $font-color-dull;
+	padding-top: $line-height / 4;
+	border-radius: $border-radius;
+	border: solid $border-size-normal $border-color-light;
+	background: $background-hover;
 }
 
 // event colors ---------------------------------------------------------------
 .positive {
-    background: $positive-background;
-    color: $positive-foreground;
-    border-color: $positive-border-color;
+	background: $positive-background;
+	color: $positive-foreground;
+	border-color: $positive-border-color;
 }
 
 .negative {
-    background: $negative-background;
-    color: $negative-foreground;
-    border-color: $negative-border-color;
+	background: $negative-background;
+	color: $negative-foreground;
+	border-color: $negative-border-color;
 }
 
 .alert {
-    background: $alert-background;
-    color: $alert-foreground;
-    border-color: $alert-border-color;
+	background: $alert-background;
+	color: $alert-foreground;
+	border-color: $alert-border-color;
 }
 
 .info {
-    background: $info-background;
-    color: $info-foreground;
-    border-color: $info-border-color;
+	background: $info-background;
+	color: $info-foreground;
+	border-color: $info-border-color;
 }
 
 // ----------------------------------------------------------------------------

@@ -1,12 +1,12 @@
 // variables ------------------------------------------------------------------
 // fonts ----------------------------------------------------------------------
-$primary-font: "Rubik";
+$primary-font: arial;
 $font-size-small: 1.2rem;
-$font-size-normal: 1.4rem;
+$font-size-normal: 1.5rem;
 $font-size-large: 1.8rem;
 $font-color-normal: rgba(34,34,34,1);
 $font-color-dull: rgba(69,69,69,1);
-$line-height: 1.8;
+$line-height: 2.4rem;
 $letter-spacing: 0.1rem;
 $font-weight-normal: 300;
 $font-weight-bold: 600;
@@ -42,6 +42,12 @@ $input-background: rgba(252,252,252,1);
 $input-border-normal: $border-color-normal;
 $input-border-focus: $primary-accent-color;
 $input-foreground-placeholder: $input-border-normal;
+
+// switches -------------------------------------------------------------------
+$switch-height: 2.5rem;
+$switch-width: 4.5rem;
+$switch-padding: 0.3rem;
+$switch-label-margin: 1.5rem;
 
 // code -----------------------------------------------------------------------
 $code-background: rgba(241,241,241,1);
