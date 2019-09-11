@@ -139,12 +139,10 @@
 			<form action="" id="sample_form">
 				<div class="row">
 					<div class="six columns">
-						<fieldset>
+						<fieldset class="input-error">
 							<label for="name">Name</label>
 							<input type="text" name="name">
-							<div class="negative message">
-								<p>This is an input error</p>
-							</div>
+							<p>Enter your name e.g. John Doe</p>
 						</fieldset>
 
 						<fieldset>
@@ -155,7 +153,7 @@
 
 						<fieldset>
 							<label for="cities">Cities</label>
-							<select name="cities" form="sample_form">
+							<select name="cities" form="sample_form" class="padding-1">
 								<option value="nil"></option>
 								<option value="lahore">Lahore</option>
 								<option value="karachi">Karachi</option>
@@ -172,6 +170,7 @@
 						<fieldset>
 							<label for="reg_date">Registration Date</label>
 							<input type="date" name="reg_date" data-placeholder="Date of birth">
+							<p>Please select a date after 1<sup>st</sup> January, 2000</p>
 						</fieldset>
 
 						<fieldset>

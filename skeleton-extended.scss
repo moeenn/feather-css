@@ -89,6 +89,7 @@ input[type="button"].button-primary:focus {
 
 
 // forms ----------------------------------------------------------------------
+input,
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -113,6 +114,7 @@ select {
 	resize: none;
 }
 
+input,
 input[type="email"],
 input[type="number"],
 input[type="search"],
@@ -135,6 +137,7 @@ textarea {
 	resize: none;
 }
 
+input:focus,
 input[type="email"]:focus,
 input[type="number"]:focus,
 input[type="search"]:focus,
@@ -166,13 +169,22 @@ fieldset > select {
 	@extend .u-full-width;
 }
 
+.input-error {
+	label, p {
+		color: $negative-foreground;
+	}
+	input, textarea, select {
+		background-color: $negative-background;
+		border: solid $border-size-normal $negative-border-color;
+	}
+	input:focus, textarea:focus, select:focus {
+		border-color: darken($negative-border-color, 20%);
+	}
+}
+
 input[type="checkbox"],
 input[type="radio"] {
 	display: inline;
-}
-
-select {
-	@extend .padding-horizontal-1;
 }
 
 label > .label-body {

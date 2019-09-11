@@ -14,7 +14,8 @@ body {
   text-rendering: optimizeLegibility;
 }
 .transition, .page-buttons a, input[type=checkbox]:empty ~ label:before,
-input[type=checkbox]:empty ~ label:after, table tbody tr, nav a, input[type=email],
+input[type=checkbox]:empty ~ label:after, table tbody tr, nav a, input,
+input[type=email],
 input[type=number],
 input[type=search],
 input[type=text],
@@ -95,6 +96,7 @@ input[type=button].button-primary:focus {
   border-color: #2275d7;
 }
 
+input,
 input[type=email],
 input[type=number],
 input[type=search],
@@ -116,6 +118,7 @@ select {
   resize: none;
 }
 
+input,
 input[type=email],
 input[type=number],
 input[type=search],
@@ -136,6 +139,7 @@ textarea {
   resize: none;
 }
 
+input:focus,
 input[type=email]:focus,
 input[type=number]:focus,
 input[type=search]:focus,
@@ -157,6 +161,17 @@ label {
 
 fieldset {
   border-width: 0;
+}
+
+.input-error label, .input-error p {
+  color: #d22d2b;
+}
+.input-error input, .input-error textarea, .input-error select {
+  background-color: #ffefef;
+  border: solid 1px #fad1d1;
+}
+.input-error input:focus, .input-error textarea:focus, .input-error select:focus {
+  border-color: #f07575;
 }
 
 input[type=checkbox],
@@ -424,7 +439,8 @@ form {
 button,
 input[type=submit],
 input[type=reset],
-input[type=button], input[type=email],
+input[type=button], input,
+input[type=email],
 input[type=number],
 input[type=search],
 input[type=text],
@@ -463,14 +479,15 @@ select {
   padding-right: 0;
 }
 
-.padding-horizontal-1, select {
+.padding-horizontal-1 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
 
 .padding-horizontal-2, .page-buttons a, table th:last-child,
 table td:last-child, table th:first-child,
-table td:first-child, input[type=email],
+table td:first-child, input,
+input[type=email],
 input[type=number],
 input[type=search],
 input[type=text],
