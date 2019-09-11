@@ -488,7 +488,7 @@ form {
 		@extend .margin-vertical-0;
 		color: $font-color-dull;
 		font-size: $font-size-small;
-		font-weight: 500;
+		font-weight: $font-weight-normal;
 		line-height: $line-height - 0.4rem;
 		text-align: justify;
 		display: block;
@@ -585,14 +585,13 @@ input[type="checkbox"]:checked ~ label:after {
 	}
 	p {
 		@extend .margin-padding-0;
-		text-align: justify;
 	}
 }
 
 .box {
 	border-radius: $border-radius;
 	border: solid $border-size-normal $border-color-dark;
-	hr {
+	header {
 		@extend .margin-padding-0;
 	}
 }

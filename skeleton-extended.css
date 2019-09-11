@@ -236,7 +236,7 @@ fieldset > select {
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
-.margin-padding-0, .box hr, .message p, fieldset {
+.margin-padding-0, .box header, .message p, fieldset {
   margin: 0;
   padding: 0;
 }
@@ -716,7 +716,7 @@ table td {
 form p {
   color: #454545;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: normal;
   line-height: 2rem;
   text-align: justify;
   display: block;
@@ -801,10 +801,6 @@ input[type=checkbox]:checked ~ label:after {
   font-weight: 600;
   font-size: 1.5rem;
 }
-.message p {
-  text-align: justify;
-}
-
 .box {
   border-radius: 4px;
   border: solid 1px #bbbbbb;
