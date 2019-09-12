@@ -9,7 +9,7 @@ body {
 }
 
 @font-face {
-	font-family: $primary-font, sans-serif;
+	font-family: $primary-font, Arial, sans-serif;
 	font-weight: $font-weight-normal;
 	text-rendering: optimizeLegibility;
 }
@@ -274,16 +274,16 @@ form            { @extend .margin-bottom-2; }
 // @media (min-width: 400px) {}
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
+@media only screen and (min-width: 600px) {}
 
 /* Larger than tablet */
-@media (min-width: 750px) {}
+@media only screen and (min-width: 750px) {}
 
 /* Larger than desktop */
-@media (min-width: 1000px) {}
+@media only screen and (min-width: 1000px) {}
 
 /* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+@media only screen and (min-width: 1200px) {}
 
 
 // margin and padding ---------------------------------------------------------
@@ -384,7 +384,7 @@ nav {
 }
 
 // switch to mobile at small screen
-@media (max-width: 550px) {
+@media only screen and (max-width: 600px) {
 	nav a {
 		@extend .padding-horizontal-4;
 		display: block;
@@ -433,7 +433,7 @@ h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -0.05rem; }
 h6 { font-size: 1.6rem; line-height: 1.6;  letter-spacing: -0.02rem; }
 
 // adjust for mobile
-@media (min-width: 550px) {
+@media only screen and (min-width: 600px) {
   h1 { font-size: 5.0rem; }
   h2 { font-size: 4.2rem; }
   h3 { font-size: 3.6rem; }
@@ -612,7 +612,7 @@ input[type="checkbox"]:checked ~ label:after {
 .sticky {
 	position: sticky;
 	top: 0;
-	z-index: 1;
+	// z-index: 1;
 }
 
 // shadows --------------------------------------------------------------------

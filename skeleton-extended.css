@@ -9,7 +9,7 @@ body {
 }
 
 @font-face {
-  font-family: arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   font-weight: normal;
   text-rendering: optimizeLegibility;
 }
@@ -592,7 +592,7 @@ nav .active {
   border-bottom: solid 2px #868686;
 }
 
-@media (max-width: 550px) {
+@media only screen and (max-width: 600px) {
   nav a {
     display: block;
     text-align: left;
@@ -666,7 +666,7 @@ h6 {
   letter-spacing: -0.02rem;
 }
 
-@media (min-width: 550px) {
+@media only screen and (min-width: 600px) {
   h1 {
     font-size: 5rem;
   }
@@ -825,7 +825,6 @@ input[type=checkbox]:checked ~ label:after {
 .sticky {
   position: sticky;
   top: 0;
-  z-index: 1;
 }
 
 .shadow-small {
