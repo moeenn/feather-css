@@ -6,6 +6,7 @@ body {
   font-size: 1.5rem;
   line-height: 2.4rem;
   color: #222222;
+  background: white;
 }
 
 @font-face {
@@ -13,31 +14,55 @@ body {
   font-weight: normal;
   text-rendering: optimizeLegibility;
 }
-.transition, .page-buttons a, input[type=checkbox]:empty ~ label:before,
-input[type=checkbox]:empty ~ label:after, table tbody tr, nav a, input,
-input[type=email],
-input[type=number],
-input[type=search],
-input[type=text],
-input[type=tel],
-input[type=url],
-input[type=date],
-input[type=password],
-textarea,
-select, .button,
+.transition, .page-buttons a, input[type=checkbox]:empty ~ label:before, form textarea[type=checkbox]:empty ~ label:before,
+input[type=checkbox]:empty ~ label:after,
+form textarea[type=checkbox]:empty ~ label:after, form input, form textarea,
+form input[type=email],
+form textarea[type=email],
+form input[type=number],
+form textarea[type=number],
+form input[type=search],
+form textarea[type=search],
+form input[type=text],
+form textarea[type=text],
+form input[type=tel],
+form textarea[type=tel],
+form input[type=url],
+form textarea[type=url],
+form input[type=date],
+form textarea[type=date],
+form input[type=password],
+form textarea[type=password],
+form select, table tbody tr, nav a, .button,
 button,
 input[type=submit],
+form textarea[type=submit],
 input[type=reset],
-input[type=button] {
+form textarea[type=reset],
+input[type=button],
+form textarea[type=button] {
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background: white;
 }
 
 .button,
 button,
 input[type=submit],
+form textarea[type=submit],
 input[type=reset],
-input[type=button] {
+form textarea[type=reset],
+input[type=button],
+form textarea[type=button] {
   display: inline-block;
   height: 4rem;
   color: #555555;
@@ -55,24 +80,27 @@ input[type=button] {
   cursor: pointer;
   box-sizing: border-box;
 }
-
-.button:hover,
+.button:hover, .button:focus,
 button:hover,
-input[type=submit]:hover,
-input[type=reset]:hover,
-input[type=button]:hover,
-.button:focus,
 button:focus,
+input[type=submit]:hover,
+form textarea[type=submit]:hover,
 input[type=submit]:focus,
+form textarea[type=submit]:focus,
+input[type=reset]:hover,
+form textarea[type=reset]:hover,
 input[type=reset]:focus,
-input[type=button]:focus {
+form textarea[type=reset]:focus,
+input[type=button]:hover,
+form textarea[type=button]:hover,
+input[type=button]:focus,
+form textarea[type=button]:focus {
   color: #333333;
   border-color: #a0a0a0;
   outline: 0;
 }
 
-.button.button-primary,
-button.button-primary,
+.button-primary,
 input[type=submit].button-primary,
 input[type=reset].button-primary,
 input[type=button].button-primary {
@@ -80,112 +108,21 @@ input[type=button].button-primary {
   background-color: #4a90e2;
   border-color: #2275d7;
 }
-
-.button.button-primary:hover,
-button.button-primary:hover,
+.button-primary:hover, .button-primary:focus,
 input[type=submit].button-primary:hover,
-input[type=reset].button-primary:hover,
-input[type=button].button-primary:hover,
-.button.button-primary:focus,
-button.button-primary:focus,
 input[type=submit].button-primary:focus,
+input[type=reset].button-primary:hover,
 input[type=reset].button-primary:focus,
+input[type=button].button-primary:hover,
 input[type=button].button-primary:focus {
   color: white;
   background-color: #3483de;
   border-color: #2275d7;
 }
 
-input,
-input[type=email],
-input[type=number],
-input[type=search],
-input[type=text],
-input[type=tel],
-input[type=url],
-input[type=date],
-input[type=password],
-textarea,
-select {
-  height: 4rem;
-  background-color: #fcfcfc;
-  border: solid 1px #ececec;
-  border-radius: 4px;
-  box-shadow: none;
-  box-sizing: border-box;
-  font-size: 1.5rem;
-  font-weight: normal;
-  resize: none;
-}
-
-input,
-input[type=email],
-input[type=number],
-input[type=search],
-input[type=text],
-input[type=tel],
-input[type=date],
-input[type=url],
-input[type=password],
-textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  resize: none;
-}
-
-textarea {
-  min-height: 12rem;
-  resize: none;
-}
-
-input:focus,
-input[type=email]:focus,
-input[type=number]:focus,
-input[type=search]:focus,
-input[type=text]:focus,
-input[type=tel]:focus,
-input[type=url]:focus,
-input[type=date]:focus,
-input[type=password]:focus,
-textarea:focus,
-select:focus {
-  border: solid 1px #4a90e2;
-  outline: 0;
-}
-
-label {
-  font-weight: 600;
-  display: block;
-}
-
-fieldset {
-  border-width: 0;
-}
-
-.input-error label, .input-error p {
-  color: #d22d2b;
-}
-.input-error input, .input-error textarea, .input-error select {
-  background-color: #ffefef;
-  border: solid 1px #fad1d1;
-}
-.input-error input:focus, .input-error textarea:focus, .input-error select:focus {
-  border-color: #f07575;
-}
-
-input[type=checkbox],
-input[type=radio] {
-  display: inline;
-}
-
-label > .label-body {
-  display: inline-block;
-  font-weight: normal;
-}
-
-input::placeholder {
-  color: lightgray;
+.button-thin {
+  height: 3rem;
+  font-size: 0.9rem;
 }
 
 ul {
@@ -200,10 +137,8 @@ ol, ul {
   padding-left: 0;
 }
 
-ul ul,
-ul ol,
-ol ol,
-ol ul {
+ul ul, ul ol,
+ol ol, ol ul {
   font-size: 1.35rem;
 }
 
@@ -221,14 +156,14 @@ pre > code {
   white-space: pre;
 }
 
-.u-full-width, fieldset > input,
-fieldset > textarea,
-fieldset > select {
+.u-full-width, form fieldset > input,
+form fieldset > textarea,
+form fieldset > select {
   width: 100%;
   box-sizing: border-box;
 }
 
-.content-align-center {
+.content-align-center, .gallery {
   text-align: center;
 }
 
@@ -246,12 +181,11 @@ fieldset > select {
   clear: both;
 }
 
-/* Larger than mobile */
 /* Larger than phablet (also point when grid becomes active) */
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
-.margin-padding-0, .box header, .message p, fieldset {
+.margin-padding-0, .box header, .message p, form fieldset {
   margin: 0;
   padding: 0;
 }
@@ -285,7 +219,7 @@ fieldset > select {
   margin-bottom: 0;
 }
 
-.margin-vertical-1, input[type=checkbox]:empty ~ label {
+.margin-vertical-1, input[type=checkbox]:empty ~ label, form textarea[type=checkbox]:empty ~ label {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -295,10 +229,8 @@ fieldset > select {
   margin-bottom: 1rem;
 }
 
-.margin-vertical-3, ul ul,
-ul ol,
-ol ol,
-ol ul {
+.margin-vertical-3, ul ul, ul ol,
+ol ol, ol ul {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -318,7 +250,7 @@ ol ul {
   margin-right: 0;
 }
 
-.margin-horizontal-1, label > .label-body {
+.margin-horizontal-1, form label > .label-body {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
@@ -338,10 +270,8 @@ ol ul {
   margin-right: 2rem;
 }
 
-.margin-horizontal-5, ul ul,
-ul ol,
-ol ol,
-ol ul {
+.margin-horizontal-5, ul ul, ul ol,
+ol ol, ol ul {
   margin-left: 2.5rem;
   margin-right: 2.5rem;
 }
@@ -362,7 +292,7 @@ ol ul {
   margin-top: 1.5rem;
 }
 
-.margin-top-4, section, fieldset {
+.margin-top-4, form fieldset, section {
   margin-top: 2rem;
 }
 
@@ -374,23 +304,11 @@ ol ul {
   margin-bottom: 0;
 }
 
-.margin-bottom-1, .message header, h1, h2, h3, h4, h5, h6, legend,
-input,
-textarea,
-select,
-fieldset {
+.margin-bottom-1, .message header, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
 }
 
-.margin-bottom-2, li, button,
-.button, pre,
-blockquote,
-dl,
-figure,
-table,
-ul,
-ol,
-form {
+.margin-bottom-2, li {
   margin-bottom: 1rem;
 }
 
@@ -430,26 +348,36 @@ form {
   padding: 2.5rem;
 }
 
-.padding-vertical-0, .page-buttons a {
+.padding-vertical-0, .page-buttons a, .container, .button-thin {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-.padding-vertical-1, .button,
+.padding-vertical-1, form input, form textarea,
+form input[type=email],
+form textarea[type=email],
+form input[type=number],
+form textarea[type=number],
+form input[type=search],
+form textarea[type=search],
+form input[type=text],
+form textarea[type=text],
+form input[type=tel],
+form textarea[type=tel],
+form input[type=url],
+form textarea[type=url],
+form input[type=date],
+form textarea[type=date],
+form input[type=password],
+form textarea[type=password],
+form select, .button,
 button,
 input[type=submit],
+form textarea[type=submit],
 input[type=reset],
-input[type=button], input,
-input[type=email],
-input[type=number],
-input[type=search],
-input[type=text],
-input[type=tel],
-input[type=url],
-input[type=date],
-input[type=password],
-textarea,
-select {
+form textarea[type=reset],
+input[type=button],
+form textarea[type=button] {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -484,24 +412,31 @@ select {
   padding-right: 0.5rem;
 }
 
-.padding-horizontal-2, .page-buttons a, table th:last-child,
+.padding-horizontal-2, .page-buttons a, form input, form textarea,
+form input[type=email],
+form textarea[type=email],
+form input[type=number],
+form textarea[type=number],
+form input[type=search],
+form textarea[type=search],
+form input[type=text],
+form textarea[type=text],
+form input[type=tel],
+form textarea[type=tel],
+form input[type=url],
+form textarea[type=url],
+form input[type=date],
+form textarea[type=date],
+form input[type=password],
+form textarea[type=password],
+form select, table th:last-child,
 table td:last-child, table th:first-child,
-table td:first-child, input,
-input[type=email],
-input[type=number],
-input[type=search],
-input[type=text],
-input[type=tel],
-input[type=url],
-input[type=date],
-input[type=password],
-textarea,
-select {
+table td:first-child {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.padding-horizontal-3, pre > code {
+.padding-horizontal-3, .button-thin, pre > code {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
@@ -511,11 +446,14 @@ select {
   padding-right: 2rem;
 }
 
-.padding-horizontal-5, .button,
+.padding-horizontal-5, .container, .button,
 button,
 input[type=submit],
+form textarea[type=submit],
 input[type=reset],
-input[type=button] {
+form textarea[type=reset],
+input[type=button],
+form textarea[type=button] {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
@@ -597,7 +535,6 @@ nav .active {
     display: block;
     text-align: left;
   }
-
   nav a:hover {
     border-bottom: solid 2px transparent;
   }
@@ -608,7 +545,6 @@ nav .active {
 }
 .gallery {
   font-size: 0px;
-  text-align: center;
 }
 .gallery .item {
   display: inline-block;
@@ -730,6 +666,71 @@ table td {
   text-align: left;
   border-bottom: solid 1px #ececec;
 }
+form input, form textarea,
+form input[type=email],
+form textarea[type=email],
+form input[type=number],
+form textarea[type=number],
+form input[type=search],
+form textarea[type=search],
+form input[type=text],
+form textarea[type=text],
+form input[type=tel],
+form textarea[type=tel],
+form input[type=url],
+form textarea[type=url],
+form input[type=date],
+form textarea[type=date],
+form input[type=password],
+form textarea[type=password],
+form select {
+  height: 4rem;
+  background-color: #fcfcfc;
+  border: solid 1px #ececec;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  font-weight: normal;
+  resize: none;
+}
+form input::placeholder, form textarea::placeholder {
+  color: lightgray;
+}
+form textarea {
+  min-height: 12rem;
+  resize: none;
+}
+form input:focus,
+form input[type=email]:focus,
+form input[type=number]:focus,
+form input[type=search]:focus,
+form input[type=text]:focus,
+form input[type=tel]:focus,
+form input[type=url]:focus,
+form input[type=date]:focus,
+form input[type=password]:focus,
+form textarea:focus,
+form select:focus {
+  border: solid 1px #4a90e2;
+  outline: 0;
+}
+form label {
+  font-weight: 600;
+  display: block;
+}
+form fieldset {
+  border-width: 0;
+}
+form input[type=checkbox], form textarea[type=checkbox],
+form input[type=radio],
+form textarea[type=radio] {
+  display: inline;
+}
+form label > .label-body {
+  display: inline-block;
+  font-weight: normal;
+}
 form p {
   color: #454545;
   font-size: 1.2rem;
@@ -738,12 +739,22 @@ form p {
   text-align: justify;
   display: block;
 }
+form .input-error label, form .input-error p {
+  color: #d22d2b;
+}
+form .input-error input, form .input-error textarea, form .input-error select {
+  background-color: #ffefef;
+  border: solid 1px #fad1d1;
+}
+form .input-error input:focus, form .input-error textarea:focus, form .input-error select:focus {
+  border-color: #f07575;
+}
 
-input[type=checkbox]:empty {
+input[type=checkbox]:empty, form textarea[type=checkbox]:empty {
   display: none;
 }
 
-input[type=checkbox]:empty ~ label {
+input[type=checkbox]:empty ~ label, form textarea[type=checkbox]:empty ~ label {
   line-height: 2.5rem;
   font-weight: normal;
   position: relative;
@@ -755,8 +766,9 @@ input[type=checkbox]:empty ~ label {
   user-select: none;
 }
 
-input[type=checkbox]:empty ~ label:before,
-input[type=checkbox]:empty ~ label:after {
+input[type=checkbox]:empty ~ label:before, form textarea[type=checkbox]:empty ~ label:before,
+input[type=checkbox]:empty ~ label:after,
+form textarea[type=checkbox]:empty ~ label:after {
   position: absolute;
   display: block;
   top: 0;
@@ -769,7 +781,7 @@ input[type=checkbox]:empty ~ label:after {
   border-radius: 4px;
 }
 
-input[type=checkbox]:empty ~ label:after {
+input[type=checkbox]:empty ~ label:after, form textarea[type=checkbox]:empty ~ label:after {
   width: 2.2rem;
   top: 0.3rem;
   bottom: 0.3rem;
@@ -779,27 +791,27 @@ input[type=checkbox]:empty ~ label:after {
   border: solid 1px #ececec;
 }
 
-input[type=checkbox]:checked ~ label:before {
+input[type=checkbox]:checked ~ label:before, form textarea[type=checkbox]:checked ~ label:before {
   background-color: #4a90e2;
   border: solid 1px #2275d7;
 }
 
-input[type=checkbox]:checked ~ label:after {
+input[type=checkbox]:checked ~ label:after, form textarea[type=checkbox]:checked ~ label:after {
   margin-left: 2rem;
 }
 
 .page-buttons {
-  display: inline-block;
+  display: inline-table;
   border: solid 1px #ececec;
   border-radius: 4px;
   overflow: hidden;
   font-size: 0px;
 }
 .page-buttons a {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   display: inline-block;
   border-radius: 0px;
-  color: #6b6b6b;
+  color: #5f5f5f;
 }
 .page-buttons a:hover {
   background: rgba(0, 0, 0, 0.07);
@@ -820,23 +832,20 @@ input[type=checkbox]:checked ~ label:after {
 }
 .box {
   border-radius: 4px;
-  border: solid 1px #bbbbbb;
+  border: solid 1px #ececec;
 }
 .sticky {
   position: sticky;
   top: 0;
-}
-
-.shadow-small {
-  box-shadow: 0 0 0.08rem rgba(0, 0, 0, 0.25);
+  z-index: 1;
 }
 
 .shadow-normal {
-  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.06);
 }
 
 .shadow-large {
-  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.06);
 }
 
 .tag {

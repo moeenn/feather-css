@@ -12,7 +12,7 @@ $font-weight-normal: normal;
 $font-weight-bold: 600;
 
 // colors ---------------------------------------------------------------------
-$background-page-base: rgba(251,251,251,1);
+$background-page-base: rgba(255,255,255,1);
 $background-container: rgba(255,255,255,1);
 $background-hover: rgba(0,0,0,0.02);
 $background-active: rgba(0,0,0,0.07);
@@ -54,14 +54,11 @@ $code-background: rgba(241,241,241,1);
 $code-foreground: $font-color-normal;
 
 // shadows --------------------------------------------------------------------
-$shadow-radius-small: 0.08rem;
-$shadow-color-small: rgba(0,0,0,0.25);
-
-$shadow-radius-normal: 0.2rem;
-$shadow-color-normal: rgba(0,0,0,0.25);
+$shadow-radius-normal: 0.6rem;
+$shadow-color-normal: rgba(0,0,0,0.06);
 
 $shadow-radius-large: 1.5rem;
-$shadow-color-large: rgba(0,0,0,0.25);
+$shadow-color-large: rgba(0,0,0,0.06);
 
 // event colors ---------------------------------------------------------------
 $positive-background: rgba(252,255,245,1);

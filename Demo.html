@@ -7,7 +7,7 @@
 </header>
 <body>
 	<div class="container">
-		<section>
+		<section class="sticky">
 			<nav>
 				<a class="active">Home</a>
 				<a>Products</a>
@@ -70,10 +70,17 @@
 
 		<section>
 			<div class="content-align-right">
+				<button class="button-thin">Normal</button>
+				<button class="button-primary button-thin">Primary</button>
+			</div>
+
+			<div class="content-align-left">
 				<button>Normal</button>
 				<button class="button-primary shadow-small">Primary</button>
 			</div>
-		<hr class="margin-vertical-5">
+
+			<hr class="margin-vertical-5">
+
 			<div class="content-align-center">
 				<button class="positive shadow-small">Positive</button>
 				<button class="negative shadow-small">Negative</button>
@@ -180,7 +187,8 @@
 							<label for="switch">Remember Me</label>
 						</fieldset>
 
-						<input class="button-primary margin-vertical-3" type="submit" value="Login">
+						<br>
+						<input class="button-primary" type="submit" value="Login">
 					</div>
 				</div>
 			</form>
