@@ -3,6 +3,7 @@
 // base settings --------------------------------------------------------------
 html { font-size: 62.5%; }
 body {
+	@extend .margin-0;
 	font-size: $font-size-normal;
 	line-height: $line-height;
 	color: $font-color-normal;
@@ -59,7 +60,7 @@ input[type="button"] {
 	cursor: pointer;
 	box-sizing: border-box;
 	&:hover, &:focus {
-		color: $button-foreground-hover;
+		// color: $button-foreground-hover;
 		border-color: darken( $border-color-normal, 30% );
 		outline: 0;
 	}
@@ -547,6 +548,15 @@ input[type="checkbox"]:checked ~ label:after {
 	}
 }
 
+// footer --------------------------------------------------------------------
+footer {
+	@extend .margin-top-4;
+	font-size: $font-size-small;
+	background: $footer-background;
+	color: $footer-foreground;
+	padding: 8rem 0;
+}
+
 // message and boxes ----------------------------------------------------------
 .message {
 	@extend .padding-4;
@@ -563,6 +573,17 @@ input[type="checkbox"]:checked ~ label:after {
 	p {
 		@extend .margin-padding-0;
 	}
+}
+
+.flash-message {
+	display: table;
+	background: $background-hover;
+	border-bottom: solid $border-size-normal $border-color-light;
+	width: 100%;
+	radius: 0;
+	z-index: 10;
+	.container 	{ background: inherit; }
+	p 			{ @extend .margin-vertical-2; @extend .margin-horizontal-1; }
 }
 
 .box {

@@ -4,37 +4,74 @@
 	<link rel="stylesheet" href="upstream/normalize.css">
 	<link rel="stylesheet" href="upstream/skeleton.css">
 	<link rel="stylesheet" href="skeleton-extended.css">
+	<style>
+		.banner {
+			background-image: url("static/images/banner.jpg");
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	</style>
 </header>
 <body>
-	<div class="container">
-		<section class="sticky">
+	<!-- flashed message -->
+	<!--
+	<div class="flash-message alert">
+		<div class="container" style="background: inherit;">
+			<p>This is a Flashed Message</p>
+		</div>
+	</div>
+ 	-->
+
+	<!-- banner image -->
+	<div class="banner">
+		<div class="container" style="background: inherit; color: #cdcdcd; padding: 12rem 3rem;">
+			<div class="row">
+				<div class="one-half column">
+					<h2>Welcome to Feather Demo</h2>
+					<p>The Styled Elements are Demoed down here, take a look!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- main content -->
+	<section>
+		<div class="container sticky">
 			<nav>
 				<a class="active">Home</a>
 				<a>Products</a>
 				<a>Services</a>
 				<a>Programs</a>
 			</nav>
-		</section>
+	 	</div>
+	</section>
 
-		<section>
-			<h2>Welcome to the Demo Site</h2>
+	<!-- inline tags -->
+	<section>
+		<div class="container">
 			<p style="text-align: justify;"><span class="tag">Normal</span> ipsum dolor sit amet, consectetur adipisicing elit. Ea vero nam quas assumenda debitis dolor <span class="positive tag">Positive</span> minus consectetur provident, corporis. Provident excepturi veniam eveniet earum dolore impedit <span class="negative tag">Negative</span> aliquam, quae. Lorem ipsum dolor sit amet,  consectetur adipisicing elit. Recusandae amet sunt <span class="alert tag">Alert</span> a iusto soluta veritatis nam dolor dolore. Atque, reprehenderit alias voluptas architecto? Provident <span class="info tag">Info</span> maxime dicta aut veritatis.</p>
-		</section>
+		</div>
+	</section>
 
-		<hr class="margin-vertical-5">
+	<hr class="margin-vertical-5">
 
-		<section>
+	<!-- heading styles -->
+	<section>
+		<div class="container">
 			<h1>Heading 1</h1>
 			<h2>Heading 2</h2>
 			<h3>Heading 3</h3>
 			<h4>Heading 4</h4>
 			<h5>Heading 5</h5>
 			<h6>Heading 6</h6>
-		</section>
+		</div>
+	</section>
 
-		<hr class="margin-vertical-5">
+	<hr class="margin-vertical-5">
 
-		<section>
+	<!-- table -->
+	<section>
+		<div class="container">
 			<table class="u-full-width">
 				<thead>
 					<tr>
@@ -66,32 +103,39 @@
 					</tr>
 				</tbody>
 			</table>
-		</section>
+		</div>
+	</section>
 
-		<section>
-			<div class="content-align-right">
-				<button class="button-thin">Normal</button>
-				<button class="button-primary button-thin">Primary</button>
-			</div>
+	<!-- buttons -->
+	<section>
+		<div class="container">
+			<button>Normal</button>
+			<button class="button-primary shadow-small">Primary</button>
+			<hr class="margin-vertical-1" style="border: transparent;">
+			<button class="button-thin">Normal</button>
+			<button class="button-primary button-thin">Primary</button>
+		</div>
+	</section>
 
-			<div class="content-align-left">
-				<button>Normal</button>
-				<button class="button-primary shadow-small">Primary</button>
-			</div>
+	<hr class="margin-vertical-5">
 
-			<hr class="margin-vertical-5">
-
+	<!-- event colors -->
+	<section>
+		<div class="container">
 			<div class="content-align-center">
-				<button class="positive shadow-small">Positive</button>
-				<button class="negative shadow-small">Negative</button>
-				<button class="alert shadow-small">Alert</button>
-				<button class="info shadow-small">Info</button>
+				<button class="positive">Positive</button>
+				<button class="negative">Negative</button>
+				<button class="alert">Alert</button>
+				<button class="info">Info</button>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<hr class="margin-vertical-5">
+	<hr class="margin-vertical-5">
 
-		<section>
+	<!-- messages -->
+	<section>
+		<div class="container">
 			<div class="message">
 				<header>Default Message</header>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur iusto ea, dolore atque pariatur harum est at, quas nobis maxime voluptatum in odio animi tempora. Cupiditate, ab numquam expedita aliquid?</p>
@@ -112,11 +156,14 @@
 				<header>Info Message</header>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur iusto ea, dolore atque pariatur harum est at, quas nobis maxime voluptatum in odio animi tempora. Cupiditate, ab numquam expedita aliquid?</p>
 			</div>
-		</section>
+		</div>
+	</section>
 
-		<hr class="margin-vertical-5">
+	<hr class="margin-vertical-5">
 
-		<section>
+	<!-- gallery -->
+	<section>
+		<div class="container">
 			<div class="gallery">
 				<div class="item shadow-large">
 					<img class="thumb" src="static/images/thumb_001.jpg">
@@ -140,11 +187,29 @@
 					<img class="thumb" src="static/images/thumb_007.jpg">
 				</div>
 			</div
-		</section>
+		</div>
+	</section>
 
-		<hr class="margin-vertical-5">
+	<hr class="margin-vertical-5">
 
-		<section>
+	<!-- page buttons -->
+	<section>
+		<div class="container content-align-center">
+			<div class="page-buttons">
+				<a href="#">1</a>
+				<a href="#" class="active">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+			</div>
+		</div>
+	</section>
+
+	<hr class="margin-vertical-5">
+
+	<!-- form -->
+	<section>
+		<div class="container">
 			<form action="" id="sample_form">
 				<div class="row">
 					<div class="one-half column">
@@ -187,27 +252,18 @@
 							<label for="switch">Remember Me</label>
 						</fieldset>
 
-						<br>
-						<input class="button-primary" type="submit" value="Login">
+						<input class="button-primary margin-vertical-5" type="submit" value="Submit">
 					</div>
 				</div>
 			</form>
-		</section>
+		</div>
+	</section>
 
-		<section>
-			<div class="row">
-				<div class="twelve columns content-align-center">
-					<hr class="margin-vertical-5">
-					<div class="page-buttons">
-						<a href="#">1</a>
-						<a href="#" class="active">2</a>
-						<a href="#">3</a>
-						<a href="#">4</a>
-						<a href="#">5</a>
-					</div>
-					<hr class="margin-vertical-5">
-				</div>
-			</div>
-		</section>
-	</body>
+	<!-- footer -->
+	<section>
+		<footer class="content-align-center">
+			<p>&copy Feather Project - 2019</p>
+		</footer>
+	</section>
+</body>
 </html>

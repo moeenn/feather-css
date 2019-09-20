@@ -102,3 +102,7 @@ $navigation-bar-border-active: solid $border-size-large darken($border-color-nor
 $gallery-item-width: 22rem;
 $gallery-item-height: 15rem;
 $gallery-item-gap: 1rem;
+
+// footer ---------------------------------------------------------------------
+$footer-background: rgba(25,33,36,1);
+$footer-foreground: lighten( $footer-background, 40% );

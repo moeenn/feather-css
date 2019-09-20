@@ -95,7 +95,6 @@ input[type=button]:hover,
 form textarea[type=button]:hover,
 input[type=button]:focus,
 form textarea[type=button]:focus {
-  color: #333333;
   border-color: #a0a0a0;
   outline: 0;
 }
@@ -190,7 +189,7 @@ form fieldset > select {
   padding: 0;
 }
 
-.margin-0, .gallery .thumb {
+.margin-0, .gallery .thumb, body {
   margin: 0;
 }
 
@@ -224,7 +223,7 @@ form fieldset > select {
   margin-bottom: 0.5rem;
 }
 
-.margin-vertical-2, .message, hr {
+.margin-vertical-2, .flash-message p, .message, hr {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -250,7 +249,7 @@ ol ol, ol ul {
   margin-right: 0;
 }
 
-.margin-horizontal-1, form label > .label-body {
+.margin-horizontal-1, .flash-message p, form label > .label-body {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
@@ -292,7 +291,7 @@ ol ol, ol ul {
   margin-top: 1.5rem;
 }
 
-.margin-top-4, form fieldset, section {
+.margin-top-4, footer, form fieldset, section {
   margin-top: 2rem;
 }
 
@@ -820,6 +819,13 @@ input[type=checkbox]:checked ~ label:after, form textarea[type=checkbox]:checked
   background: rgba(0, 0, 0, 0.07);
 }
 
+footer {
+  font-size: 1.2rem;
+  background: #192124;
+  color: #6e8f9b;
+  padding: 8rem 0;
+}
+
 .message {
   border-radius: 4px;
   border: solid 1px #e6e6e6;
@@ -829,6 +835,17 @@ input[type=checkbox]:checked ~ label:after, form textarea[type=checkbox]:checked
 .message header {
   font-weight: 600;
   font-size: 1.5rem;
+}
+.flash-message {
+  display: table;
+  background: rgba(0, 0, 0, 0.02);
+  border-bottom: solid 1px #e6e6e6;
+  width: 100%;
+  radius: 0;
+  z-index: 10;
+}
+.flash-message .container {
+  background: inherit;
 }
 .box {
   border-radius: 4px;
