@@ -2,7 +2,6 @@
 <header>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="upstream/normalize.css">
-	<link rel="stylesheet" href="upstream/skeleton.css">
 	<link rel="stylesheet" href="skeleton-extended.css">
 	<style>
 		.banner {
@@ -14,19 +13,19 @@
 </header>
 <body>
 	<!-- flashed message -->
-	<!--
-	<div class="flash-message alert">
+<!--
+	<div class="flash-message info">
 		<div class="container" style="background: inherit;">
 			<p>This is a Flashed Message</p>
 		</div>
 	</div>
- 	-->
+ -->
 
 	<!-- banner image -->
 	<div class="banner">
 		<div class="container" style="background: inherit; color: #cdcdcd; padding: 12rem 3rem;">
-			<div class="row">
-				<div class="one-half column">
+			<div class="two-column grid">
+				<div>
 					<h2>Welcome to Feather Demo</h2>
 					<p>The Styled Elements are Demoed down here, take a look!</p>
 				</div>
@@ -35,8 +34,8 @@
 	</div>
 
 	<!-- main content -->
-	<section>
-		<div class="container sticky">
+	<section class="sticky">
+		<div class="container">
 			<nav>
 				<a class="active">Home</a>
 				<a>Products</a>
@@ -58,12 +57,24 @@
 	<!-- heading styles -->
 	<section>
 		<div class="container">
-			<h1>Heading 1</h1>
-			<h2>Heading 2</h2>
-			<h3>Heading 3</h3>
-			<h4>Heading 4</h4>
-			<h5>Heading 5</h5>
-			<h6>Heading 6</h6>
+			<div class="four-column grid">
+				<div class="column">
+					<h1>Heading 1</h1>
+					<h2>Heading 2</h2>
+					<h3>Heading 3</h3>
+					<h4>Heading 4</h4>
+					<h5>Heading 5</h5>
+					<h6>Heading 6</h6>
+				</div>
+<!-- 				<div class="column">
+					<h1>Heading 1</h1>
+					<h2>Heading 2</h2>
+					<h3>Heading 3</h3>
+					<h4>Heading 4</h4>
+					<h5>Heading 5</h5>
+					<h6>Heading 6</h6>
+				</div> -->
+			</div>
 		</div>
 	</section>
 
@@ -110,9 +121,9 @@
 	<section>
 		<div class="container">
 			<button>Normal</button>
-			<button class="button-primary shadow-small">Primary</button>
-			<hr class="margin-vertical-1" style="border: transparent;">
 			<button class="button-thin">Normal</button>
+			<hr style="border-color: transparent;">
+			<button class="button-primary">Primary</button>
 			<button class="button-primary button-thin">Primary</button>
 		</div>
 	</section>
@@ -211,8 +222,8 @@
 	<section>
 		<div class="container">
 			<form action="" id="sample_form">
-				<div class="row">
-					<div class="one-half column">
+				<div class="two-column grid">
+					<div class="column">
 						<fieldset class="input-error">
 							<label for="name">Name</label>
 							<input type="text" name="name">

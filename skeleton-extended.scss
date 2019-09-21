@@ -1,6 +1,7 @@
 @import "settings";
 
 // base settings --------------------------------------------------------------
+* { box-sizing: border-box; }
 html { font-size: 62.5%; }
 body {
 	@extend .margin-0;
@@ -29,7 +30,7 @@ section     { @extend .margin-top-4; }
 	width: 100%;
 	max-width: 1160px;
 	margin: 0 auto;
-	box-sizing: border-box;
+	// box-sizing: border-box;
 	border-radius: $border-radius;
 	background: $background-container;
 }
@@ -58,7 +59,7 @@ input[type="button"] {
 	border-radius: $border-radius;
 	border: solid $border-size-normal $border-color-dark;
 	cursor: pointer;
-	box-sizing: border-box;
+	// box-sizing: border-box;
 	&:hover, &:focus {
 		// color: $button-foreground-hover;
 		border-color: darken( $border-color-normal, 30% );
@@ -121,7 +122,7 @@ pre > code {
 // utilities ------------------------------------------------------------------
 .u-full-width {
 	width: 100%;
-	box-sizing: border-box;
+	// box-sizing: border-box;
 }
 
 // align content inside the parent element
@@ -268,7 +269,7 @@ nav {
 		border-radius: $border-radius;
 		overflow: hidden;
 		margin: $gallery-item-gap;
-		box-sizing: border-box;
+		// box-sizing: border-box;
 	}
 	.thumb {
 		@extend .margin-0;
@@ -306,7 +307,7 @@ h6 { font-size: 1.6rem; line-height: 1.6;  letter-spacing: -0.02rem; }
 
 // misc tweaks ----------------------------------------------------------------
 p {
-	@extend .margin-top-3;
+	@extend .margin-top-2;
 	@extend .margin-bottom-0;
 	font-size: $font-size-normal;
 }
@@ -373,7 +374,7 @@ form {
 		border: solid $border-size-normal $input-border-normal;
 		border-radius: $border-radius;
 		box-shadow: none;
-		box-sizing: border-box;
+		// box-sizing: border-box;
 		font-size: $font-size-normal;
 		font-weight: $font-weight-normal;
 		resize: none;
@@ -640,6 +641,20 @@ footer {
 	background: $info-background;
 	color: $info-foreground;
 	border-color: $info-border-color;
+}
+
+// grid system ----------------------------------------------------------------
+.grid 			{ display: grid; grid-gap: $spacing-5; grid-auto-flow: column;  }
+.two-column 	{ grid-template-columns: repeat(2, 1fr); }
+.three-column 	{ grid-template-columns: repeat(3, 1fr); }
+.four-column 	{ grid-template-columns: repeat(4, 1fr); }
+.five-column 	{ grid-template-columns: repeat(5, 1fr); }
+.six-column 	{ grid-template-columns: repeat(6, 1fr); }
+
+// switch to single column at below 600px
+@media only screen and (max-width: 600px) {
+	.two-column, .three-column, .four-column,
+	.five-column, .six-column { grid-template-columns: 1fr; grid-auto-flow: row; }
 }
 
 // ----------------------------------------------------------------------------
