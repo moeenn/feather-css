@@ -7,6 +7,7 @@ html {
 }
 
 body {
+  font-family: "IBM Plex Sans";
   font-size: 1.5rem;
   line-height: 2.4rem;
   color: #222222;
@@ -14,7 +15,7 @@ body {
 }
 
 @font-face {
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "IBM Plex Sans", "Roboto", Arial, sans-serif;
   font-weight: normal;
   text-rendering: optimizeLegibility;
 }
@@ -37,7 +38,7 @@ form input[type=date],
 form textarea[type=date],
 form input[type=password],
 form textarea[type=password],
-form select, table tbody tr, nav a, .button,
+form select, table tbody tr, nav .links a, .button,
 button,
 input[type=submit],
 form textarea[type=submit],
@@ -54,8 +55,8 @@ form textarea[type=button] {
   width: 100%;
   max-width: 1160px;
   margin: 0 auto;
+  overflow: hidden;
   border-radius: 4px;
-  background: white;
 }
 
 .button,
@@ -214,7 +215,7 @@ form fieldset > select {
   margin: 2.5rem;
 }
 
-.margin-vertical-0, form p {
+.margin-vertical-0, form p, nav .links a {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -250,7 +251,7 @@ ol ol, ol ul {
   margin-right: 0;
 }
 
-.margin-horizontal-1, .flash-message p, form label > .label-body {
+.margin-horizontal-1, .flash-message p, form label > .label-body, nav .links a {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
@@ -390,12 +391,12 @@ form textarea[type=button] {
   padding-bottom: 0.5rem;
 }
 
-.padding-vertical-2, pre > code {
+.padding-vertical-2, nav .links a, pre > code {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-.padding-vertical-3 {
+.padding-vertical-3, nav {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
@@ -452,12 +453,12 @@ table td:first-child {
   padding-right: 1rem;
 }
 
-.padding-horizontal-3, .button-thin, pre > code {
+.padding-horizontal-3, nav .links a, .button-thin, pre > code {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
 
-.padding-horizontal-4, nav a {
+.padding-horizontal-4 {
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -490,7 +491,7 @@ form textarea[type=button] {
   padding-top: 0.5rem;
 }
 
-.padding-top-2, nav a {
+.padding-top-2 {
   padding-top: 1rem;
 }
 
@@ -518,7 +519,7 @@ form textarea[type=button] {
   padding-bottom: 0;
 }
 
-.padding-bottom-1, nav a {
+.padding-bottom-1 {
   padding-bottom: 0.5rem;
 }
 
@@ -548,39 +549,42 @@ form textarea[type=button] {
 
 nav {
   background: white;
-  font-size: 0;
-  border-bottom: solid 1px #ececec;
+  color: #222222;
+  font-size: 1.5rem;
+  line-height: 2.4rem;
 }
-nav a {
+nav > div {
   display: inline-block;
-  font-size: 1.2rem;
-  color: #222222;
-  text-align: center;
-  text-decoration: none;
-  border-bottom: solid 2px transparent;
-  margin-bottom: -1px;
 }
-nav a:hover {
-  background: rgba(0, 0, 0, 0.02);
-  color: #222222;
-  border-bottom: solid 2px #a0a0a0;
-}
-nav .active {
+nav .logo {
+  display: inline-block;
+  margin-right: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
-  border-bottom: solid 2px #868686;
+}
+nav .links {
+  display: inline-block;
+}
+nav .links a {
+  color: #222222;
+  display: inline-block;
+  text-decoration: none;
+}
+nav .links a:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+nav .links .active {
+  border-bottom: solid 2px #4a90e2;
 }
 
 @media only screen and (max-width: 600px) {
-  nav a {
+  nav .logo {
     display: block;
-    text-align: left;
-  }
-  nav a:hover {
-    border-bottom: solid 2px transparent;
+    margin-left: 1.5rem;
   }
 
-  nav .active {
-    border-bottom: solid 2px transparent;
+  nav .links a {
+    display: block;
   }
 }
 .gallery {
@@ -895,6 +899,11 @@ footer {
   z-index: 1;
 }
 
+@media only screen and (max-width: 600px) {
+  .sticky {
+    position: static;
+  }
+}
 .shadow-normal {
   box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.06);
 }

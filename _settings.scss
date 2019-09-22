@@ -1,6 +1,6 @@
 // variables ------------------------------------------------------------------
 // fonts ----------------------------------------------------------------------
-$primary-font: "Roboto";
+$primary-font: "IBM Plex Sans";
 $font-size-small: 1.2rem;
 $font-size-normal: 1.5rem;
 $font-size-large: 1.8rem;
@@ -13,7 +13,6 @@ $font-weight-bold: 600;
 
 // colors ---------------------------------------------------------------------
 $background-page-base: rgba(255,255,255,1);
-$background-container: rgba(255,255,255,1);
 $background-hover: rgba(0,0,0,0.02);
 $background-active: rgba(0,0,0,0.07);
 $background-selection: rgba(204,225,254,1);
@@ -93,12 +92,15 @@ $link-foreground-hover: darken( $link-foreground-normal, 10% );
 $link-background-hover: transparent;
 
 // navigation bar -------------------------------------------------------------
+// $navigation-bar-background: rgba(255,255,255,1);
+// $navigation-bar-foreground: rgba(34,34,34,1);
+// $navigation-bar-anchor-hover-background: $background-hover;
+// $navigation-bar-border: solid $border-size-normal $border-color-normal;
+// $navigation-bar-border-hover: solid $border-size-large darken($border-color-normal, 30%);
+// $navigation-bar-border-active: solid $border-size-large darken($border-color-normal, 40%);
+
 $navigation-bar-background: rgba(255,255,255,1);
-$navigation-bar-foreground: rgba(34,34,34,1);
-$navigation-bar-anchor-hover-background: $background-hover;
-$navigation-bar-border: solid $border-size-normal $border-color-normal;
-$navigation-bar-border-hover: solid $border-size-large darken($border-color-normal, 30%);
-$navigation-bar-border-active: solid $border-size-large darken($border-color-normal, 40%);
+$navigation-bar-foreground: $font-color-normal;
 
 // gallery --------------------------------------------------------------------
 $gallery-item-width: 22rem;

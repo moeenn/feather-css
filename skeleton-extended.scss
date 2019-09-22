@@ -5,6 +5,7 @@
 html { font-size: 62.5%; }
 body {
 	@extend .margin-0;
+	font-family: $primary-font;
 	font-size: $font-size-normal;
 	line-height: $line-height;
 	color: $font-color-normal;
@@ -12,7 +13,7 @@ body {
 }
 
 @font-face {
-	font-family: $primary-font, Arial, sans-serif;
+	font-family: $primary-font, "Roboto", Arial, sans-serif;
 	font-weight: $font-weight-normal;
 	text-rendering: optimizeLegibility;
 }
@@ -30,9 +31,8 @@ section     { @extend .margin-top-4; }
 	width: 100%;
 	max-width: 1160px;
 	margin: 0 auto;
-	// box-sizing: border-box;
+	overflow: hidden;
 	border-radius: $border-radius;
-	background: $background-container;
 }
 
 // buttons --------------------------------------------------------------------
@@ -227,44 +227,85 @@ pre > code {
 .padding-bottom-big		{ padding-bottom: $spacing-big; }
 .padding-bottom-huge	{ padding-bottom: $spacing-huge; }
 
-// navigation bar -------------------------------------------------------------
+// navigation bar (old) -------------------------------------------------------
+// nav {
+// 	background: $navigation-bar-background;
+// 	font-size: 0;
+// 	border-bottom: $navigation-bar-border;
+// 	a {
+// 		@extend .padding-horizontal-4;
+// 		@extend .padding-top-2;
+// 		@extend .padding-bottom-1;
+// 		@extend .transition;
+// 		display: inline-block;
+// 		font-size: $font-size-small;
+// 		color: $navigation-bar-foreground;
+// 		text-align: center;
+// 		text-decoration: none;
+// 		border-bottom: solid $border-size-large transparent;
+// 		margin-bottom: $border-size-normal - $border-size-large;
+// 		&:hover {
+// 			background: $navigation-bar-anchor-hover-background;
+// 			color: $navigation-bar-foreground;
+// 			border-bottom: $navigation-bar-border-hover;
+// 		}
+// 	}
+// 	.active {
+// 		font-weight: $font-weight-bold;
+// 		border-bottom: $navigation-bar-border-active;
+// 	}
+// }
+
+// // switch to mobile at small screen
+// @media only screen and (max-width: 600px) {
+// 	nav a {
+// 		@extend .padding-horizontal-4;
+// 		display: block;
+// 		text-align: left;
+// 		&:hover { border-bottom: solid $border-size-large transparent; }
+// 	}
+// 	nav .active { border-bottom: solid $border-size-large transparent; }
+// }
+
 nav {
+	@extend .padding-vertical-3;
 	background: $navigation-bar-background;
-	font-size: 0;
-	border-bottom: $navigation-bar-border;
-	a {
-		@extend .padding-horizontal-4;
-		@extend .padding-top-2;
-		@extend .padding-bottom-1;
-		@extend .transition;
+	color: $navigation-bar-foreground;
+	font-size: $font-size-normal;
+	line-height: $line-height;
+	> div { display: inline-block; }
+
+	.logo {
 		display: inline-block;
-		font-size: $font-size-small;
-		color: $navigation-bar-foreground;
-		text-align: center;
-		text-decoration: none;
-		border-bottom: solid $border-size-large transparent;
-		margin-bottom: $border-size-normal - $border-size-large;
-		&:hover {
-			background: $navigation-bar-anchor-hover-background;
-			color: $navigation-bar-foreground;
-			border-bottom: $navigation-bar-border-hover;
-		}
-	}
-	.active {
+		margin-right: $spacing-5;
+		font-size: $font-size-large;
 		font-weight: $font-weight-bold;
-		border-bottom: $navigation-bar-border-active;
+	}
+
+	.links {
+		display: inline-block;
+		a {
+			@extend .margin-vertical-0;
+			@extend .margin-horizontal-1;
+			@extend .padding-vertical-2;
+			@extend .padding-horizontal-3;
+			@extend .transition;
+			color: $navigation-bar-foreground;
+			display: inline-block;
+			text-decoration: none;
+			&:hover {
+				background: $background-hover;
+			}
+		}
+		.active {
+			border-bottom: solid 2px $primary-accent-color;
+		}
 	}
 }
 
-// switch to mobile at small screen
 @media only screen and (max-width: 600px) {
-	nav a {
-		@extend .padding-horizontal-4;
-		display: block;
-		text-align: left;
-		&:hover { border-bottom: solid $border-size-large transparent; }
-	}
-	nav .active { border-bottom: solid $border-size-large transparent; }
+	nav .logo 		{ display: block; margin-left: $spacing-3; }
+	nav .links a 	{ display: block; }
 }
 
 // gallery stylings -----------------------------------------------------------
@@ -521,7 +562,7 @@ input[type="checkbox"]:empty ~ label:after {
 	top: $switch-padding;
 	bottom: $switch-padding;
 	margin-left: $switch-padding;
-	background-color: $background-container;
+	background-color: $background-page-base;
 	border-radius: $border-radius;
 	border: solid $border-size-normal $input-border-normal;
 }
@@ -610,6 +651,10 @@ footer {
 	position: sticky;
 	top: 0;
 	z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+	.sticky { position: static; }
 }
 
 // shadows --------------------------------------------------------------------
