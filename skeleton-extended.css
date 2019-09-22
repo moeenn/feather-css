@@ -348,6 +348,10 @@ ol ol, ol ul {
   padding: 2.5rem;
 }
 
+.padding-huge {
+  padding: 8rem;
+}
+
 .padding-vertical-0, .page-buttons a, .container, .button-thin {
   padding-top: 0;
   padding-bottom: 0;
@@ -400,6 +404,10 @@ form textarea[type=button] {
 .padding-vertical-5 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.padding-vertical-huge {
+  padding: 8rem 0;
 }
 
 .padding-horizontal-0 {
@@ -458,6 +466,10 @@ form textarea[type=button] {
   padding-right: 2.5rem;
 }
 
+.padding-horizontal-huge {
+  padding: 0 8rem;
+}
+
 .padding-top-0 {
   padding-top: 0;
 }
@@ -482,6 +494,10 @@ form textarea[type=button] {
   padding-top: 2.5rem;
 }
 
+.padding-top-huge {
+  padding-top: 8rem;
+}
+
 .padding-bottom-0 {
   padding-bottom: 0;
 }
@@ -504,6 +520,10 @@ form textarea[type=button] {
 
 .padding-bottom-5 {
   padding-bottom: 2.5rem;
+}
+
+.padding-bottom-huge {
+  padding-bottom: 8rem;
 }
 
 nav {
