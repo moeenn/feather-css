@@ -92,15 +92,10 @@ $link-foreground-hover: darken( $link-foreground-normal, 10% );
 $link-background-hover: transparent;
 
 // navigation bar -------------------------------------------------------------
-// $navigation-bar-background: rgba(255,255,255,1);
-// $navigation-bar-foreground: rgba(34,34,34,1);
-// $navigation-bar-anchor-hover-background: $background-hover;
-// $navigation-bar-border: solid $border-size-normal $border-color-normal;
-// $navigation-bar-border-hover: solid $border-size-large darken($border-color-normal, 30%);
-// $navigation-bar-border-active: solid $border-size-large darken($border-color-normal, 40%);
-
 $navigation-bar-background: rgba(255,255,255,1);
 $navigation-bar-foreground: $font-color-normal;
+$navigation-bar-active-border-size: 2px;
+$navigation-bar-active-border: solid $navigation-bar-active-border-size $primary-accent-color;
 
 // gallery --------------------------------------------------------------------
 $gallery-item-width: 22rem;

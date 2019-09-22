@@ -569,11 +569,12 @@ nav .links a {
   color: #222222;
   display: inline-block;
   text-decoration: none;
+  border-bottom: solid 2px transparent;
 }
 nav .links a:hover {
   background: rgba(0, 0, 0, 0.02);
 }
-nav .links .active {
+nav .links .active, nav .links a:hover {
   border-bottom: solid 2px #4a90e2;
 }
 
@@ -858,7 +859,7 @@ input[type=checkbox]:checked ~ label:after, form textarea[type=checkbox]:checked
 .page-buttons a:hover {
   background: rgba(0, 0, 0, 0.07);
 }
-.page-buttons .active {
+.page-buttons .active, .page-buttons nav .links a:hover, nav .links .page-buttons a:hover {
   background: rgba(0, 0, 0, 0.07);
 }
 

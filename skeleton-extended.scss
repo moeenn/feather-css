@@ -227,46 +227,7 @@ pre > code {
 .padding-bottom-big		{ padding-bottom: $spacing-big; }
 .padding-bottom-huge	{ padding-bottom: $spacing-huge; }
 
-// navigation bar (old) -------------------------------------------------------
-// nav {
-// 	background: $navigation-bar-background;
-// 	font-size: 0;
-// 	border-bottom: $navigation-bar-border;
-// 	a {
-// 		@extend .padding-horizontal-4;
-// 		@extend .padding-top-2;
-// 		@extend .padding-bottom-1;
-// 		@extend .transition;
-// 		display: inline-block;
-// 		font-size: $font-size-small;
-// 		color: $navigation-bar-foreground;
-// 		text-align: center;
-// 		text-decoration: none;
-// 		border-bottom: solid $border-size-large transparent;
-// 		margin-bottom: $border-size-normal - $border-size-large;
-// 		&:hover {
-// 			background: $navigation-bar-anchor-hover-background;
-// 			color: $navigation-bar-foreground;
-// 			border-bottom: $navigation-bar-border-hover;
-// 		}
-// 	}
-// 	.active {
-// 		font-weight: $font-weight-bold;
-// 		border-bottom: $navigation-bar-border-active;
-// 	}
-// }
-
-// // switch to mobile at small screen
-// @media only screen and (max-width: 600px) {
-// 	nav a {
-// 		@extend .padding-horizontal-4;
-// 		display: block;
-// 		text-align: left;
-// 		&:hover { border-bottom: solid $border-size-large transparent; }
-// 	}
-// 	nav .active { border-bottom: solid $border-size-large transparent; }
-// }
-
+// navigation bar -------------------------------------------------------------
 nav {
 	@extend .padding-vertical-3;
 	background: $navigation-bar-background;
@@ -293,12 +254,14 @@ nav {
 			color: $navigation-bar-foreground;
 			display: inline-block;
 			text-decoration: none;
+			border-bottom: solid $navigation-bar-active-border-size transparent;
 			&:hover {
+				@extend .active;
 				background: $background-hover;
 			}
 		}
 		.active {
-			border-bottom: solid 2px $primary-accent-color;
+			border-bottom: $navigation-bar-active-border;
 		}
 	}
 }
