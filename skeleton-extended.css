@@ -348,8 +348,12 @@ ol ol, ol ul {
   padding: 2.5rem;
 }
 
-.padding-huge {
+.padding-big {
   padding: 8rem;
+}
+
+.padding-huge {
+  padding: 12rem;
 }
 
 .padding-vertical-0, .page-buttons a, .container, .button-thin {
@@ -406,8 +410,12 @@ form textarea[type=button] {
   padding-bottom: 2.5rem;
 }
 
-.padding-vertical-huge {
+.padding-vertical-big, footer {
   padding: 8rem 0;
+}
+
+.padding-vertical-huge {
+  padding: 12rem 0;
 }
 
 .padding-horizontal-0 {
@@ -466,8 +474,12 @@ form textarea[type=button] {
   padding-right: 2.5rem;
 }
 
-.padding-horizontal-huge {
+.padding-horizontal-big {
   padding: 0 8rem;
+}
+
+.padding-horizontal-huge {
+  padding: 0 12rem;
 }
 
 .padding-top-0 {
@@ -494,8 +506,12 @@ form textarea[type=button] {
   padding-top: 2.5rem;
 }
 
-.padding-top-huge {
+.padding-top-big {
   padding-top: 8rem;
+}
+
+.padding-top-huge {
+  padding-top: 12rem;
 }
 
 .padding-bottom-0 {
@@ -522,8 +538,12 @@ form textarea[type=button] {
   padding-bottom: 2.5rem;
 }
 
-.padding-bottom-huge {
+.padding-bottom-big {
   padding-bottom: 8rem;
+}
+
+.padding-bottom-huge {
+  padding-bottom: 12rem;
 }
 
 nav {
@@ -842,7 +862,6 @@ footer {
   font-size: 1.2rem;
   background: #192124;
   color: #6e8f9b;
-  padding: 8rem 0;
 }
 
 .message {
