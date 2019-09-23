@@ -1,5 +1,11 @@
-# Skeleton Extended
-Skeleton CSS is great but it is missing quite a few things. This is where this project comes into the picture. Elements have been added that I felt were missing from the Skeleton CSS. This project is very much a **Work in Progress**.
+# Feather CSS
+Feather CSS is a natural successor to Skeleton-CSS, which is great but was missing quite a few things. On top it that Skeleton-CSS hasn't been in active development since 2015. 
+
+Feather-CSS strinctly follows the philosophy set by Skeleton-CSS. It is dead simple to implement and the developers using it can get away with using simple HTML markup for most part. There is no need for crazy div & element nesting required by e.g. Bootstrap. 
+
+When the markup is clean, greater focus can be directed towards implementing the required business logic. There should be no feeling of fighting the underlying technology to achieve our ends.
+
+if all that sounds good then you may like Feather-CSS. Do note that this project is still very much a **Work in Progress** and your mileage may vary.
 
 # Credit
 All credit goes to the original creators of Skeleton CSS. Without their excellent work this project would not be possible. Show them some love
@@ -199,7 +205,7 @@ Margins and Paddings can be added to elements conveniently using these special c
 - [ ] Content Alignment
 - [x] Hover Transitions
 - [x] Port to SASS
-- [ ] New Grid System
+- [x] New Grid System
 - [ ] Dark Theme
 - [ ] Code Clean Up
 - [ ] Testing, testing and testing!
