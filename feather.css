@@ -4,12 +4,14 @@
 
 html {
   font-size: 62.5%;
+  height: 100%;
 }
 
 body {
   font-family: "IBM Plex Sans";
   font-size: 1.5rem;
   line-height: 2.4rem;
+  height: 100%;
   color: #222222;
   background: white;
 }
@@ -27,33 +29,37 @@ body {
   color: #4a90e2;
 }
 
-.transition, .page-buttons a, input[type=checkbox]:empty ~ label:before, form textarea[type=checkbox]:empty ~ label:before,
+.font-color-invert {
+  color: #dddddd;
+}
+
+.transition, .page-buttons a, input[type=checkbox]:empty ~ label:before, textarea[type=checkbox]:empty ~ label:before,
 input[type=checkbox]:empty ~ label:after,
-form textarea[type=checkbox]:empty ~ label:after, form input, form textarea,
-form input[type=email],
-form textarea[type=email],
-form input[type=number],
-form textarea[type=number],
-form input[type=search],
-form textarea[type=search],
-form input[type=text],
-form textarea[type=text],
-form input[type=tel],
-form textarea[type=tel],
-form input[type=url],
-form textarea[type=url],
-form input[type=date],
-form textarea[type=date],
-form input[type=password],
-form textarea[type=password],
-form select, table tbody tr, nav .links a, .button,
+textarea[type=checkbox]:empty ~ label:after, input, textarea,
+input[type=email],
+textarea[type=email],
+input[type=number],
+textarea[type=number],
+input[type=search],
+textarea[type=search],
+input[type=text],
+textarea[type=text],
+input[type=tel],
+textarea[type=tel],
+input[type=url],
+textarea[type=url],
+input[type=date],
+textarea[type=date],
+input[type=password],
+textarea[type=password],
+select, table tbody tr, nav .links a, .button,
 button,
 input[type=submit],
-form textarea[type=submit],
+textarea[type=submit],
 input[type=reset],
-form textarea[type=reset],
+textarea[type=reset],
 input[type=button],
-form textarea[type=button] {
+textarea[type=button] {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -70,11 +76,11 @@ form textarea[type=button] {
 .button,
 button,
 input[type=submit],
-form textarea[type=submit],
+textarea[type=submit],
 input[type=reset],
-form textarea[type=reset],
+textarea[type=reset],
 input[type=button],
-form textarea[type=button] {
+textarea[type=button] {
   display: inline-block;
   height: 4rem;
   color: #555555;
@@ -82,6 +88,7 @@ form textarea[type=button] {
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 2.4rem;
+  vertical-align: top;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   text-decoration: none;
@@ -95,17 +102,17 @@ form textarea[type=button] {
 button:hover,
 button:focus,
 input[type=submit]:hover,
-form textarea[type=submit]:hover,
+textarea[type=submit]:hover,
 input[type=submit]:focus,
-form textarea[type=submit]:focus,
+textarea[type=submit]:focus,
 input[type=reset]:hover,
-form textarea[type=reset]:hover,
+textarea[type=reset]:hover,
 input[type=reset]:focus,
-form textarea[type=reset]:focus,
+textarea[type=reset]:focus,
 input[type=button]:hover,
-form textarea[type=button]:hover,
+textarea[type=button]:hover,
 input[type=button]:focus,
-form textarea[type=button]:focus {
+textarea[type=button]:focus {
   border-color: #a0a0a0;
   outline: 0;
 }
@@ -154,21 +161,27 @@ ol ol, ol ul {
 
 code {
   font-size: 1.35rem;
-  white-space: nowrap;
+  white-space: wrap;
   background: #f1f1f1;
   color: #222222;
   border: solid 1px #ececec;
   border-radius: 4px;
-}
-
-pre > code {
   display: block;
   white-space: pre;
 }
 
-.u-full-width, form fieldset > input,
-form fieldset > textarea,
-form fieldset > select {
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.u-full-width, fieldset > input,
+fieldset > textarea,
+fieldset > select {
   width: 100%;
 }
 
@@ -190,20 +203,16 @@ form fieldset > select {
   clear: both;
 }
 
-/* Larger than phablet (also point when grid becomes active) */
-/* Larger than tablet */
-/* Larger than desktop */
-/* Larger than Desktop HD */
-.margin-padding-0, .box header, .message p, form fieldset {
+.margin-padding-0, .box header, .message p, fieldset {
   margin: 0;
   padding: 0;
 }
 
-.margin-0, .gallery .thumb, body {
+.margin-0, .gallery .thumb, body, section {
   margin: 0;
 }
 
-.margin-1, code {
+.margin-1 {
   margin: 0.5rem;
 }
 
@@ -236,7 +245,7 @@ form fieldset > select {
   margin-bottom: 0;
 }
 
-.margin-vertical-1, input[type=checkbox]:empty ~ label, form textarea[type=checkbox]:empty ~ label {
+.margin-vertical-1, input[type=checkbox]:empty ~ label, textarea[type=checkbox]:empty ~ label {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -277,7 +286,7 @@ ol ol, ol ul {
   margin-right: 0;
 }
 
-.margin-horizontal-1, .flash-message p, form label > .label-body, nav .links a {
+.margin-horizontal-1, .flash-message p, label > .label-body, nav .links a {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
@@ -329,7 +338,7 @@ ol ol, ol ul {
   margin-top: 1.5rem;
 }
 
-.margin-top-4, footer, form fieldset, section {
+.margin-top-4, footer, fieldset {
   margin-top: 2rem;
 }
 
@@ -381,7 +390,7 @@ ol ol, ol ul {
   padding: 0;
 }
 
-.padding-1, .tag, code {
+.padding-1, .tag {
   padding: 0.5rem;
 }
 
@@ -414,36 +423,36 @@ ol ol, ol ul {
   padding-bottom: 0;
 }
 
-.padding-vertical-1, form input, form textarea,
-form input[type=email],
-form textarea[type=email],
-form input[type=number],
-form textarea[type=number],
-form input[type=search],
-form textarea[type=search],
-form input[type=text],
-form textarea[type=text],
-form input[type=tel],
-form textarea[type=tel],
-form input[type=url],
-form textarea[type=url],
-form input[type=date],
-form textarea[type=date],
-form input[type=password],
-form textarea[type=password],
-form select, .button,
+.padding-vertical-1, input, textarea,
+input[type=email],
+textarea[type=email],
+input[type=number],
+textarea[type=number],
+input[type=search],
+textarea[type=search],
+input[type=text],
+textarea[type=text],
+input[type=tel],
+textarea[type=tel],
+input[type=url],
+textarea[type=url],
+input[type=date],
+textarea[type=date],
+input[type=password],
+textarea[type=password],
+select, .button,
 button,
 input[type=submit],
-form textarea[type=submit],
+textarea[type=submit],
 input[type=reset],
-form textarea[type=reset],
+textarea[type=reset],
 input[type=button],
-form textarea[type=button] {
+textarea[type=button] {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
 
-.padding-vertical-2, nav .links a, pre > code {
+.padding-vertical-2, nav .links a, code {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -481,31 +490,31 @@ form textarea[type=button] {
   padding-right: 0.5rem;
 }
 
-.padding-horizontal-2, .page-buttons a, form input, form textarea,
-form input[type=email],
-form textarea[type=email],
-form input[type=number],
-form textarea[type=number],
-form input[type=search],
-form textarea[type=search],
-form input[type=text],
-form textarea[type=text],
-form input[type=tel],
-form textarea[type=tel],
-form input[type=url],
-form textarea[type=url],
-form input[type=date],
-form textarea[type=date],
-form input[type=password],
-form textarea[type=password],
-form select, table th:last-child,
+.padding-horizontal-2, .page-buttons a, input, textarea,
+input[type=email],
+textarea[type=email],
+input[type=number],
+textarea[type=number],
+input[type=search],
+textarea[type=search],
+input[type=text],
+textarea[type=text],
+input[type=tel],
+textarea[type=tel],
+input[type=url],
+textarea[type=url],
+input[type=date],
+textarea[type=date],
+input[type=password],
+textarea[type=password],
+select, table th:last-child,
 table td:last-child, table th:first-child,
 table td:first-child {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.padding-horizontal-3, nav .links a, .button-thin, pre > code {
+.padding-horizontal-3, nav .links a, .button-thin, code {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
@@ -518,11 +527,11 @@ table td:first-child {
 .padding-horizontal-5, .container, .button,
 button,
 input[type=submit],
-form textarea[type=submit],
+textarea[type=submit],
 input[type=reset],
-form textarea[type=reset],
+textarea[type=reset],
 input[type=button],
-form textarea[type=button] {
+textarea[type=button] {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
@@ -762,24 +771,33 @@ table td {
   text-align: left;
   border-bottom: solid 1px #ececec;
 }
-form input, form textarea,
-form input[type=email],
-form textarea[type=email],
-form input[type=number],
-form textarea[type=number],
-form input[type=search],
-form textarea[type=search],
-form input[type=text],
-form textarea[type=text],
-form input[type=tel],
-form textarea[type=tel],
-form input[type=url],
-form textarea[type=url],
-form input[type=date],
-form textarea[type=date],
-form input[type=password],
-form textarea[type=password],
-form select {
+form p {
+  color: #454545;
+  font-size: 1.2rem;
+  font-weight: normal;
+  line-height: 2rem;
+  text-align: justify;
+  display: block;
+}
+
+input, textarea,
+input[type=email],
+textarea[type=email],
+input[type=number],
+textarea[type=number],
+input[type=search],
+textarea[type=search],
+input[type=text],
+textarea[type=text],
+input[type=tel],
+textarea[type=tel],
+input[type=url],
+textarea[type=url],
+input[type=date],
+textarea[type=date],
+input[type=password],
+textarea[type=password],
+select {
   height: 4rem;
   background-color: #fcfcfc;
   border: solid 1px #ececec;
@@ -789,67 +807,83 @@ form select {
   font-weight: normal;
   resize: none;
 }
-form input::placeholder, form textarea::placeholder {
+
+input::placeholder, textarea::placeholder {
   color: lightgray;
 }
-form textarea {
+
+textarea {
   min-height: 12rem;
   resize: none;
 }
-form input:focus,
-form input[type=email]:focus,
-form input[type=number]:focus,
-form input[type=search]:focus,
-form input[type=text]:focus,
-form input[type=tel]:focus,
-form input[type=url]:focus,
-form input[type=date]:focus,
-form input[type=password]:focus,
-form textarea:focus,
-form select:focus {
+
+input:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+input[type=search]:focus,
+input[type=text]:focus,
+input[type=tel]:focus,
+input[type=url]:focus,
+input[type=date]:focus,
+input[type=password]:focus,
+textarea:focus,
+select:focus {
   border: solid 1px #4a90e2;
   outline: 0;
 }
-form label {
+
+label {
   font-weight: 600;
   display: block;
 }
-form fieldset {
+
+fieldset {
   border-width: 0;
 }
-form input[type=checkbox], form textarea[type=checkbox],
-form input[type=radio],
-form textarea[type=radio] {
+
+.group-fields {
+  font-size: 0;
+}
+.group-fields input, .group-fields textarea, .group-fields button, .group-fields .button-primary, .group-fields .button-thin, .group-fields select {
+  display: inline;
+  border-radius: 0;
+}
+.group-fields input:first-child, .group-fields textarea:first-child, .group-fields button:first-child, .group-fields .button-primary:first-child, .group-fields .button-thin:first-child, .group-fields select:first-child {
+  margin-right: -1px;
+  border-radius: 4px 0 0 4px;
+}
+.group-fields input:last-child, .group-fields textarea:last-child, .group-fields button:last-child, .group-fields .button-primary:last-child, .group-fields .button-thin:last-child, .group-fields select:last-child {
+  margin-left: -1px;
+  border-radius: 0 4px 4px 0;
+}
+
+input[type=checkbox], textarea[type=checkbox],
+input[type=radio],
+textarea[type=radio] {
   display: inline;
 }
-form label > .label-body {
+
+label > .label-body {
   display: inline-block;
   font-weight: normal;
 }
-form p {
-  color: #454545;
-  font-size: 1.2rem;
-  font-weight: normal;
-  line-height: 2rem;
-  text-align: justify;
-  display: block;
-}
-form .input-error label, form .input-error p {
+
+.input-error label, .input-error p {
   color: #d22d2b;
 }
-form .input-error input, form .input-error textarea, form .input-error select {
+.input-error input, .input-error textarea, .input-error select {
   background-color: #ffefef;
   border: solid 1px #fad1d1;
 }
-form .input-error input:focus, form .input-error textarea:focus, form .input-error select:focus {
+.input-error input:focus, .input-error textarea:focus, .input-error select:focus {
   border-color: #f07575;
 }
 
-input[type=checkbox]:empty, form textarea[type=checkbox]:empty {
+input[type=checkbox]:empty, textarea[type=checkbox]:empty {
   display: none;
 }
 
-input[type=checkbox]:empty ~ label, form textarea[type=checkbox]:empty ~ label {
+input[type=checkbox]:empty ~ label, textarea[type=checkbox]:empty ~ label {
   line-height: 2.5rem;
   font-weight: normal;
   position: relative;
@@ -861,9 +895,9 @@ input[type=checkbox]:empty ~ label, form textarea[type=checkbox]:empty ~ label {
   user-select: none;
 }
 
-input[type=checkbox]:empty ~ label:before, form textarea[type=checkbox]:empty ~ label:before,
+input[type=checkbox]:empty ~ label:before, textarea[type=checkbox]:empty ~ label:before,
 input[type=checkbox]:empty ~ label:after,
-form textarea[type=checkbox]:empty ~ label:after {
+textarea[type=checkbox]:empty ~ label:after {
   position: absolute;
   display: block;
   top: 0;
@@ -876,7 +910,7 @@ form textarea[type=checkbox]:empty ~ label:after {
   border-radius: 4px;
 }
 
-input[type=checkbox]:empty ~ label:after, form textarea[type=checkbox]:empty ~ label:after {
+input[type=checkbox]:empty ~ label:after, textarea[type=checkbox]:empty ~ label:after {
   width: 2.2rem;
   top: 0.3rem;
   bottom: 0.3rem;
@@ -886,12 +920,12 @@ input[type=checkbox]:empty ~ label:after, form textarea[type=checkbox]:empty ~ l
   border: solid 1px #ececec;
 }
 
-input[type=checkbox]:checked ~ label:before, form textarea[type=checkbox]:checked ~ label:before {
+input[type=checkbox]:checked ~ label:before, textarea[type=checkbox]:checked ~ label:before {
   background-color: #4a90e2;
   border: solid 1px #2275d7;
 }
 
-input[type=checkbox]:checked ~ label:after, form textarea[type=checkbox]:checked ~ label:after {
+input[type=checkbox]:checked ~ label:after, textarea[type=checkbox]:checked ~ label:after {
   margin-left: 2rem;
 }
 
@@ -1037,4 +1071,13 @@ footer {
     grid-template-columns: 1fr;
     grid-auto-flow: row;
   }
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }

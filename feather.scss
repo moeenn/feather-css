@@ -1,13 +1,14 @@
 @import "settings";
 
 // base settings --------------------------------------------------------------
-* { box-sizing: border-box; }
-html { font-size: 62.5%; }
+* 	{ box-sizing: border-box; }
+html { font-size: 62.5%; height: 100%; }
 body {
 	@extend .margin-0;
 	font-family: $primary-font;
 	font-size: $font-size-normal;
 	line-height: $line-height;
+	height: 100%;
 	color: $font-color-normal;
 	background: $background-page-base;
 }
@@ -21,12 +22,13 @@ body {
 // font colors
 .font-color-normal		{ color: $font-color-normal; }
 .font-color-primary		{ color: $primary-accent-color; }
+.font-color-invert 		{ color: invert($font-color-normal); }
 
 // transition
 .transition { -webkit-transition: 0.3s; transition: 0.3s; }
 
 // section
-section     { @extend .margin-top-4; }
+section     { @extend .margin-0; }
 
 .container {
 	@extend .padding-vertical-0;
@@ -55,6 +57,7 @@ input[type="button"] {
 	font-size: $font-size-small - 0.1rem;
 	font-weight: $font-weight-bold;
 	line-height: $line-height;
+	vertical-align: top;
 	letter-spacing: $letter-spacing;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -63,9 +66,7 @@ input[type="button"] {
 	border-radius: $border-radius;
 	border: solid $border-size-normal $border-color-dark;
 	cursor: pointer;
-	// box-sizing: border-box;
 	&:hover, &:focus {
-		// color: $button-foreground-hover;
 		border-color: darken( $border-color-normal, 30% );
 		outline: 0;
 	}
@@ -106,27 +107,30 @@ ol ol, ol ul   {
 
 // code -----------------------------------------------------------------------
 code {
-	@extend .padding-1;
-	@extend .margin-1;
+	@extend .padding-vertical-2;
+	@extend .padding-horizontal-3;
 	font-size: $font-size-normal * 0.9;
-	white-space: nowrap;
+	white-space: wrap;
 	background: $code-background;
 	color: $code-foreground;
 	border: solid $border-size-normal $border-color-normal;
 	border-radius: $border-radius;
-}
-
-pre > code {
-	@extend .padding-vertical-2;
-	@extend .padding-horizontal-3;
 	display: block;
 	white-space: pre;
+}
+
+pre {
+	overflow-x: auto;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
 }
 
 // utilities ------------------------------------------------------------------
 .u-full-width {
 	width: 100%;
-	// box-sizing: border-box;
 }
 
 // align content inside the parent element
@@ -140,19 +144,6 @@ pre > code {
 	display: table;
 	clear: both;
 }
-
-// break-points ---------------------------------------------------------------
-/* Larger than phablet (also point when grid becomes active) */
-@media only screen and (min-width: 600px) {}
-
-/* Larger than tablet */
-@media only screen and (min-width: 750px) {}
-
-/* Larger than desktop */
-@media only screen and (min-width: 1000px) {}
-
-/* Larger than Desktop HD */
-@media only screen and (min-width: 1200px) {}
 
 // margin and padding ---------------------------------------------------------
 .margin-padding-0 		{ margin: 0; padding: 0; }
@@ -384,99 +375,6 @@ table {
 
 // forms ----------------------------------------------------------------------
 form {
-	input,
-	input[type="email"],
-	input[type="number"],
-	input[type="search"],
-	input[type="text"],
-	input[type="tel"],
-	input[type="url"],
-	input[type="date"],
-	input[type="password"],
-	select {
-		@extend .padding-vertical-1;
-		@extend .padding-horizontal-2;
-		@extend .transition;
-		height: $button-height;
-		background-color: $input-background;
-		border: solid $border-size-normal $input-border-normal;
-		border-radius: $border-radius;
-		box-shadow: none;
-		// box-sizing: border-box;
-		font-size: $font-size-normal;
-		font-weight: $font-weight-normal;
-		resize: none;
-	}
-
-	// input,
-	// input[type="email"],
-	// input[type="number"],
-	// input[type="search"],
-	// input[type="text"],
-	// input[type="tel"],
-	// input[type="date"],
-	// input[type="url"],
-	// input[type="password"] {
-	// 	-webkit-appearance: none;
-	// 	-moz-appearance: none;
-	// 	appearance: none;
-	// 	resize: none;
-	// }
-
-	input::placeholder {
-		color: darken($input-foreground-placeholder,10%);
-	}
-
-	textarea {
-		@extend input;
-		@extend .padding-vertical-1;
-		min-height: $font-size-normal * 8;
-		resize: none;
-	}
-
-	input:focus,
-	input[type="email"]:focus,
-	input[type="number"]:focus,
-	input[type="search"]:focus,
-	input[type="text"]:focus,
-	input[type="tel"]:focus,
-	input[type="url"]:focus,
-	input[type="date"]:focus,
-	input[type="password"]:focus,
-	textarea:focus,
-	select:focus {
-		border: solid $border-size-normal $input-border-focus;
-		outline: 0;
-	}
-
-	label {
-		font-weight: $font-weight-bold;
-		display: block;
-	}
-
-	fieldset {
-		@extend .margin-padding-0;
-		@extend .margin-top-4;
-		border-width: 0;
-	}
-
-	fieldset > input,
-	fieldset > textarea,
-	fieldset > select {
-		@extend .u-full-width;
-	}
-
-	input[type="checkbox"],
-	input[type="radio"] {
-		display: inline;
-	}
-
-	label > .label-body {
-		@extend .margin-horizontal-1;
-		display: inline-block;
-		font-weight: $font-weight-normal;
-	}
-
 	// field descriptions
 	p {
 		@extend .margin-vertical-0;
@@ -487,21 +385,129 @@ form {
 		text-align: justify;
 		display: block;
 	}
+}
 
-	.input-error {
-		label, p {
-			color: $negative-foreground;
+input,
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="date"],
+input[type="password"],
+select {
+	@extend .padding-vertical-1;
+	@extend .padding-horizontal-2;
+	@extend .transition;
+	height: $button-height;
+	background-color: $input-background;
+	border: solid $border-size-normal $input-border-normal;
+	border-radius: $border-radius;
+	box-shadow: none;
+	// box-sizing: border-box;
+	font-size: $font-size-normal;
+	font-weight: $font-weight-normal;
+	resize: none;
+}
+
+// input,
+// input[type="email"],
+// input[type="number"],
+// input[type="search"],
+// input[type="text"],
+// input[type="tel"],
+// input[type="date"],
+// input[type="url"],
+// input[type="password"] {
+// 	-webkit-appearance: none;
+// 	-moz-appearance: none;
+// 	appearance: none;
+// 	resize: none;
+// }
+
+input::placeholder {
+	color: darken($input-foreground-placeholder,10%);
+}
+
+textarea {
+	@extend input;
+	@extend .padding-vertical-1;
+	min-height: $font-size-normal * 8;
+	resize: none;
+}
+
+input:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+	border: solid $border-size-normal $input-border-focus;
+	outline: 0;
+}
+
+label {
+	font-weight: $font-weight-bold;
+	display: block;
+}
+
+fieldset {
+	@extend .margin-padding-0;
+	@extend .margin-top-4;
+	border-width: 0;
+}
+
+.group-fields {
+	font-size: 0;
+	input, button, .button-primary, .button-thin, select {
+		display: inline;
+		border-radius: 0;
+		&:first-child {
+			margin-right: -$border-size-normal;
+			border-radius: $border-radius 0 0 $border-radius;
 		}
-		input, textarea, select {
-			background-color: $negative-background;
-			border: solid $border-size-normal $negative-border-color;
-		}
-		input:focus, textarea:focus, select:focus {
-			border-color: darken($negative-border-color, 20%);
+		&:last-child {
+			margin-left: -$border-size-normal;
+			border-radius: 0 $border-radius $border-radius 0;
 		}
 	}
 }
 
+fieldset > input,
+fieldset > textarea,
+fieldset > select {
+	@extend .u-full-width;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline;
+}
+
+label > .label-body {
+	@extend .margin-horizontal-1;
+	display: inline-block;
+	font-weight: $font-weight-normal;
+}
+
+.input-error {
+	label, p {
+		color: $negative-foreground;
+	}
+	input, textarea, select {
+		background-color: $negative-background;
+		border: solid $border-size-normal $negative-border-color;
+	}
+	input:focus, textarea:focus, select:focus {
+		border-color: darken($negative-border-color, 20%);
+	}
+}
 
 // switches -------------------------------------------------------------------
 input[type="checkbox"]:empty { display: none; }
@@ -681,7 +687,7 @@ footer {
 	border-color: $info-border-color;
 }
 
-// grid system ----------------------------------------------------------------
+// grid & flex system ----------------------------------------------------------------
 .grid 			{ display: grid; grid-gap: $spacing-5; grid-auto-flow: column;  }
 .two-column 	{ grid-template-columns: repeat(2, 1fr); }
 .three-column 	{ grid-template-columns: repeat(3, 1fr); }
@@ -694,5 +700,21 @@ footer {
 	.two-column, .three-column, .four-column,
 	.five-column, .six-column { grid-template-columns: 1fr; grid-auto-flow: row; }
 }
+
+.flex-row 		{ display: flex; flex-direction: row; }
+.flex-column 	{ display: flex; flex-direction: column; }
+
+// break-points ---------------------------------------------------------------
+// Larger than phablet (also point when grid becomes active)
+@media only screen and (min-width: 600px) {}
+
+// Larger than tablet
+@media only screen and (min-width: 750px) {}
+
+// Larger than desktop
+@media only screen and (min-width: 1000px) {}
+
+// Larger than Desktop HD
+@media only screen and (min-width: 1200px) {}
 
 // ----------------------------------------------------------------------------
