@@ -29,8 +29,8 @@ body {
   color: #4a90e2;
 }
 
-.font-color-invert {
-  color: #dddddd;
+.font-color-inverted {
+  color: white;
 }
 
 .transition, .page-buttons a, input[type=checkbox]:empty ~ label:before, textarea[type=checkbox]:empty ~ label:before,
@@ -60,8 +60,8 @@ input[type=reset],
 textarea[type=reset],
 input[type=button],
 textarea[type=button] {
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .container {
@@ -841,20 +841,42 @@ fieldset {
   border-width: 0;
 }
 
-.group-fields {
+.group-horizontal {
   font-size: 0;
 }
-.group-fields input, .group-fields textarea, .group-fields button, .group-fields .button-primary, .group-fields .button-thin, .group-fields select {
+.group-horizontal > input, .group-horizontal > textarea {
+  border-radius: 0;
+}
+.group-horizontal > * {
   display: inline;
   border-radius: 0;
 }
-.group-fields input:first-child, .group-fields textarea:first-child, .group-fields button:first-child, .group-fields .button-primary:first-child, .group-fields .button-thin:first-child, .group-fields select:first-child {
+.group-horizontal > *:first-child {
   margin-right: -1px;
   border-radius: 4px 0 0 4px;
 }
-.group-fields input:last-child, .group-fields textarea:last-child, .group-fields button:last-child, .group-fields .button-primary:last-child, .group-fields .button-thin:last-child, .group-fields select:last-child {
+.group-horizontal > *:last-child {
   margin-left: -1px;
   border-radius: 0 4px 4px 0;
+}
+
+.group-vertical {
+  font-size: 0;
+}
+.group-vertical > input, .group-vertical > textarea {
+  border-radius: 0;
+}
+.group-vertical > * {
+  display: inline;
+  border-radius: 0;
+}
+.group-vertical > *:first-child {
+  margin-bottom: -1px;
+  border-radius: 4px 4px 0 0;
+}
+.group-vertical > *:last-child {
+  margin-top: -1px;
+  border-radius: 0 0 4px 4px;
 }
 
 input[type=checkbox], textarea[type=checkbox],
@@ -1080,4 +1102,28 @@ footer {
 .flex-column {
   display: flex;
   flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
+.flex-4 {
+  flex: 4;
+}
+
+.flex-5 {
+  flex: 5;
+}
+
+.flex-6 {
+  flex: 6;
 }

@@ -22,10 +22,10 @@ body {
 // font colors
 .font-color-normal		{ color: $font-color-normal; }
 .font-color-primary		{ color: $primary-accent-color; }
-.font-color-invert 		{ color: invert($font-color-normal); }
+.font-color-inverted 	{ color: lighten(invert($font-color-normal), 20%); }
 
 // transition
-.transition { -webkit-transition: 0.3s; transition: 0.3s; }
+.transition { -webkit-transition: all 0.3s ease; transition: all 0.3s ease; }
 
 // section
 section     { @extend .margin-0; }
@@ -463,9 +463,10 @@ fieldset {
 	border-width: 0;
 }
 
-.group-fields {
+.group-horizontal {
 	font-size: 0;
-	input, button, .button-primary, .button-thin, select {
+	& > input { border-radius: 0; }
+	& > * {
 		display: inline;
 		border-radius: 0;
 		&:first-child {
@@ -475,6 +476,23 @@ fieldset {
 		&:last-child {
 			margin-left: -$border-size-normal;
 			border-radius: 0 $border-radius $border-radius 0;
+		}
+	}
+}
+
+.group-vertical {
+	font-size: 0;
+	& > input { border-radius: 0; }
+	& > * {
+		display: inline;
+		border-radius: 0;
+		&:first-child {
+			margin-bottom: -$border-size-normal;
+			border-radius: $border-radius $border-radius 0 0;
+		}
+		&:last-child {
+			margin-top: -$border-size-normal;
+			border-radius: 0 0 $border-radius $border-radius;
 		}
 	}
 }
@@ -703,6 +721,12 @@ footer {
 
 .flex-row 		{ display: flex; flex-direction: row; }
 .flex-column 	{ display: flex; flex-direction: column; }
+.flex-1 		{ flex: 1; }
+.flex-2 		{ flex: 2; }
+.flex-3 		{ flex: 3; }
+.flex-4 		{ flex: 4; }
+.flex-5 		{ flex: 5; }
+.flex-6 		{ flex: 6; }
 
 // break-points ---------------------------------------------------------------
 // Larger than phablet (also point when grid becomes active)
