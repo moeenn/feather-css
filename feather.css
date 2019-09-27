@@ -4,14 +4,14 @@
 
 html {
   font-size: 62.5%;
-  height: 100%;
+  height: 100vh;
 }
 
 body {
   font-family: "IBM Plex Sans";
   font-size: 1.5rem;
   line-height: 2.4rem;
-  height: 100%;
+  height: 100vh;
   color: #222222;
   background: white;
 }
@@ -95,7 +95,7 @@ textarea[type=button] {
   white-space: nowrap;
   background-color: transparent;
   border-radius: 4px;
-  border: solid 1px #bbbbbb;
+  border: solid 1px rgba(0, 0, 0, 0.24);
   cursor: pointer;
 }
 .button:hover, .button:focus,
@@ -113,7 +113,7 @@ input[type=button]:hover,
 textarea[type=button]:hover,
 input[type=button]:focus,
 textarea[type=button]:focus {
-  border-color: #a0a0a0;
+  border-color: rgba(0, 0, 0, 0.05);
   outline: 0;
 }
 
@@ -161,27 +161,20 @@ ol ol, ol ul {
 
 code {
   font-size: 1.35rem;
-  white-space: wrap;
-  background: #f1f1f1;
+  background: rgba(0, 0, 0, 0.05);
   color: #222222;
-  border: solid 1px #ececec;
+  border: solid 1px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   display: block;
-  white-space: pre;
 }
 
 pre {
   overflow-x: auto;
   white-space: pre-wrap;
-  white-space: -moz-pre-wrap;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
   word-wrap: break-word;
 }
 
-.u-full-width, fieldset > input,
-fieldset > textarea,
-fieldset > select {
+.full-width, .group-vertical > input, .group-vertical > textarea, .group-horizontal > input, .group-horizontal > textarea, fieldset > * {
   width: 100%;
 }
 
@@ -208,7 +201,7 @@ fieldset > select {
   padding: 0;
 }
 
-.margin-0, .gallery .thumb, body, section {
+.margin-0, .gallery .thumb, body, section, code, pre {
   margin: 0;
 }
 
@@ -656,7 +649,7 @@ nav .links .active, nav .links a:hover {
   display: inline-block;
   width: 22rem;
   height: 15rem;
-  border: solid 1px #ececec;
+  border: solid 1px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   overflow: hidden;
   margin: 1rem;
@@ -738,15 +731,15 @@ p {
 
 hr {
   border-width: 0;
-  border-top: solid 1px #e6e6e6;
+  border-top: solid 1px rgba(0, 0, 0, 0.05);
 }
 
 ::-moz-selection {
-  background: #cce1fe;
+  background: rgba(0, 107, 255, 0.15);
 }
 
 ::selection {
-  background: #cce1fe;
+  background: rgba(0, 107, 255, 0.15);
 }
 
 a {
@@ -769,7 +762,7 @@ table th,
 table td {
   padding: 12px 15px;
   text-align: left;
-  border-bottom: solid 1px #ececec;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.05);
 }
 form p {
   color: #454545;
@@ -799,25 +792,14 @@ input[type=password],
 textarea[type=password],
 select {
   height: 4rem;
-  background-color: #fcfcfc;
-  border: solid 1px #ececec;
+  background-color: rgba(0, 0, 0, 0.01);
+  border: solid 1px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   box-shadow: none;
   font-size: 1.5rem;
   font-weight: normal;
-  resize: none;
 }
-
-input::placeholder, textarea::placeholder {
-  color: lightgray;
-}
-
-textarea {
-  min-height: 12rem;
-  resize: none;
-}
-
-input:focus,
+input:focus, textarea:focus,
 input[type=email]:focus,
 input[type=number]:focus,
 input[type=search]:focus,
@@ -826,10 +808,18 @@ input[type=tel]:focus,
 input[type=url]:focus,
 input[type=date]:focus,
 input[type=password]:focus,
-textarea:focus,
 select:focus {
   border: solid 1px #4a90e2;
   outline: 0;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(0, 0, 0, 0.24);
+}
+
+textarea {
+  min-height: 12rem;
+  resize: none;
 }
 
 label {
@@ -840,7 +830,6 @@ label {
 fieldset {
   border-width: 0;
 }
-
 .group-horizontal {
   font-size: 0;
 }
@@ -849,6 +838,8 @@ fieldset {
 }
 .group-horizontal > * {
   display: inline;
+  width: 0;
+  min-width: 0;
   border-radius: 0;
 }
 .group-horizontal > *:first-child {
@@ -868,6 +859,8 @@ fieldset {
 }
 .group-vertical > * {
   display: inline;
+  width: 0;
+  min-width: 0;
   border-radius: 0;
 }
 .group-vertical > *:first-child {
@@ -894,11 +887,11 @@ label > .label-body {
   color: #d22d2b;
 }
 .input-error input, .input-error textarea, .input-error select {
-  background-color: #ffefef;
-  border: solid 1px #fad1d1;
+  background-color: rgba(255, 0, 0, 0.047);
+  border: solid 1px rgba(255, 0, 0, 0.11);
 }
 .input-error input:focus, .input-error textarea:focus, .input-error select:focus {
-  border-color: #f07575;
+  border-color: rgba(153, 0, 0, 0.11);
 }
 
 input[type=checkbox]:empty, textarea[type=checkbox]:empty {
@@ -928,7 +921,7 @@ textarea[type=checkbox]:empty ~ label:after {
   content: "";
   width: 4.5rem;
   background-color: rgba(0, 0, 0, 0.07);
-  border: solid 1px #ececec;
+  border: solid 1px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
 }
 
@@ -939,7 +932,7 @@ input[type=checkbox]:empty ~ label:after, textarea[type=checkbox]:empty ~ label:
   margin-left: 0.3rem;
   background-color: white;
   border-radius: 4px;
-  border: solid 1px #ececec;
+  border: solid 1px rgba(0, 0, 0, 0.05);
 }
 
 input[type=checkbox]:checked ~ label:before, textarea[type=checkbox]:checked ~ label:before {
@@ -953,7 +946,7 @@ input[type=checkbox]:checked ~ label:after, textarea[type=checkbox]:checked ~ la
 
 .page-buttons {
   display: inline-table;
-  border: solid 1px #ececec;
+  border: solid 1px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
   overflow: hidden;
   font-size: 0px;
@@ -979,7 +972,7 @@ footer {
 
 .message {
   border-radius: 4px;
-  border: solid 1px #e6e6e6;
+  border: solid 1px rgba(0, 0, 0, 0.05);
   background: rgba(0, 0, 0, 0.02);
   color: #454545;
 }
@@ -990,7 +983,7 @@ footer {
 .flash-message {
   display: table;
   background: rgba(0, 0, 0, 0.02);
-  border-bottom: solid 1px #e6e6e6;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.05);
   width: 100%;
   radius: 0;
   z-index: 10;
@@ -1000,17 +993,11 @@ footer {
 }
 .box {
   border-radius: 4px;
-  border: solid 1px #ececec;
+  border: solid 1px rgba(0, 0, 0, 0.05);
 }
-.sticky-top {
+.sticky {
   position: sticky;
   top: 0;
-  z-index: 1;
-}
-
-.sticky-bottom {
-  position: sticky;
-  bottom: 0;
   z-index: 1;
 }
 
@@ -1033,32 +1020,32 @@ footer {
   color: #454545;
   padding-top: 0.6rem;
   border-radius: 4px;
-  border: solid 1px #e6e6e6;
+  border: solid 1px rgba(0, 0, 0, 0.05);
   background: rgba(0, 0, 0, 0.02);
 }
 
 .positive {
-  background: #fcfff5;
-  color: #39a522;
-  border-color: #d3fad1;
+  background: rgba(178, 255, 0, 0.045);
+  color: #369c20;
+  border-color: rgba(178, 255, 0, 0.5);
 }
 
 .negative {
-  background: #ffefef;
+  background: rgba(255, 0, 0, 0.047);
   color: #d22d2b;
-  border-color: #fad1d1;
+  border-color: rgba(255, 0, 0, 0.11);
 }
 
 .alert {
-  background: #fffaf3;
-  color: #a56421;
-  border-color: #faded1;
+  background: rgba(255, 148, 0, 0.08);
+  color: #9a540b;
+  border-color: rgba(255, 80, 0, 0.15);
 }
 
 .info {
-  background: #f8ffff;
+  background: rgba(0, 255, 255, 0.025);
   color: #2681b2;
-  border-color: #d1e8fa;
+  border-color: rgba(0, 143, 255, 0.15);
 }
 
 .grid {

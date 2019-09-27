@@ -2,13 +2,13 @@
 
 // base settings --------------------------------------------------------------
 * 	{ box-sizing: border-box; }
-html { font-size: 62.5%; height: 100%; }
+html { font-size: 62.5%; height: 100vh; }
 body {
 	@extend .margin-0;
 	font-family: $primary-font;
 	font-size: $font-size-normal;
 	line-height: $line-height;
-	height: 100%;
+	height: 100vh;
 	color: $font-color-normal;
 	background: $background-page-base;
 }
@@ -107,29 +107,26 @@ ol ol, ol ul   {
 
 // code -----------------------------------------------------------------------
 code {
+	@extend .margin-0;
 	@extend .padding-vertical-2;
 	@extend .padding-horizontal-3;
 	font-size: $font-size-normal * 0.9;
-	white-space: wrap;
 	background: $code-background;
 	color: $code-foreground;
 	border: solid $border-size-normal $border-color-normal;
 	border-radius: $border-radius;
 	display: block;
-	white-space: pre;
 }
 
 pre {
+	@extend .margin-0;
 	overflow-x: auto;
 	white-space: pre-wrap;
-	white-space: -moz-pre-wrap;
-	white-space: -pre-wrap;
-	white-space: -o-pre-wrap;
 	word-wrap: break-word;
 }
 
 // utilities ------------------------------------------------------------------
-.u-full-width {
+.full-width {
 	width: 100%;
 }
 
@@ -335,7 +332,7 @@ hr {
 	@extend .margin-vertical-2;
 	@extend .margin-horizontal-0;
 	border-width: 0;
-	border-top: solid $border-size-normal $border-color-light;
+	border-top: solid $border-size-normal $border-color-normal;
 }
 
 // text selection background
@@ -405,14 +402,16 @@ select {
 	border: solid $border-size-normal $input-border-normal;
 	border-radius: $border-radius;
 	box-shadow: none;
-	// box-sizing: border-box;
 	font-size: $font-size-normal;
 	font-weight: $font-weight-normal;
-	resize: none;
+	&:focus {
+		border: solid $border-size-normal $input-border-focus;
+		outline: 0;
+	}
 }
 
 input::placeholder {
-	color: darken($input-foreground-placeholder,10%);
+	color: $input-foreground-placeholder;
 }
 
 textarea {
@@ -420,21 +419,6 @@ textarea {
 	@extend .padding-vertical-1;
 	min-height: $font-size-normal * 8;
 	resize: none;
-}
-
-input:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="text"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
-input[type="date"]:focus,
-input[type="password"]:focus,
-textarea:focus,
-select:focus {
-	border: solid $border-size-normal $input-border-focus;
-	outline: 0;
 }
 
 label {
@@ -446,13 +430,18 @@ fieldset {
 	@extend .margin-padding-0;
 	@extend .margin-top-4;
 	border-width: 0;
+	& > * {
+		@extend .full-width;
+	}
 }
 
 .group-horizontal {
 	font-size: 0;
-	& > input { border-radius: 0; }
+	& > input { @extend .full-width; border-radius: 0; }
 	& > * {
 		display: inline;
+		width: 0;
+		min-width: 0;
 		border-radius: 0;
 		&:first-child {
 			margin-right: -$border-size-normal;
@@ -467,9 +456,11 @@ fieldset {
 
 .group-vertical {
 	font-size: 0;
-	& > input { border-radius: 0; }
+	& > input { @extend .full-width; border-radius: 0; }
 	& > * {
 		display: inline;
+		width: 0;
+		min-width: 0;
 		border-radius: 0;
 		&:first-child {
 			margin-bottom: -$border-size-normal;
@@ -480,12 +471,6 @@ fieldset {
 			border-radius: 0 0 $border-radius $border-radius;
 		}
 	}
-}
-
-fieldset > input,
-fieldset > textarea,
-fieldset > select {
-	@extend .u-full-width;
 }
 
 input[type="checkbox"],
@@ -600,7 +585,7 @@ footer {
 	@extend .padding-4;
 	@extend .margin-vertical-2;
 	border-radius: $border-radius;
-	border: solid $border-size-normal $border-color-light;
+	border: solid $border-size-normal $border-color-normal;
 	background: $background-hover;
 	color: $font-color-dull;
 	header {
@@ -616,7 +601,7 @@ footer {
 .flash-message {
 	display: table;
 	background: $background-hover;
-	border-bottom: solid $border-size-normal $border-color-light;
+	border-bottom: solid $border-size-normal $border-color-normal;
 	width: 100%;
 	radius: 0;
 	z-index: 10;
@@ -633,15 +618,9 @@ footer {
 }
 
 // strick element to top of the screen ----------------------------------------
-.sticky-top {
+.sticky {
 	position: sticky;
 	top: 0;
-	z-index: 1;
-}
-
-.sticky-bottom {
-	position: sticky;
-	bottom: 0;
 	z-index: 1;
 }
 
@@ -661,7 +640,7 @@ footer {
 	color: $font-color-dull;
 	padding-top: $line-height / 4;
 	border-radius: $border-radius;
-	border: solid $border-size-normal $border-color-light;
+	border: solid $border-size-normal $border-color-normal;
 	background: $background-hover;
 }
 
