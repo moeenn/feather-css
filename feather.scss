@@ -604,8 +604,8 @@ footer {
 	border-bottom: solid $border-size-normal $border-color-normal;
 	width: 100%;
 	radius: 0;
-	z-index: 10;
-	.container 	{ background: inherit; }
+	// z-index: 10;
+	.container 	{ background: transparent; }
 	p 			{ @extend .margin-vertical-2; @extend .margin-horizontal-1; }
 }
 
