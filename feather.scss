@@ -271,7 +271,7 @@ nav {
 	}
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: $resolution-phone) {
 	nav .logo 		{ display: block; margin-left: $spacing-3; }
 	nav .links a 	{ display: block; }
 }
@@ -315,7 +315,7 @@ h5 { font-size: 1.8rem; line-height: 1.5;  letter-spacing: -0.05rem; }
 h6 { font-size: 1.6rem; line-height: 1.6;  letter-spacing: -0.02rem; }
 
 // adjust for mobile
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: $resolution-phone) {
   h1 { font-size: 5.0rem; }
   h2 { font-size: 4.2rem; }
   h3 { font-size: 3.6rem; }
@@ -410,21 +410,6 @@ select {
 	font-weight: $font-weight-normal;
 	resize: none;
 }
-
-// input,
-// input[type="email"],
-// input[type="number"],
-// input[type="search"],
-// input[type="text"],
-// input[type="tel"],
-// input[type="date"],
-// input[type="url"],
-// input[type="password"] {
-// 	-webkit-appearance: none;
-// 	-moz-appearance: none;
-// 	appearance: none;
-// 	resize: none;
-// }
 
 input::placeholder {
 	color: darken($input-foreground-placeholder,10%);
@@ -660,7 +645,7 @@ footer {
 	z-index: 1;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: $resolution-phone) {
 	.sticky { position: static; }
 }
 
@@ -714,7 +699,7 @@ footer {
 .six-column 	{ grid-template-columns: repeat(6, 1fr); }
 
 // switch to single column at below 600px
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: $resolution-phone) {
 	.two-column, .three-column, .four-column,
 	.five-column, .six-column { grid-template-columns: 1fr; grid-auto-flow: row; }
 }
@@ -728,17 +713,10 @@ footer {
 .flex-5 		{ flex: 5; }
 .flex-6 		{ flex: 6; }
 
-// break-points ---------------------------------------------------------------
-// Larger than phablet (also point when grid becomes active)
-@media only screen and (min-width: 600px) {}
-
-// Larger than tablet
-@media only screen and (min-width: 750px) {}
-
-// Larger than desktop
-@media only screen and (min-width: 1000px) {}
-
-// Larger than Desktop HD
-@media only screen and (min-width: 1200px) {}
+// break-point templates ( copy from here when needed ) -----------------------
+@media only screen and (min-width: $resolution-phone) {}
+@media only screen and (min-width: $resolution-tablet) {}
+@media only screen and (min-width: $resolution-laptop) {}
+@media only screen and (min-width: $resolution-desktop) {}
 
 // ----------------------------------------------------------------------------

@@ -105,3 +105,9 @@ $gallery-item-gap: 1rem;
 // footer ---------------------------------------------------------------------
 $footer-background: rgba(25,33,36,1);
 $footer-foreground: lighten( $footer-background, 40% );
+
+// break-points ---------------------------------------------------------------
+$resolution-phone: 600px;
+$resolution-tablet: 750px;
+$resolution-laptop: 1000px;
+$resolution-desktop: 1200px;
