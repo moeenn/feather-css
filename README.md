@@ -1,7 +1,7 @@
 # Feather CSS
-Feather CSS is a natural successor to Skeleton-CSS, which is great but was missing quite a few things. On top it that Skeleton-CSS hasn't been in active development since 2015. 
+Feather CSS is a natural successor to Skeleton-CSS, which is great but was missing quite a few things. On top it that Skeleton-CSS hasn't been in active development since 2015.
 
-Feather-CSS strinctly follows the philosophy set by Skeleton-CSS. It is dead simple to implement and the developers using it can get away with using simple HTML markup for most part. There is no need for crazy div & element nesting required by e.g. Bootstrap. 
+Feather-CSS strinctly follows the philosophy set by Skeleton-CSS. It is dead simple to implement and the developers using it can get away with using simple HTML markup for most part. There is no need for crazy div & element nesting required by e.g. Bootstrap.
 
 When the markup is clean, greater focus can be directed towards implementing the required business logic. There should be no feeling of fighting the underlying technology to achieve our ends.
 
@@ -44,7 +44,7 @@ Margins and Paddings can be added to elements conveniently using these special c
 ![Field Descriptions](screenshots/field_description.png)
 ```css
 <form>
-  <fieldset> 
+  <fieldset>
     <label for="name">Name</label>
     <input class="u-full-width" type="text" name="name">
     <p>Enter your full name e.g. John Smith</p>
@@ -197,15 +197,14 @@ Margins and Paddings can be added to elements conveniently using these special c
 
 # TODO
 - [x] Inline Tags
-- [ ] Inline Badges / counters
 - [x] Input Field Descriptions
-- [ ] Blockquotes
+- [x] Blockquotes
 - [x] Input Date
 - [x] Checkboxes
-- [ ] Content Alignment
+- [x] Content Alignment
 - [x] Hover Transitions
 - [x] Port to SASS
 - [x] New Grid System
 - [ ] Dark Theme
-- [ ] Code Clean Up
+- [ ] Reduce Code (Keep Under 1000 SLOC)
 - [ ] Testing, testing and testing!

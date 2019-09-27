@@ -644,6 +644,18 @@ footer {
 	background: $background-hover;
 }
 
+
+// blockquotes ----------------------------------------------------------------
+blockquote {
+	@extend .margin-0;
+	@extend .padding-5;
+	display: block;
+	border-left: solid $border-size-large $primary-accent-color;
+	background: $background-hover;
+	font-weight: $font-weight-bold;
+	& > p { margin: 0; }
+}
+
 // event colors ---------------------------------------------------------------
 .positive {
 	background: $positive-background;

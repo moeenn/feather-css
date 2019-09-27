@@ -201,7 +201,7 @@ pre {
   padding: 0;
 }
 
-.margin-0, .gallery .thumb, body, section, code, pre {
+.margin-0, blockquote, .gallery .thumb, body, section, code, pre {
   margin: 0;
 }
 
@@ -399,7 +399,7 @@ ol ol, ol ul {
   padding: 2rem;
 }
 
-.padding-5 {
+.padding-5, blockquote {
   padding: 2.5rem;
 }
 
@@ -1021,6 +1021,16 @@ footer {
   border-radius: 4px;
   border: solid 1px rgba(0, 0, 0, 0.05);
   background: rgba(0, 0, 0, 0.02);
+}
+
+blockquote {
+  display: block;
+  border-left: solid 2px #4a90e2;
+  background: rgba(0, 0, 0, 0.02);
+  font-weight: 600;
+}
+blockquote > p {
+  margin: 0;
 }
 
 .positive {
