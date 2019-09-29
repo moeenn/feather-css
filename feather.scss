@@ -35,7 +35,7 @@ section     { @extend .margin-0; }
 	@extend .padding-horizontal-5;
 	position: relative;
 	width: 100%;
-	max-width: 1160px;
+	max-width: $container-width;
 	margin: 0 auto;
 	overflow: hidden;
 	border-radius: $border-radius;
@@ -289,15 +289,14 @@ nav {
 		border-radius: $border-radius;
 		overflow: hidden;
 		margin: $gallery-item-gap;
-		// box-sizing: border-box;
 	}
-	.thumb {
-		@extend .margin-0;
-		@extend .padding-0;
-		object-fit: cover;
-		width: 100%;
-		height: 100%;
-	}
+}
+
+img,video {
+	@extend .margin-padding-0;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
 }
 
 // headings -------------------------------------------------------------------
@@ -317,12 +316,12 @@ h6 { font-size: 1.4rem; line-height: 1.8;  letter-spacing: -0.02rem; }
 
 // adjust for mobile
 @media only screen and (min-width: $resolution-phone) {
-  h1 { font-size: 5.0rem; }
-  h2 { font-size: 4.2rem; }
-  h3 { font-size: 3.6rem; }
-  h4 { font-size: 3.0rem; }
-  h5 { font-size: 2.4rem; }
-  h6 { font-size: 1.8rem; }
+	h1 { font-size: 5.0rem; }
+	h2 { font-size: 4.2rem; }
+	h3 { font-size: 3.6rem; }
+	h4 { font-size: 3.0rem; }
+	h5 { font-size: 2.4rem; }
+	h6 { font-size: 1.7rem; }
 }
 
 // misc tweaks ----------------------------------------------------------------
@@ -339,7 +338,6 @@ hr {
 ::-moz-selection {
 	background: $background-selection;
 }
-
 ::selection {
 	background: $background-selection;
 }
@@ -391,8 +389,7 @@ input[type="text"],
 input[type="tel"],
 input[type="url"],
 input[type="date"],
-input[type="password"],
-select {
+input[type="password"] {
 	@extend .padding-vertical-1;
 	@extend .padding-horizontal-2;
 	@extend .transition;
@@ -407,6 +404,17 @@ select {
 		border: solid $border-size-normal $input-border-focus;
 		outline: 0;
 	}
+}
+
+select {
+	@extend input;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+	background-repeat: no-repeat, repeat;
+	background-position: right 1rem top 50%, 0 0;
+	background-size: 0.7rem auto, 100%;
 }
 
 input::placeholder {
@@ -431,42 +439,6 @@ fieldset {
 	border-width: 0;
 	& > * {
 		@extend .full-width;
-	}
-}
-
-.group-horizontal {
-	font-size: 0;
-	& > input { @extend .full-width; border-radius: 0; }
-	& > * {
-		display: inline;
-		width: 0;
-		min-width: 0;
-		border-radius: 0;
-		&:first-child {
-			margin-right: -$border-size-normal;
-			border-radius: $border-radius 0 0 $border-radius;
-		}
-		&:last-child {
-			margin-left: -$border-size-normal;
-			border-radius: 0 $border-radius $border-radius 0;
-		}
-	}
-}
-
-.group-vertical {
-	font-size: 0;
-	& > input,
-	& > div {
-		@extend .full-width;
-		border-radius: 0;
-		margin-bottom: -$border-size-normal;
-		&:first-child {
-			border-radius: $border-radius $border-radius 0 0;
-		}
-		&:last-child {
-			margin-bottom: 0;
-			border-radius: 0 0 $border-radius $border-radius;
-		}
 	}
 }
 
@@ -568,6 +540,43 @@ input[type="checkbox"]:checked ~ label:after {
 	}
 }
 
+// groups ---------------------------------------------------------------------
+.group-horizontal {
+	font-size: 0;
+	& > input { @extend .full-width; border-radius: 0; }
+	& > * {
+		display: inline;
+		width: 0;
+		min-width: 0;
+		border-radius: 0;
+		&:first-child {
+			margin-right: -$border-size-normal;
+			border-radius: $border-radius 0 0 $border-radius;
+		}
+		&:last-child {
+			margin-left: -$border-size-normal;
+			border-radius: 0 $border-radius $border-radius 0;
+		}
+	}
+}
+
+.group-vertical {
+	font-size: 0;
+	& > input,
+	& > div {
+		@extend .full-width;
+		border-radius: 0;
+		margin-bottom: -$border-size-normal;
+		&:first-child {
+			border-radius: $border-radius $border-radius 0 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+			border-radius: 0 0 $border-radius $border-radius;
+		}
+	}
+}
+
 // footer --------------------------------------------------------------------
 footer {
 	@extend .margin-top-4;
@@ -589,9 +598,6 @@ footer {
 		font-weight: $font-weight-bold;
 		font-size: $font-size-normal;
 	}
-	// p {
-	// 	@extend .margin-padding-0;
-	// }
 }
 
 .flash-message {
@@ -626,8 +632,8 @@ footer {
 
 // inline tags ----------------------------------------------------------------
 .tag {
-	padding: $spacing-1 - 0.3rem $spacing-1;
-	font-size: $font-size-normal;
+	@extend .padding-1;
+	font-size: $font-size-small;
 	font-family: monospace;
 	color: $font-color-dull;
 	vertical-align: top;
@@ -635,7 +641,6 @@ footer {
 	border: solid $border-size-normal $border-color-normal;
 	background: $background-hover;
 }
-
 
 // blockquotes ----------------------------------------------------------------
 blockquote {
@@ -675,11 +680,11 @@ blockquote {
 
 // grid & flex system ----------------------------------------------------------------
 .grid 			{ display: grid; grid-gap: $spacing-3; }
-.two-column 	{ grid-template-columns: repeat(2, 1fr); }
-.three-column 	{ grid-template-columns: repeat(3, 1fr); }
-.four-column 	{ grid-template-columns: repeat(4, 1fr); }
-.five-column 	{ grid-template-columns: repeat(5, 1fr); }
-.six-column 	{ grid-template-columns: repeat(6, 1fr); }
+.two-column 	{ grid-template-columns: repeat(auto-fit, minmax( $container-width/2.75, 1fr)); }
+.three-column 	{ grid-template-columns: repeat(auto-fit, minmax( $container-width/3.75, 1fr)); }
+.four-column 	{ grid-template-columns: repeat(auto-fit, minmax( $container-width/4.75, 1fr)); }
+.five-column 	{ grid-template-columns: repeat(auto-fit, minmax( $container-width/5.75, 1fr)); }
+.six-column 	{ grid-template-columns: repeat(auto-fit, minmax( $container-width/6.75, 1fr)); }
 
 // switch to single column at below 600px
 @media only screen and (max-width: $resolution-phone) {
@@ -697,9 +702,9 @@ blockquote {
 .flex-6 			{ flex: 6; }
 
 // break-point templates ( copy from here when needed ) -----------------------
-@media only screen and (min-width: $resolution-phone) {}
-@media only screen and (min-width: $resolution-tablet) {}
-@media only screen and (min-width: $resolution-laptop) {}
-@media only screen and (min-width: $resolution-desktop) {}
+// @media only screen and (min-width: $resolution-phone) {}
+// @media only screen and (min-width: $resolution-tablet) {}
+// @media only screen and (min-width: $resolution-laptop) {}
+// @media only screen and (min-width: $resolution-desktop) {}
 
 // ----------------------------------------------------------------------------

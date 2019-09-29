@@ -33,33 +33,44 @@ body {
   color: white;
 }
 
-.transition, .page-buttons a, input[type=checkbox]:empty ~ label:before, textarea[type=checkbox]:empty ~ label:before,
+.transition, .page-buttons a, input[type=checkbox]:empty ~ label:before, select[type=checkbox]:empty ~ label:before, textarea[type=checkbox]:empty ~ label:before,
 input[type=checkbox]:empty ~ label:after,
-textarea[type=checkbox]:empty ~ label:after, input, textarea,
+select[type=checkbox]:empty ~ label:after,
+textarea[type=checkbox]:empty ~ label:after, input, textarea, select,
 input[type=email],
 textarea[type=email],
+select[type=email],
 input[type=number],
 textarea[type=number],
+select[type=number],
 input[type=search],
 textarea[type=search],
+select[type=search],
 input[type=text],
 textarea[type=text],
+select[type=text],
 input[type=tel],
 textarea[type=tel],
+select[type=tel],
 input[type=url],
 textarea[type=url],
+select[type=url],
 input[type=date],
 textarea[type=date],
+select[type=date],
 input[type=password],
 textarea[type=password],
-select, table tbody tr, nav .links a, .button,
+select[type=password], table tbody tr, nav .links a, .button,
 button,
 input[type=submit],
 textarea[type=submit],
+select[type=submit],
 input[type=reset],
 textarea[type=reset],
+select[type=reset],
 input[type=button],
-textarea[type=button] {
+textarea[type=button],
+select[type=button] {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -77,10 +88,13 @@ textarea[type=button] {
 button,
 input[type=submit],
 textarea[type=submit],
+select[type=submit],
 input[type=reset],
 textarea[type=reset],
+select[type=reset],
 input[type=button],
-textarea[type=button] {
+textarea[type=button],
+select[type=button] {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
   display: inline-block;
@@ -105,16 +119,22 @@ button:hover,
 button:focus,
 input[type=submit]:hover,
 textarea[type=submit]:hover,
+select[type=submit]:hover,
 input[type=submit]:focus,
 textarea[type=submit]:focus,
+select[type=submit]:focus,
 input[type=reset]:hover,
 textarea[type=reset]:hover,
+select[type=reset]:hover,
 input[type=reset]:focus,
 textarea[type=reset]:focus,
+select[type=reset]:focus,
 input[type=button]:hover,
 textarea[type=button]:hover,
+select[type=button]:hover,
 input[type=button]:focus,
-textarea[type=button]:focus {
+textarea[type=button]:focus,
+select[type=button]:focus {
   border-color: #a6a6a6;
   outline: 0;
 }
@@ -176,7 +196,7 @@ pre {
   word-wrap: break-word;
 }
 
-.full-width, .group-vertical > input, .group-vertical > textarea, .group-vertical > div, .group-horizontal > input, .group-horizontal > textarea, fieldset > * {
+.full-width, .group-vertical > input, .group-vertical > select, .group-vertical > textarea, .group-vertical > div, .group-horizontal > input, .group-horizontal > select, .group-horizontal > textarea, fieldset > * {
   width: 100%;
 }
 
@@ -198,12 +218,12 @@ pre {
   clear: both;
 }
 
-.margin-padding-0, fieldset {
+.margin-padding-0, fieldset, img, video {
   margin: 0;
   padding: 0;
 }
 
-.margin-0, blockquote > p, blockquote, p, .gallery .thumb, body, section, code, pre {
+.margin-0, blockquote > p, blockquote, p, body, section, code, pre {
   margin: 0;
 }
 
@@ -240,7 +260,7 @@ pre {
   margin-bottom: 0;
 }
 
-.margin-vertical-1, input[type=checkbox]:empty ~ label, textarea[type=checkbox]:empty ~ label {
+.margin-vertical-1, input[type=checkbox]:empty ~ label, select[type=checkbox]:empty ~ label, textarea[type=checkbox]:empty ~ label {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -381,11 +401,11 @@ ol ol, ol ul {
   margin-bottom: 12rem;
 }
 
-.padding-0, .gallery .thumb {
+.padding-0 {
   padding: 0;
 }
 
-.padding-1 {
+.padding-1, .tag {
   padding: 0.5rem;
 }
 
@@ -418,31 +438,41 @@ ol ol, ol ul {
   padding-bottom: 0;
 }
 
-.padding-vertical-1, input, textarea,
+.padding-vertical-1, input, textarea, select,
 input[type=email],
 textarea[type=email],
+select[type=email],
 input[type=number],
 textarea[type=number],
+select[type=number],
 input[type=search],
 textarea[type=search],
+select[type=search],
 input[type=text],
 textarea[type=text],
+select[type=text],
 input[type=tel],
 textarea[type=tel],
+select[type=tel],
 input[type=url],
 textarea[type=url],
+select[type=url],
 input[type=date],
 textarea[type=date],
+select[type=date],
 input[type=password],
 textarea[type=password],
-select, .button,
+select[type=password], .button,
 button,
 input[type=submit],
 textarea[type=submit],
+select[type=submit],
 input[type=reset],
 textarea[type=reset],
+select[type=reset],
 input[type=button],
-textarea[type=button] {
+textarea[type=button],
+select[type=button] {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -485,24 +515,31 @@ textarea[type=button] {
   padding-right: 0.5rem;
 }
 
-.padding-horizontal-2, .page-buttons a, input, textarea,
+.padding-horizontal-2, .page-buttons a, input, textarea, select,
 input[type=email],
 textarea[type=email],
+select[type=email],
 input[type=number],
 textarea[type=number],
+select[type=number],
 input[type=search],
 textarea[type=search],
+select[type=search],
 input[type=text],
 textarea[type=text],
+select[type=text],
 input[type=tel],
 textarea[type=tel],
+select[type=tel],
 input[type=url],
 textarea[type=url],
+select[type=url],
 input[type=date],
 textarea[type=date],
+select[type=date],
 input[type=password],
 textarea[type=password],
-select, table th:last-child,
+select[type=password], table th:last-child,
 table td:last-child, table th:first-child,
 table td:first-child {
   padding-left: 1rem;
@@ -523,10 +560,13 @@ table td:first-child {
 button,
 input[type=submit],
 textarea[type=submit],
+select[type=submit],
 input[type=reset],
 textarea[type=reset],
+select[type=reset],
 input[type=button],
-textarea[type=button] {
+textarea[type=button],
+select[type=button] {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
 }
@@ -660,7 +700,8 @@ nav .links .active {
   overflow: hidden;
   margin: 1rem;
 }
-.gallery .thumb {
+
+img, video {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -728,7 +769,7 @@ h6 {
   }
 
   h6 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 }
 p {
@@ -778,24 +819,31 @@ form p {
   display: block;
 }
 
-input, textarea,
+input, textarea, select,
 input[type=email],
 textarea[type=email],
+select[type=email],
 input[type=number],
 textarea[type=number],
+select[type=number],
 input[type=search],
 textarea[type=search],
+select[type=search],
 input[type=text],
 textarea[type=text],
+select[type=text],
 input[type=tel],
 textarea[type=tel],
+select[type=tel],
 input[type=url],
 textarea[type=url],
+select[type=url],
 input[type=date],
 textarea[type=date],
+select[type=date],
 input[type=password],
 textarea[type=password],
-select {
+select[type=password] {
   height: 4rem;
   background-color: rgba(0, 0, 0, 0.01);
   border: solid 1px #f2f2f2;
@@ -804,7 +852,7 @@ select {
   font-size: 1.5rem;
   font-weight: normal;
 }
-input:focus, textarea:focus,
+input:focus, textarea:focus, select:focus,
 input[type=email]:focus,
 input[type=number]:focus,
 input[type=search]:focus,
@@ -812,13 +860,22 @@ input[type=text]:focus,
 input[type=tel]:focus,
 input[type=url]:focus,
 input[type=date]:focus,
-input[type=password]:focus,
-select:focus {
+input[type=password]:focus {
   border: solid 1px #4a90e2;
   outline: 0;
 }
 
-input::placeholder, textarea::placeholder {
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat, repeat;
+  background-position: right 1rem top 50%, 0 0;
+  background-size: 0.7rem auto, 100%;
+}
+
+input::placeholder, textarea::placeholder, select::placeholder {
   color: #aeaeae;
 }
 
@@ -835,44 +892,9 @@ label {
 fieldset {
   border-width: 0;
 }
-.group-horizontal {
-  font-size: 0;
-}
-.group-horizontal > input, .group-horizontal > textarea {
-  border-radius: 0;
-}
-.group-horizontal > * {
-  display: inline;
-  width: 0;
-  min-width: 0;
-  border-radius: 0;
-}
-.group-horizontal > *:first-child {
-  margin-right: -1px;
-  border-radius: 4px 0 0 4px;
-}
-.group-horizontal > *:last-child {
-  margin-left: -1px;
-  border-radius: 0 4px 4px 0;
-}
-
-.group-vertical {
-  font-size: 0;
-}
-.group-vertical > input, .group-vertical > textarea, .group-vertical > div {
-  border-radius: 0;
-  margin-bottom: -1px;
-}
-.group-vertical > input:first-child, .group-vertical > textarea:first-child, .group-vertical > div:first-child {
-  border-radius: 4px 4px 0 0;
-}
-.group-vertical > input:last-child, .group-vertical > textarea:last-child, .group-vertical > div:last-child {
-  margin-bottom: 0;
-  border-radius: 0 0 4px 4px;
-}
-
-input[type=checkbox], textarea[type=checkbox],
+input[type=checkbox], select[type=checkbox], textarea[type=checkbox],
 input[type=radio],
+select[type=radio],
 textarea[type=radio] {
   display: inline;
 }
@@ -893,11 +915,11 @@ label > .label-body {
   border-color: #e06b69;
 }
 
-input[type=checkbox]:empty, textarea[type=checkbox]:empty {
+input[type=checkbox]:empty, select[type=checkbox]:empty, textarea[type=checkbox]:empty {
   display: none;
 }
 
-input[type=checkbox]:empty ~ label, textarea[type=checkbox]:empty ~ label {
+input[type=checkbox]:empty ~ label, select[type=checkbox]:empty ~ label, textarea[type=checkbox]:empty ~ label {
   line-height: 2.5rem;
   font-weight: normal;
   position: relative;
@@ -909,8 +931,9 @@ input[type=checkbox]:empty ~ label, textarea[type=checkbox]:empty ~ label {
   user-select: none;
 }
 
-input[type=checkbox]:empty ~ label:before, textarea[type=checkbox]:empty ~ label:before,
+input[type=checkbox]:empty ~ label:before, select[type=checkbox]:empty ~ label:before, textarea[type=checkbox]:empty ~ label:before,
 input[type=checkbox]:empty ~ label:after,
+select[type=checkbox]:empty ~ label:after,
 textarea[type=checkbox]:empty ~ label:after {
   position: absolute;
   display: block;
@@ -924,7 +947,7 @@ textarea[type=checkbox]:empty ~ label:after {
   border-radius: 4px;
 }
 
-input[type=checkbox]:empty ~ label:after, textarea[type=checkbox]:empty ~ label:after {
+input[type=checkbox]:empty ~ label:after, select[type=checkbox]:empty ~ label:after, textarea[type=checkbox]:empty ~ label:after {
   width: 2.2rem;
   top: 0.3rem;
   bottom: 0.3rem;
@@ -934,12 +957,12 @@ input[type=checkbox]:empty ~ label:after, textarea[type=checkbox]:empty ~ label:
   border: solid 1px #f2f2f2;
 }
 
-input[type=checkbox]:checked ~ label:before, textarea[type=checkbox]:checked ~ label:before {
+input[type=checkbox]:checked ~ label:before, select[type=checkbox]:checked ~ label:before, textarea[type=checkbox]:checked ~ label:before {
   background-color: #4a90e2;
   border: solid 1px #2275d7;
 }
 
-input[type=checkbox]:checked ~ label:after, textarea[type=checkbox]:checked ~ label:after {
+input[type=checkbox]:checked ~ label:after, select[type=checkbox]:checked ~ label:after, textarea[type=checkbox]:checked ~ label:after {
   margin-left: 2rem;
 }
 
@@ -961,6 +984,42 @@ input[type=checkbox]:checked ~ label:after, textarea[type=checkbox]:checked ~ la
 }
 .page-buttons .active {
   background: rgba(0, 0, 0, 0.07);
+}
+
+.group-horizontal {
+  font-size: 0;
+}
+.group-horizontal > input, .group-horizontal > select, .group-horizontal > textarea {
+  border-radius: 0;
+}
+.group-horizontal > * {
+  display: inline;
+  width: 0;
+  min-width: 0;
+  border-radius: 0;
+}
+.group-horizontal > *:first-child {
+  margin-right: -1px;
+  border-radius: 4px 0 0 4px;
+}
+.group-horizontal > *:last-child {
+  margin-left: -1px;
+  border-radius: 0 4px 4px 0;
+}
+
+.group-vertical {
+  font-size: 0;
+}
+.group-vertical > input, .group-vertical > select, .group-vertical > textarea, .group-vertical > div {
+  border-radius: 0;
+  margin-bottom: -1px;
+}
+.group-vertical > input:first-child, .group-vertical > select:first-child, .group-vertical > textarea:first-child, .group-vertical > div:first-child {
+  border-radius: 4px 4px 0 0;
+}
+.group-vertical > input:last-child, .group-vertical > select:last-child, .group-vertical > textarea:last-child, .group-vertical > div:last-child {
+  margin-bottom: 0;
+  border-radius: 0 0 4px 4px;
 }
 
 footer {
@@ -1015,8 +1074,7 @@ footer {
 }
 
 .tag {
-  padding: 0.2rem 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: monospace;
   color: #454545;
   vertical-align: top;
@@ -1061,23 +1119,23 @@ blockquote {
 }
 
 .two-column {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(421.8181818182px, 1fr));
 }
 
 .three-column {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(309.3333333333px, 1fr));
 }
 
 .four-column {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(244.2105263158px, 1fr));
 }
 
 .five-column {
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(201.7391304348px, 1fr));
 }
 
 .six-column {
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(171.8518518519px, 1fr));
 }
 
 @media only screen and (max-width: 600px) {
