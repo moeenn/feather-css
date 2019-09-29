@@ -21,8 +21,8 @@ $primary-accent-color: rgba(74,144,226,1);
 // borders --------------------------------------------------------------------
 $border-size-normal: 1px;
 $border-size-large: 2px;
-$border-color-normal: rgba(0,0,0,0.05);
-$border-color-dark: rgba(0,0,0,0.24);
+$border-color-normal: rgba(242,242,242,1);
+$border-color-dark: rgba(225,225,225,1);
 $border-radius: 4px;
 
 // buttons --------------------------------------------------------------------
@@ -39,7 +39,7 @@ $button-primary-hover-background: darken( $button-primary-background, 5% );
 $input-background: rgba(0,0,0,0.01);
 $input-border-normal: $border-color-normal;
 $input-border-focus: $primary-accent-color;
-$input-foreground-placeholder: $border-color-dark;
+$input-foreground-placeholder: darken($border-color-dark,20%);
 
 // switches -------------------------------------------------------------------
 $switch-height: 2.5rem;
@@ -59,22 +59,6 @@ $shadow-radius-large: 1.5rem;
 $shadow-color-large: rgba(0,0,0,0.06);
 
 // event colors ---------------------------------------------------------------
-// $positive-background: rgba(252,255,245,1);
-// $positive-foreground: rgba(57,165,34,1);
-// $positive-border-color: rgba(211,250,209,1);
-
-// $negative-background: rgba(255,239,239,1);
-// $negative-foreground: rgba(210,45,43,1);
-// $negative-border-color: rgba(250,209,209,1);
-
-// $alert-background: rgba(255,250,243,1);
-// $alert-foreground: rgba(165,100,33,1);
-// $alert-border-color: rgba(250,222,209,1);
-
-// $info-background: rgba(248,255,255,1);
-// $info-foreground: rgba(38,129,178,1);
-// $info-border-color: rgba(209,232,250,1);
-
 $positive-background: rgba(178,255,0,0.045);
 $positive-foreground: rgba(54,156,32,1);
 $positive-border-color: rgba(178,255,0,0.5);
@@ -88,7 +72,7 @@ $alert-foreground: rgba(154,84,11,1);
 $alert-border-color: rgba(255,80,0,0.15);
 
 $info-background: rgba(0,255,255,0.025);
-$info-foreground: rgba(38,129,178,1);
+$info-foreground: rgba(18,104,151,1);
 $info-border-color: rgba(0,143,255,0.15);
 
 // spacing for margins and paddings -------------------------------------------

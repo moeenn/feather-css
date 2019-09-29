@@ -48,7 +48,7 @@
 		</div>
 	</section>
 	<!-- inline tags -->
-	<section>
+	<section class="margin-vertical-3">
 		<div class="container">
 			<p style="text-align: justify;"><span class="tag">Normal</span> ipsum dolor sit amet, consectetur adipisicing elit. Ea vero nam quas assumenda debitis dolor <span class="positive tag">Positive</span> minus consectetur provident, corporis. Provident excepturi veniam eveniet earum dolore impedit <span class="negative tag">Negative</span> aliquam, quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae amet sunt <span class="alert tag">Alert</span> a iusto soluta veritatis nam dolor dolore. Atque, reprehenderit alias voluptas architecto? Provident <span class="info tag">Info</span> maxime dicta aut veritatis.</p>
 		</div>
@@ -58,7 +58,7 @@
 	<section>
 		<div class="container">
 			<blockquote>
-				<p>This is a Important Blockquote.</p>
+				<p>This is an Important Blockquote.</p>
 			</blockquote>
 		</div>
 	</section>
@@ -124,13 +124,16 @@
 		</div>
 	</section>
 	<!-- buttons -->
-	<section>
+	<section class="margin-vertical-5">
 		<div class="container">
-			<button>Normal</button>
-			<button class="button-thin">Normal</button>
-			<hr style="border-color: transparent;">
-			<button class="button-primary">Primary</button>
-			<button class="button-primary button-thin">Primary</button>
+			<div class="margin-vertical-3">
+				<button>Normal</button>
+				<button class="button-primary">Primary</button>
+			</div>
+			<div class="margin-vertical-3">
+				<button class="button-thin">Normal</button>
+				<button class="button-primary button-thin">Primary</button>
+			</div>
 		</div>
 	</section>
 	<hr class="margin-vertical-5">
@@ -138,10 +141,12 @@
 	<section>
 		<div class="container">
 			<div class="content-align-center">
-				<button class="positive">Positive</button>
-				<button class="negative">Negative</button>
-				<button class="alert">Alert</button>
-				<button class="info">Info</button>
+				<div class="four-column grid">
+					<div class="border padding-2 positive">Positive</div>
+					<div class="border padding-2 negative">Negative</div>
+					<div class="border padding-2 alert">Alert</div>
+					<div class="border padding-2 info">Info</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -149,25 +154,27 @@
 	<!-- messages -->
 	<section>
 		<div class="container">
-			<div class="message">
-				<header>Default Message</header>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur iusto ea, dolore atque pariatur harum est at, quas nobis maxime voluptatum in odio animi tempora. Cupiditate, ab numquam expedita aliquid?</p>
-			</div>
-			<div class="positive message">
-				<header>Positive Message</header>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur iusto ea, dolore atque pariatur harum est at, quas nobis maxime voluptatum in odio animi tempora. Cupiditate, ab numquam expedita aliquid?</p>
-			</div>
-			<div class="negative message">
-				<header>Negative Message</header>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur iusto ea, dolore atque pariatur harum est at, quas nobis maxime voluptatum in odio animi tempora. Cupiditate, ab numquam expedita aliquid?</p>
-			</div>
-			<div class="alert message">
-				<header>Alert Message</header>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur iusto ea, dolore atque pariatur harum est at, quas nobis maxime voluptatum in odio animi tempora. Cupiditate, ab numquam expedita aliquid?</p>
-			</div>
-			<div class="info message">
-				<header>Info Message</header>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur iusto ea, dolore atque pariatur harum est at, quas nobis maxime voluptatum in odio animi tempora. Cupiditate, ab numquam expedita aliquid?</p>
+			<div class="two-column grid">
+				<div class="message">
+					<header>Default Message</header>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur iusto ea, dolore atque pariatur harum est at, quas nobis maxime voluptatum in odio animi tempora. Cupiditate, ab numquam expedita aliquid?</p>
+				</div>
+				<div class="positive message">
+					<header>Positive Message</header>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur iusto ea, dolore atque pariatur harum est at, quas nobis maxime voluptatum in odio animi tempora. Cupiditate, ab numquam expedita aliquid?</p>
+				</div>
+				<div class="negative message">
+					<header>Negative Message</header>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur iusto ea, dolore atque pariatur harum est at, quas nobis maxime voluptatum in odio animi tempora. Cupiditate, ab numquam expedita aliquid?</p>
+				</div>
+				<div class="alert message">
+					<header>Alert Message</header>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur iusto ea, dolore atque pariatur harum est at, quas nobis maxime voluptatum in odio animi tempora. Cupiditate, ab numquam expedita aliquid?</p>
+				</div>
+				<div class="info message">
+					<header>Info Message</header>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur iusto ea, dolore atque pariatur harum est at, quas nobis maxime voluptatum in odio animi tempora. Cupiditate, ab numquam expedita aliquid?</p>
+				</div>
 			</div>
 		</div>
 	</section>
