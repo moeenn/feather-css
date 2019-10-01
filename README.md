@@ -150,7 +150,6 @@ Event colors can be applied to various elements. They style the border, backgrou
 
 ## Navigation Bar
 ![Navigation Bar](screenshots/navbar.png)
-![Navigation Bar](screenshots/navbar_responsive.png)
 ```html
 <nav>
   <div class="logo">
@@ -227,7 +226,7 @@ Event colors can be applied to various elements. They style the border, backgrou
 - [x] Input Date
 - [x] Checkboxes
 - [ ] File Upload Field
-- [x] Content Alignment
+- [ ] Content Alignment
 - [x] Hover Transitions
 - [x] Port to SASS
 - [x] New Grid System
