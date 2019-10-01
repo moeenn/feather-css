@@ -12,10 +12,6 @@ If all that sounds good then you may like Feather-CSS. Do note that this project
 * Mike Abbink, creator of the font IBM Plex Sans. [Website](https://www.ibm.com/plex/)
 
 # Features and Changes
-## Event Colors
-Event colors can be applied to various elements. They style the border, background and font colors.
-![Event Colors](screenshots/event_colors.png)
-
 ## Margins and Paddings
 Margins and Paddings can be added to elements conveniently using these special classes
 
@@ -28,6 +24,10 @@ Margins and Paddings can be added to elements conveniently using these special c
 | .margin-bottom-xx     | Margin on Bottom         | .padding-bottom-xx   | Padding on Bottom         |
 
 **Note**: xx takes values 0 to 5, big and huge.
+
+## Event Colors
+Event colors can be applied to various elements. They style the border, background and font colors.
+![Event Colors](screenshots/event_colors.png)
 
 ## Tags
 ![Tags](screenshots/tags.png)
@@ -128,9 +128,9 @@ Margins and Paddings can be added to elements conveniently using these special c
 ![Flash Message](screenshots/flash-messages.png)
 ```html
 <div class="flash-message alert">
-	<div class="container">
-		<p>This is a Flashed Message</p>
-	</div>
+  <div class="container">
+    <p>This is a Flashed Message</p>
+  </div>
 </div>
 ```
 **Note**: Event colors can be applied to the Flash Messages
@@ -153,15 +153,15 @@ Margins and Paddings can be added to elements conveniently using these special c
 ![Navigation Bar](screenshots/navbar_responsive.png)
 ```html
 <nav>
-	<div class="logo">
-		<h3>Company Name</h3>
-	</div>
-	<div class="links">
-		<a href="#" class="active">Home</a>
-		<a href="#">Products</a>
-		<a href="#">Services</a>
-		<a href="#">Programs</a>
-	</div>
+  <div class="logo">
+    <h3>Company Name</h3>
+  </div>
+  <div class="links">
+    <a href="#" class="active">Home</a>
+    <a href="#">Products</a>
+    <a href="#">Services</a>
+    <a href="#">Programs</a>
+  </div>
 </nav>
 ```
 
@@ -182,7 +182,7 @@ Margins and Paddings can be added to elements conveniently using these special c
 ![Block Quotes](screenshots/blockquotes.png)
 ```html
 <blockquote>
-	<p>This is an Important Blockquote.</p>
+  <p>This is an Important Blockquote.</p>
 </blockquote>
 ```
 
@@ -199,8 +199,8 @@ Margins and Paddings can be added to elements conveniently using these special c
 ![Switch](screenshots/switch.png)
 ```html
 <fieldset>
-	<input type="checkbox" id="switch">
-	<label for="switch">Remember Me</label>
+  <input type="checkbox" id="switch">
+  <label for="switch">Remember Me</label>
 </fieldset>
 ```
 
@@ -208,9 +208,9 @@ Margins and Paddings can be added to elements conveniently using these special c
 ![Input Error](screenshots/input-error.png)
 ```html
 <fieldset class="input-error">
-	<label for="name">Name</label>
-	<input type="text" name="name">
-	<p>Enter your name e.g. John Doe</p>
+  <label for="name">Name</label>
+  <input type="text" name="name">
+  <p>Enter your name e.g. John Doe</p>
 </fieldset>
 ```
 
