@@ -3,14 +3,13 @@ Feather CSS is a natural successor to Skeleton-CSS, which is great but was missi
 
 Feather-CSS strinctly follows the philosophy set by Skeleton-CSS. It is dead simple to implement and the developers using it can get away with using simple HTML markup for most part. There is no need for crazy div & element nesting required by e.g. Bootstrap.
 
-When the markup is clean, greater focus can be directed towards implementing the required business logic. There should be no feeling of fighting the underlying technology to achieve our ends.
+When the markup is clean, greater focus can be directed towards implementing the required business logic. There should be no feeling of fighting the underlying technology for achieving our ends.
 
-if all that sounds good then you may like Feather-CSS. Do note that this project is still very much a **Work in Progress** and your mileage may vary.
+If all that sounds good then you may like Feather-CSS. Do note that this project is still very much a **Work in Progress** and your mileage may vary. I'm still experimenting with what features should be included and how they should be implemented.
 
 # Credit
-All credit goes to the original creators of Skeleton CSS. Without their excellent work this project would not be possible. Show them some love
-  * [Website](http://getskeleton.com/)
-  * [Github](https://github.com/dhg/Skeleton/)
+* Original creators of Skeleton CSS. Without their excellent work this project would not be possible. [Website](http://getskeleton.com/)
+* Mike Abbink, creator of the font IBM Plex Sans. [Website](https://www.ibm.com/plex/)
 
 # Features and Changes
 ## Event Colors
@@ -28,11 +27,11 @@ Margins and Paddings can be added to elements conveniently using these special c
 | .margin-top-xx        | Margin on Top            | .padding-top-xx      | Padding on Top            |
 | .margin-bottom-xx     | Margin on Bottom         | .padding-bottom-xx   | Padding on Bottom         |
 
-**Note**: xx takes values between 0 and 5 inclusive.
+**Note**: xx takes values 0 to 5, big and huge.
 
 ## Tags
 ![Tags](screenshots/tags.png)
-```css
+```html
 <span class="tag">Normal</span>
 <span class="positive tag">Normal</span>
 <span class="negative tag">Normal</span>
@@ -42,26 +41,25 @@ Margins and Paddings can be added to elements conveniently using these special c
 
 ## Field Descriptions
 ![Field Descriptions](screenshots/field_description.png)
-```css
+```html
 <form>
   <fieldset>
     <label for="name">Name</label>
-    <input class="u-full-width" type="text" name="name">
+    <input type="text" name="name">
     <p>Enter your full name e.g. John Smith</p>
   </fieldset>
   <fieldset>
     <label for="password">Password</label>
-    <input class="u-full-width" type="password" name="password">
+    <input type="password" name="password">
     <p>Enter an alpha-numeric password that is atleast 8-characters long</p>
-    <input class="button-primary" type="submit" value="Login">
   </fieldset>
 </form>
 ```
 
 ## Tables
 ![Tables](screenshots/table.png)
-```css
-<table class="u-full-width">
+```html
+<table class="full-width">
   <thead>
     <tr>
       <th>ID.</th>
@@ -94,45 +92,16 @@ Margins and Paddings can be added to elements conveniently using these special c
 </table>
 ```
 
-### Tables with Event Colors
-![Tables with Event Colors](screenshots/table_event_colors.png)
-```css
-<table class="u-full-width">
-  <thead>
-    <tr>
-      <th>ID.</th>
-      <th>Name</th>
-      <th>Email</th>
-    </tr>
-  </thead>
-    <tbody>
-     <tr class="positive">
-       <td>01</td>
-       <td>User</td>
-       <td>email@emai.com</td>
-     </tr>
-     <tr class="alert">
-       <td>02</td>
-       <td>User</td>
-       <td>email@emai.com</td>
-     </tr>
-     <tr class="negative">
-       <td>03</td>
-       <td>User</td>
-       <td>email@emai.com</td>
-     </tr>
-     <tr class="info">
-       <td>04</td>
-       <td>User</td>
-       <td>email@emai.com</td>
-     </tr>
-   </tbody>
-</table>
+**Note**: Event colors can be applied to table rows 
+```html
+<tr class="positive">
+  ...
+</tr>
 ```
 
-## Messages with Event Colors
+## Messages 
 ![Messages](screenshots/messages.png)
-```css
+```html
 <div class="message">
   <header>Default Message</header>
   <p>... </p>
@@ -155,9 +124,21 @@ Margins and Paddings can be added to elements conveniently using these special c
 </div>
 ```
 
+### Flash Message
+![Flash Message](screenshots/flash-messages.png)
+```html
+<div class="flash-message alert">
+	<div class="container">
+		<p>This is a Flashed Message</p>
+	</div>
+</div>
+```
+**Note**: Event colors can be applied to the Flash Messages
+
+
 ## Page Buttons
 ![Page Buttons](screenshots/pages.png)
-```css
+```html
 <div class="page-buttons">
   <a>1</a>
   <a class="active">2</a>
@@ -169,30 +150,74 @@ Margins and Paddings can be added to elements conveniently using these special c
 
 ## Navigation Bar
 ![Navigation Bar](screenshots/navbar.png)
-```css
+![Navigation Bar](screenshots/navbar_responsive.png)
+```html
 <nav>
-  <a class="active">Home</a>
-  <a>Products</a>
-  <a>Services</a>
-  <a>Programs</a>
+	<div class="logo">
+		<h3>Company Name</h3>
+	</div>
+	<div class="links">
+		<a href="#" class="active">Home</a>
+		<a href="#">Products</a>
+		<a href="#">Services</a>
+		<a href="#">Programs</a>
+	</div>
 </nav>
 ```
 
-### Navigation Bar Responsive
-![Navigation Bar](screenshots/navbar_responsive.png)
-
 ## Gallery
 ![Gallery](screenshots/gallery.png)
-```css
+```html
 <div class="gallery">
-  <div class="item shadow-large">
+  <div class="item">
     <img class="thumb" src="thumb_001.jpg">
   </div>
-  <div class="item shadow-large">
+  <div class="item">
     <img class="thumb" src="thumb_002.jpg">
   </div>
 </div
 ```
+
+## Blockquotes
+![Block Quotes](screenshots/blockquotes.png)
+```html
+<blockquote>
+	<p>This is an Important Blockquote.</p>
+</blockquote>
+```
+
+## Buttons
+![Buttons](screenshots/buttons.png)
+```css
+<button>Normal</button>
+<button class="button-primary">Primary</button>
+<button class="button-thin">Normal</button>
+<button class="button-primary button-thin">Primary</button>
+```
+
+## Switches
+![Switch](screenshots/switch.png)
+```html
+<fieldset>
+	<input type="checkbox" id="switch">
+	<label for="switch">Remember Me</label>
+</fieldset>
+```
+
+## Input Errors
+![Input Error](screenshots/input-error.png)
+```html
+<fieldset class="input-error">
+	<label for="name">Name</label>
+	<input type="text" name="name">
+	<p>Enter your name e.g. John Doe</p>
+</fieldset>
+```
+
+# Bugs
+- [ ] Inline tag font size in Firefox is wrong
+- [ ] Select menu arrow is blue for some reason
+- [ ] Date field arrows are wrong
 
 
 # TODO
@@ -201,6 +226,7 @@ Margins and Paddings can be added to elements conveniently using these special c
 - [x] Blockquotes
 - [x] Input Date
 - [x] Checkboxes
+- [ ] File Upload Field
 - [x] Content Alignment
 - [x] Hover Transitions
 - [x] Port to SASS
