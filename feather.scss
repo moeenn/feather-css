@@ -1,7 +1,7 @@
 @import "settings";
 
 // base settings --------------------------------------------------------------
-* 	{ box-sizing: border-box; }
+*, ::after, ::before { box-sizing: border-box; }
 html { font-size: 62.5%; height: 100vh; }
 body {
 	@extend .margin-0;
@@ -14,18 +14,36 @@ body {
 }
 
 @font-face {
-	font-family: $primary-font, "Roboto", Arial, sans-serif;
+	font-family: "IBM Plex Sans", "Roboto", Arial, sans-serif;
 	font-weight: $font-weight-normal;
-	text-rendering: optimizeLegibility;
+	font-display: swap;
+	src: local('IBM Plex Sans'), local('IBMPlexSans');
+	src: url(https://fonts.gstatic.com/s/ibmplexsans/v7/zYXgKVElMYYaJe8bpLHnCwDKhdzeFb5N.woff2) format('woff2');
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
 }
 
-// font colors
+// firefox font rendering fix
+@-moz-document url-prefix() {
+	p.font-bold,label,th,button {
+		font-weight: 450;
+	}
+}
+
+// smooth scrolling
+[scroll-behavior=smooth] {
+	scroll-behavior: smooth
+}
+
+// font related classes
+.font-bold				{ font-weight: $font-weight-bold; }
 .font-color-normal		{ color: $font-color-normal; }
 .font-color-primary		{ color: $primary-accent-color; }
 .font-color-inverted 	{ color: lighten(invert($font-color-normal), 20%); }
 
 // transition
-.transition { -webkit-transition: all 0.3s ease; transition: all 0.3s ease; }
+.transition { -webkit-transition: all 0.3s ease 0s; transition: all 0.3s ease 0s; }
 
 // section
 section     { @extend .margin-0; }
@@ -50,6 +68,7 @@ input[type="button"] {
 	@extend .padding-horizontal-5;
 	@extend .padding-vertical-1;
 	@extend .transition;
+	@extend .font-bold;
 	margin-left: $spacing-1 / 2;
 	margin-right: $spacing-1 / 2;
 	display: inline-block;
@@ -57,7 +76,6 @@ input[type="button"] {
 	color: $button-foreground;
 	text-align: center;
 	font-size: $font-size-small - 0.1rem;
-	font-weight: $font-weight-bold;
 	line-height: $line-height;
 	vertical-align: top;
 	letter-spacing: $letter-spacing;
@@ -128,11 +146,9 @@ pre {
 }
 
 // utilities ------------------------------------------------------------------
-.full-width {
-	width: 100%;
-}
+.full-width { width: 100%; }
 
-// align content inside the parent element
+// align content inside the parent element 										// Implement Floats
 .content-align-center   { text-align: center; }
 .content-align-left     { text-align: left; }
 .content-align-right    { text-align: right; }
@@ -241,10 +257,10 @@ nav {
 	& > div { display: inline-block; }
 
 	.logo {
+		@extend .font-bold;
 		display: inline-block;
 		margin-right: $spacing-5;
 		font-size: $font-size-large;
-		font-weight: $font-weight-bold;
 	}
 
 	.links {
@@ -280,7 +296,7 @@ nav {
 // gallery stylings -----------------------------------------------------------
 .gallery {
 	@extend .content-align-center;
-	font-size: 0px;
+	font-size: 0;
 	.item {
 		display: inline-block;
 		width: $gallery-item-width;
@@ -355,16 +371,13 @@ a {
 // table ----------------------------------------------------------------------
 table {
 	font-size: $font-size-normal;
-
 	tbody tr 			{ @extend .transition; }
 	tbody tr:hover  	{ background: $background-hover; }
-	th,td 				{	padding: 12px 15px;
-							text-align: left;
-							border-bottom: solid $border-size-normal $input-border-normal; }
-	th:first-child,
-	td:first-child 		{ @extend .padding-horizontal-2; }
-	th:last-child,
-	td:last-child 		{ @extend .padding-horizontal-2; }
+	th,td {
+		padding: $spacing-2 $spacing-2;
+		text-align: left;
+		border-bottom: solid $border-size-normal $input-border-normal;
+	}
 }
 
 // forms ----------------------------------------------------------------------
@@ -429,7 +442,7 @@ textarea {
 }
 
 label {
-	font-weight: $font-weight-bold;
+	@extend .font-bold;
 	display: block;
 }
 
@@ -522,14 +535,14 @@ input[type="checkbox"]:checked ~ label:after {
 	border: solid $border-size-normal $border-color-normal;
 	border-radius: $border-radius;
 	overflow: hidden;
-	font-size: 0px;
+	font-size: 0;
 	a {
 		@extend .padding-horizontal-2;
 		@extend .padding-vertical-0;
 		@extend .transition;
 		font-size: $font-size-small;
 		display: inline-block;
-		border-radius: 0px;
+		border-radius: 0;
 		color: lighten( $font-color-dull, 10%);
 	}
 	a:hover {
@@ -593,11 +606,7 @@ footer {
 	border: solid $border-size-normal $border-color-normal;
 	background: $background-hover;
 	color: $font-color-dull;
-	header {
-		@extend .margin-bottom-1;
-		font-weight: $font-weight-bold;
-		font-size: $font-size-normal;
-	}
+	.font-bold { @extend .margin-bottom-1; }
 }
 
 .flash-message {
@@ -607,7 +616,7 @@ footer {
 	width: 100%;
 	radius: 0;
 	.container 	{ background: transparent; }
-	p 			{ @extend .margin-vertical-2; @extend .margin-horizontal-1; }
+	p 			{ @extend .margin-vertical-2; }
 }
 
 .border {
@@ -619,7 +628,7 @@ footer {
 .sticky { 																		// FIXME
 	position: sticky;
 	top: 0;
-	z-index: 1;
+	// z-index: 10;
 }
 
 @media only screen and (max-width: $resolution-phone) {
@@ -646,10 +655,10 @@ footer {
 blockquote {
 	@extend .margin-0;
 	@extend .padding-5;
+	@extend .font-bold;
 	display: block;
 	border-left: solid $border-size-large $primary-accent-color;
 	background: $background-hover;
-	font-weight: $font-weight-bold;
 	& > p { @extend .margin-0; }
 }
 

@@ -1,4 +1,4 @@
-* {
+*, ::after, ::before {
   box-sizing: border-box;
 }
 
@@ -19,8 +19,36 @@ body {
 @font-face {
   font-family: "IBM Plex Sans", "Roboto", Arial, sans-serif;
   font-weight: normal;
-  text-rendering: optimizeLegibility;
+  font-display: swap;
+  src: local("IBM Plex Sans"), local("IBMPlexSans");
+  src: url(https://fonts.gstatic.com/s/ibmplexsans/v7/zYXgKVElMYYaJe8bpLHnCwDKhdzeFb5N.woff2) format("woff2");
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
 }
+@-moz-document url-prefix() {
+  p.font-bold, nav p.logo, p.button, label, th, button {
+    font-weight: 450;
+  }
+}
+[scroll-behavior=smooth] {
+  scroll-behavior: smooth;
+}
+
+.font-bold, blockquote, label, nav .logo, .button,
+button,
+input[type=submit],
+textarea[type=submit],
+select[type=submit],
+input[type=reset],
+textarea[type=reset],
+select[type=reset],
+input[type=button],
+textarea[type=button],
+select[type=button] {
+  font-weight: 500;
+}
+
 .font-color-normal {
   color: #222222;
 }
@@ -71,8 +99,8 @@ select[type=reset],
 input[type=button],
 textarea[type=button],
 select[type=button] {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .container {
@@ -102,7 +130,6 @@ select[type=button] {
   color: #555555;
   text-align: center;
   font-size: 1.1rem;
-  font-weight: 600;
   line-height: 2.4rem;
   vertical-align: top;
   letter-spacing: 0.1rem;
@@ -301,7 +328,7 @@ ol ol, ol ul {
   margin-right: 0;
 }
 
-.margin-horizontal-1, .flash-message p, label > .label-body, nav .links a {
+.margin-horizontal-1, label > .label-body, nav .links a {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
@@ -373,7 +400,17 @@ ol ol, ol ul {
   margin-bottom: 0;
 }
 
-.margin-bottom-1, .message header, h1, h2, h3, h4, h5, h6 {
+.margin-bottom-1, .message .font-bold, .message blockquote, .message .button,
+.message button,
+.message input[type=submit],
+.message input[type=reset],
+.message input[type=button], .message nav .logo, nav .message .logo,
+.message select[type=submit],
+.message select[type=reset],
+.message select[type=button],
+.message textarea[type=submit],
+.message textarea[type=reset],
+.message textarea[type=button], .message label, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
 }
 
@@ -539,9 +576,7 @@ textarea[type=date],
 select[type=date],
 input[type=password],
 textarea[type=password],
-select[type=password], table th:last-child,
-table td:last-child, table th:first-child,
-table td:first-child {
+select[type=password] {
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -656,7 +691,6 @@ nav .logo {
   display: inline-block;
   margin-right: 2.5rem;
   font-size: 1.8rem;
-  font-weight: 600;
 }
 nav .links {
   display: inline-block;
@@ -689,7 +723,7 @@ nav .links .active {
   }
 }
 .gallery {
-  font-size: 0px;
+  font-size: 0;
 }
 .gallery .item {
   display: inline-block;
@@ -806,10 +840,11 @@ table tbody tr:hover {
   background: rgba(0, 0, 0, 0.02);
 }
 table th, table td {
-  padding: 12px 15px;
+  padding: 1rem 1rem;
   text-align: left;
   border-bottom: solid 1px #f2f2f2;
 }
+
 form p {
   color: #454545;
   font-size: 1.2rem;
@@ -885,7 +920,6 @@ textarea {
 }
 
 label {
-  font-weight: 600;
   display: block;
 }
 
@@ -971,12 +1005,12 @@ input[type=checkbox]:checked ~ label:after, select[type=checkbox]:checked ~ labe
   border: solid 1px #f2f2f2;
   border-radius: 4px;
   overflow: hidden;
-  font-size: 0px;
+  font-size: 0;
 }
 .page-buttons a {
   font-size: 1.2rem;
   display: inline-block;
-  border-radius: 0px;
+  border-radius: 0;
   color: #5f5f5f;
 }
 .page-buttons a:hover {
@@ -1034,11 +1068,6 @@ footer {
   background: rgba(0, 0, 0, 0.02);
   color: #454545;
 }
-.message header {
-  font-weight: 600;
-  font-size: 1.5rem;
-}
-
 .flash-message {
   display: table;
   background: rgba(0, 0, 0, 0.02);
@@ -1057,7 +1086,6 @@ footer {
 .sticky {
   position: sticky;
   top: 0;
-  z-index: 1;
 }
 
 @media only screen and (max-width: 600px) {
@@ -1087,11 +1115,10 @@ blockquote {
   display: block;
   border-left: solid 2px #4a90e2;
   background: rgba(0, 0, 0, 0.02);
-  font-weight: 600;
 }
 .positive {
   background: rgba(178, 255, 0, 0.045);
-  color: #369c20;
+  color: #218d0a;
   border-color: rgba(178, 255, 0, 0.5);
 }
 

@@ -1,0 +1,22 @@
+.section-border {
+	border-top: $border-size-large solid $border-color-normal;
+	height: $border-size-normal;
+	margin: $spacing-3 auto 0;
+	position: relative;
+	width: 25%;
+	@extend .margin-bottom-5;
+}
+
+.section-border:before {
+	content: '';
+	height: 3px;
+	left: 50%;
+	margin-left: -20px;
+	position: absolute;
+	top: -4px;
+	width: 50px;
+	background-color: $primary-accent-color;
+}
+
+// <h4 class="content-align-center">Event Colors</h4>
+// <div class="section-border"></div>
