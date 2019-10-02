@@ -14,7 +14,7 @@ body {
 }
 
 @font-face {
-	font-family: "IBM Plex Sans", "Roboto", Arial, sans-serif;
+	font-family: $primary-font, "Roboto", Arial, sans-serif;
 	font-weight: $font-weight-normal;
 	font-display: swap;
 	src: local('IBM Plex Sans'), local('IBMPlexSans');
@@ -45,9 +45,7 @@ body {
 // transition
 .transition { -webkit-transition: all 0.3s ease 0s; transition: all 0.3s ease 0s; }
 
-// section
 section     { @extend .margin-0; }
-
 .container {
 	@extend .padding-vertical-0;
 	@extend .padding-horizontal-5;
@@ -250,13 +248,15 @@ pre {
 // navigation bar -------------------------------------------------------------
 nav {
 	@extend .padding-vertical-3;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	background: $navigation-bar-background;
 	color: $navigation-bar-foreground;
-	font-size: $font-size-normal;
-	line-height: $line-height;
 	& > div { display: inline-block; }
 
 	.logo {
+		@extend .margin-bottom-1;
 		@extend .font-bold;
 		display: inline-block;
 		margin-right: $spacing-5;
@@ -272,7 +272,7 @@ nav {
 			@extend .padding-horizontal-3;
 			@extend .transition;
 			color: $navigation-bar-foreground;
-			display: inline-block;
+			vertical-align: sub;
 			text-decoration: none;
 			text-align: center;
 			border-bottom: solid $navigation-bar-active-border-size transparent;
@@ -283,8 +283,8 @@ nav {
 }
 
 @media only screen and (max-width: $resolution-phone) {
-	nav .logo 		{ display: block; }
-	nav .links a 	{
+	nav { flex-direction: column; }
+	nav .links > a 	{
 		display: block;
 		text-align: left;
 		.active {
@@ -628,7 +628,7 @@ footer {
 .sticky { 																		// FIXME
 	position: sticky;
 	top: 0;
-	// z-index: 10;
+	z-index: 10;
 }
 
 @media only screen and (max-width: $resolution-phone) {

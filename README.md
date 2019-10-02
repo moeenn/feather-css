@@ -92,14 +92,14 @@ Event colors can be applied to various elements. They style the border, backgrou
 </table>
 ```
 
-**Note**: Event colors can be applied to table rows 
+**Note**: Event colors can be applied to table rows
 ```html
 <tr class="positive">
   ...
 </tr>
 ```
 
-## Messages 
+## Messages
 ![Messages](screenshots/messages.png)
 ```html
 <div class="message">
@@ -217,6 +217,7 @@ Event colors can be applied to various elements. They style the border, backgrou
 - [ ] Inline tag font size in Firefox is wrong
 - [ ] Select menu arrow is blue for some reason
 - [ ] Date field arrows are wrong
+- [ ] Sticky isn't really sticky
 
 
 # TODO

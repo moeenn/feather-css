@@ -404,13 +404,13 @@ ol ol, ol ul {
 .message button,
 .message input[type=submit],
 .message input[type=reset],
-.message input[type=button], .message nav .logo, nav .message .logo,
+.message input[type=button],
 .message select[type=submit],
 .message select[type=reset],
 .message select[type=button],
 .message textarea[type=submit],
 .message textarea[type=reset],
-.message textarea[type=button], .message label, h1, h2, h3, h4, h5, h6 {
+.message textarea[type=button], .message label, h1, h2, h3, h4, h5, h6, nav .logo {
   margin-bottom: 0.5rem;
 }
 
@@ -679,10 +679,11 @@ select[type=button] {
 }
 
 nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   background: white;
   color: #222222;
-  font-size: 1.5rem;
-  line-height: 2.4rem;
 }
 nav > div {
   display: inline-block;
@@ -697,7 +698,7 @@ nav .links {
 }
 nav .links a {
   color: #222222;
-  display: inline-block;
+  vertical-align: sub;
   text-decoration: none;
   text-align: center;
   border-bottom: solid 2px transparent;
@@ -710,15 +711,15 @@ nav .links .active {
 }
 
 @media only screen and (max-width: 600px) {
-  nav .logo {
-    display: block;
+  nav {
+    flex-direction: column;
   }
 
-  nav .links a {
+  nav .links > a {
     display: block;
     text-align: left;
   }
-  nav .links a .active {
+  nav .links > a .active {
     border-left: solid 2px #4a90e2;
   }
 }
@@ -1086,6 +1087,7 @@ footer {
 .sticky {
   position: sticky;
   top: 0;
+  z-index: 10;
 }
 
 @media only screen and (max-width: 600px) {
