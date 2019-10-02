@@ -223,7 +223,7 @@ pre {
   word-wrap: break-word;
 }
 
-.full-width, .group-vertical > input, .group-vertical > select, .group-vertical > textarea, .group-vertical > div, .group-horizontal > input, .group-horizontal > select, .group-horizontal > textarea, fieldset > * {
+.full-width, .group-vertical > input, .group-vertical > select, .group-vertical > textarea, .group-vertical > div, .group-horizontal input, .group-horizontal select, .group-horizontal textarea, fieldset > * {
   width: 100%;
 }
 
@@ -282,6 +282,10 @@ pre {
   margin: 12rem;
 }
 
+.margin-auto {
+  margin: auto;
+}
+
 .margin-vertical-0, nav .links a {
   margin-top: 0;
   margin-bottom: 0;
@@ -321,6 +325,11 @@ ol ol, ol ul {
 .margin-vertical-huge {
   margin-top: 12rem;
   margin-bottom: 12rem;
+}
+
+.margin-vertical-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .margin-horizontal-0, hr {
@@ -364,6 +373,11 @@ ol ol, ol ul {
   margin-right: 12rem;
 }
 
+.margin-horizontal-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .margin-top-0, h1, h2, h3, h4, h5, h6, ol, ul {
   margin-top: 0;
 }
@@ -394,6 +408,10 @@ ol ol, ol ul {
 
 .margin-top-huge {
   margin-top: 12rem;
+}
+
+.margin-top-auto {
+  margin-top: auto;
 }
 
 .margin-bottom-0 {
@@ -438,6 +456,10 @@ ol ol, ol ul {
   margin-bottom: 12rem;
 }
 
+.margin-bottom-auto {
+  margin-bottom: auto;
+}
+
 .padding-0 {
   padding: 0;
 }
@@ -468,6 +490,10 @@ ol ol, ol ul {
 
 .padding-huge {
   padding: 12rem;
+}
+
+.padding-auto {
+  padding: auto;
 }
 
 .padding-vertical-0, .page-buttons a, .container, .button-thin {
@@ -535,11 +561,18 @@ select[type=button] {
 }
 
 .padding-vertical-big, footer {
-  padding: 8rem 0;
+  padding-top: 8rem;
+  padding-bottom: big;
 }
 
 .padding-vertical-huge {
-  padding: 12rem 0;
+  padding-top: 12rem;
+  padding-bottom: huge;
+}
+
+.padding-vertical-auto {
+  padding-top: auto;
+  padding-bottom: auto;
 }
 
 .padding-horizontal-0 {
@@ -607,11 +640,18 @@ select[type=button] {
 }
 
 .padding-horizontal-big {
-  padding: 0 8rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
 }
 
 .padding-horizontal-huge {
-  padding: 0 12rem;
+  padding-left: 12rem;
+  padding-right: 12rem;
+}
+
+.padding-horizontal-auto {
+  padding-left: auto;
+  padding-right: auto;
 }
 
 .padding-top-0 {
@@ -646,6 +686,10 @@ select[type=button] {
   padding-top: 12rem;
 }
 
+.padding-top-auto {
+  padding-top: auto;
+}
+
 .padding-bottom-0 {
   padding-bottom: 0;
 }
@@ -676,6 +720,10 @@ select[type=button] {
 
 .padding-bottom-huge {
   padding-bottom: 12rem;
+}
+
+.padding-bottom-auto {
+  padding-bottom: auto;
 }
 
 nav {
@@ -1024,20 +1072,20 @@ input[type=checkbox]:checked ~ label:after, select[type=checkbox]:checked ~ labe
 .group-horizontal {
   font-size: 0;
 }
-.group-horizontal > input, .group-horizontal > select, .group-horizontal > textarea {
+.group-horizontal input, .group-horizontal select, .group-horizontal textarea {
   border-radius: 0;
 }
-.group-horizontal > * {
+.group-horizontal * {
   display: inline;
   width: 0;
   min-width: 0;
   border-radius: 0;
 }
-.group-horizontal > *:first-child {
+.group-horizontal *:first-child {
   margin-right: -1px;
   border-radius: 4px 0 0 4px;
 }
-.group-horizontal > *:last-child {
+.group-horizontal *:last-child {
   margin-left: -1px;
   border-radius: 0 4px 4px 0;
 }
@@ -1082,6 +1130,7 @@ footer {
 .border {
   border-radius: 4px;
   border: solid 1px #f2f2f2;
+  overflow: hidden;
 }
 
 .sticky {
