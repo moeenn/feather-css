@@ -4,8 +4,8 @@ $primary-font: "IBM Plex Sans";
 $font-size-small: 1.2rem;
 $font-size-normal: 1.5rem;
 $font-size-large: 1.8rem;
-$font-color-normal: rgba(34,34,34,1);
-$font-color-dull: rgba(69,69,69,1);
+$font-color-normal: rgba(25,25,25,1);
+$font-color-dull: rgba(40,40,40,1);
 $line-height: 2.4rem;
 $letter-spacing: 0.1rem;
 $font-weight-normal: normal;
@@ -39,10 +39,11 @@ $button-primary-hover-foreground: $button-primary-foreground;
 $button-primary-hover-background: darken( $button-primary-background, 5% );
 
 // forms ----------------------------------------------------------------------
-$input-background: rgba(0,0,0,0.01);
+$input-background: $background-hover;
 $input-border-normal: $border-color-normal;
 $input-border-focus: $primary-accent-color;
-$input-foreground-placeholder: darken($border-color-dark,20%);
+$input-foreground-placeholder: darken($border-color-dark,40%);
+$input-error-border: rgba(245,165,164,1);
 
 // switches -------------------------------------------------------------------
 $switch-height: 2.5rem;
@@ -56,27 +57,27 @@ $code-foreground: $font-color-normal;
 
 // shadows --------------------------------------------------------------------
 $shadow-radius-normal: 0.6rem;
-$shadow-color-normal: rgba(0,0,0,0.06);
+$shadow-color-normal: rgba(0,0,0,0.1);
 
-$shadow-radius-large: 1.5rem;
-$shadow-color-large: rgba(0,0,0,0.06);
+$shadow-radius-large: 1.0rem;
+$shadow-color-large: rgba(0,0,0,0.2);
 
 // event colors ---------------------------------------------------------------
-$positive-background: rgba(178,255,0,0.045);
-$positive-foreground: rgba(33,141,10,1);
-$positive-border-color: rgba(178,255,0,0.5);
+$positive-background: rgba(207,236,138,0.47);
+$positive-foreground: rgba(17,99,0,1);
+// $positive-border-color: rgba(178,255,0,0.5);
 
-$negative-background: rgba(255,0,0,0.047);
-$negative-foreground: rgba(210,45,43,1);
-$negative-border-color: rgba(255,0,0,0.11);
+$negative-background: rgba(255,0,0,0.15);
+$negative-foreground: rgba(128,2,0,1);
+// $negative-border-color: rgba(255,0,0,0.11);
 
-$alert-background: rgba(255,148,0,0.08);
-$alert-foreground: rgba(154,84,11,1);
-$alert-border-color: rgba(255,80,0,0.15);
+$alert-background: rgba(255,148,0,0.19);
+$alert-foreground: rgba(123,63,0,1);
+// $alert-border-color: rgba(255,80,0,0.15);
 
-$info-background: rgba(0,255,255,0.025);
-$info-foreground: rgba(18,104,151,1);
-$info-border-color: rgba(0,143,255,0.15);
+$info-background: rgba(0,132,255,0.13);
+$info-foreground: rgba(0,98,152,1);
+// $info-border-color: rgba(0,143,255,0.15);
 
 // spacing for margins and paddings -------------------------------------------
 $spacing-1: 0.5rem;
