@@ -27,7 +27,7 @@ body {
   font-smoothing: antialiased;
 }
 @-moz-document url-prefix() {
-  p.font-bold, nav p.logo, p.button, label, th, button {
+  p.text-bold, nav p.logo, p.button-thin, p.button, label, th, button {
     font-weight: 450;
   }
 }
@@ -35,7 +35,7 @@ body {
   scroll-behavior: smooth;
 }
 
-.font-bold, blockquote, label, nav .logo, .button,
+.text-bold, blockquote, label, nav .logo, .button-thin, .button,
 button,
 input[type=submit],
 textarea[type=submit],
@@ -45,20 +45,28 @@ textarea[type=reset],
 select[type=reset],
 input[type=button],
 textarea[type=button],
-select[type=button] {
-  font-weight: 500;
+select[type=button], em {
+  font-weight: 550;
 }
 
-.font-color-normal {
+.text-justify {
+  text-align: justify;
+}
+
+.text-color-normal {
   color: #191919;
 }
 
-.font-color-primary {
+.text-color-primary, em {
   color: #4a90e2;
 }
 
-.font-color-inverted {
+.text-color-inverted {
   color: white;
+}
+
+em {
+  font-style: normal;
 }
 
 .transition, .page-buttons a, input[type=checkbox]:empty ~ label:before, select[type=checkbox]:empty ~ label:before, textarea[type=checkbox]:empty ~ label:before,
@@ -108,7 +116,6 @@ select[type=button] {
   width: 100%;
   max-width: 1160px;
   margin: 0 auto;
-  overflow: hidden;
   border-radius: 4px;
 }
 
@@ -416,11 +423,11 @@ ol ol, ol ul {
   margin-bottom: 0;
 }
 
-.margin-bottom-1, .message .font-bold, .message blockquote, .message .button,
+.margin-bottom-1, .message .text-bold, .message blockquote, .message em, .message .button,
 .message button,
 .message input[type=submit],
 .message input[type=reset],
-.message input[type=button],
+.message input[type=button], .message .button-thin,
 .message select[type=submit],
 .message select[type=reset],
 .message select[type=button],
@@ -1132,11 +1139,11 @@ footer {
   }
 }
 .shadow-normal {
-  box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0.1rem 0.4rem 0.3rem rgba(0, 0, 0, 0.08);
 }
 
 .shadow-large {
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
 }
 
 .tag {

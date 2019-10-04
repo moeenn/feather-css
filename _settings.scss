@@ -9,7 +9,7 @@ $font-color-dull: rgba(40,40,40,1);
 $line-height: 2.4rem;
 $letter-spacing: 0.1rem;
 $font-weight-normal: normal;
-$font-weight-bold: 500;
+$font-weight-bold: 550;
 
 // container
 $container-width: 1160px;
@@ -56,11 +56,8 @@ $code-background: rgba(0,0,0,0.05);
 $code-foreground: $font-color-normal;
 
 // shadows --------------------------------------------------------------------
-$shadow-radius-normal: 0.6rem;
-$shadow-color-normal: rgba(0,0,0,0.1);
-
-$shadow-radius-large: 1.0rem;
-$shadow-color-large: rgba(0,0,0,0.2);
+$shadow-normal: 0.1rem 0.4rem 0.3rem rgba(0,0,0,0.08);
+$shadow-large: 0 0.4rem 1.2rem rgba(0,0,0,0.08);
 
 // event colors ---------------------------------------------------------------
 $positive-background: rgba(207,236,138,0.47);

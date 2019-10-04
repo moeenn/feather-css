@@ -26,7 +26,7 @@ body {
 
 // firefox font rendering fix
 @-moz-document url-prefix() {
-	p.font-bold,label,th,button {
+	p.text-bold,label,th,button {
 		font-weight: 450;
 	}
 }
@@ -37,10 +37,18 @@ body {
 }
 
 // font related classes
-.font-bold				{ font-weight: $font-weight-bold; }
-.font-color-normal		{ color: $font-color-normal; }
-.font-color-primary		{ color: $primary-accent-color; }
-.font-color-inverted 	{ color: lighten(invert($font-color-normal), 20%); }
+.text-bold				{ font-weight: $font-weight-bold; }
+.text-justify 			{ text-align: justify; }
+.text-color-normal		{ color: $font-color-normal; }
+.text-color-primary		{ color: $primary-accent-color; }
+.text-color-inverted 	{ color: lighten(invert($font-color-normal), 20%); }
+
+// emphasis tag
+em {
+	@extend .text-bold;
+	@extend .text-color-primary;
+	font-style: normal;
+}
 
 // transition
 .transition { -webkit-transition: all 0.3s ease 0s; transition: all 0.3s ease 0s; }
@@ -53,7 +61,7 @@ section     { @extend .margin-0; }
 	width: 100%;
 	max-width: $container-width;
 	margin: 0 auto;
-	overflow: hidden;
+	// overflow: hidden;
 	border-radius: $border-radius;
 }
 
@@ -66,7 +74,7 @@ input[type="button"] {
 	@extend .padding-horizontal-5;
 	@extend .padding-vertical-1;
 	@extend .transition;
-	@extend .font-bold;
+	@extend .text-bold;
 	display: inline-block;
 	height: $button-height;
 	color: $button-foreground;
@@ -103,6 +111,7 @@ input[type="button"].button-primary {
 }
 
 .button-thin {
+	@extend .text-bold;
 	@extend .padding-horizontal-3;
 	@extend .padding-vertical-0;
 	height: $button-height - 1rem;
@@ -266,7 +275,7 @@ nav {
 
 	.logo {
 		@extend .margin-bottom-1;
-		@extend .font-bold;
+		@extend .text-bold;
 		display: inline-block;
 		margin-right: $spacing-5;
 		font-size: $font-size-large;
@@ -444,7 +453,7 @@ textarea {
 }
 
 label {
-	@extend .font-bold;
+	@extend .text-bold;
 	display: block;
 }
 
@@ -607,7 +616,7 @@ footer {
 	@extend .padding-4;
 	background: $background-active;
 	color: $font-color-dull;
-	.font-bold { @extend .margin-bottom-1; }
+	.text-bold { @extend .margin-bottom-1; }
 }
 
 .flash-message {
@@ -637,8 +646,8 @@ footer {
 }
 
 // shadows --------------------------------------------------------------------
-.shadow-normal 	{ box-shadow: 0 0 $shadow-radius-normal $shadow-color-normal; }
-.shadow-large 	{ box-shadow: 0 0 $shadow-radius-large $shadow-color-large; }
+.shadow-normal 	{ box-shadow: $shadow-normal; }
+.shadow-large 	{ box-shadow: $shadow-large; }
 
 // inline tags ----------------------------------------------------------------
 .tag {
@@ -657,7 +666,7 @@ footer {
 blockquote {
 	@extend .margin-0;
 	@extend .padding-5;
-	@extend .font-bold;
+	@extend .text-bold;
 	display: block;
 	border-left: solid $border-size-large $primary-accent-color;
 	background: $background-hover;
