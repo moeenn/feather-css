@@ -384,10 +384,11 @@ table {
 	tbody tr 			{ @extend .transition; }
 	tbody tr:hover  	{ background: $background-hover; }
 	th,td {
-		padding: $spacing-2 $spacing-2;
+		@extend .padding-2;
 		text-align: left;
-		border-bottom: solid $border-size-normal $input-border-normal;
+		// border-bottom: solid $border-size-normal $border-color-normal;
 	}
+	th { border-bottom: solid $border-size-normal $border-color-normal; }
 }
 
 // forms ----------------------------------------------------------------------
@@ -624,6 +625,7 @@ footer {
 	background: $background-active;
 	width: 100%;
 	radius: 0;
+	cursor: pointer;
 	.container 	{ background: transparent; }
 	p 			{ @extend .margin-vertical-2; }
 }
