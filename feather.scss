@@ -50,7 +50,7 @@ em {
 }
 
 // transition
-.transition { -webkit-transition: all 0.3s ease 0s; transition: all 0.3s ease 0s; }
+.transition { -webkit-transition: background,border 0.3s ease 0s; transition: background,border 0.3s ease 0s; }
 
 section     { @extend .margin-0; }
 .container {

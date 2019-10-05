@@ -217,7 +217,8 @@ Event colors can be applied to various elements. They style the border, backgrou
 - [ ] Inline tag font size in Firefox is wrong
 - [ ] Select menu arrow is blue for some reason
 - [ ] Date field arrows are wrong
-- [ ] Sticky isn't really sticky
+- [x] Sticky isn't really sticky
+
 
 
 # TODO
@@ -232,5 +233,5 @@ Event colors can be applied to various elements. They style the border, backgrou
 - [x] Port to SASS
 - [x] New Grid System
 - [ ] Dark Theme
-- [ ] Reduce Code (Keep Under 1000 SLOC)
+- [ ] Reduce Code (Keep Under 1000 SLOC compiled)
 - [ ] Testing, testing and testing!
