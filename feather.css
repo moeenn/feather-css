@@ -11,7 +11,6 @@ body {
   font-family: "IBM Plex Sans";
   font-size: 1.5rem;
   line-height: 2.4rem;
-  height: 100vh;
   color: #191919;
   background: white;
 }
@@ -135,12 +134,9 @@ select[type=button] {
   color: #555555;
   text-align: center;
   font-size: 1.1rem;
-  line-height: 2.4rem;
   vertical-align: top;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  text-decoration: none;
-  white-space: nowrap;
   background: transparent;
   border-radius: 4px;
   border: solid 1px #e1e1e1;
@@ -950,6 +946,7 @@ input[type=date]:focus,
 input[type=password]:focus {
   border: solid 1px #4a90e2;
   outline: 0;
+  background: rgba(179, 179, 179, 0.02);
 }
 
 select {
@@ -1114,6 +1111,7 @@ footer {
   color: #282828;
 }
 .flash-message {
+  display: table;
   background: rgba(0, 0, 0, 0.07);
   width: 100%;
   radius: 0;
@@ -1130,7 +1128,7 @@ footer {
 .sticky {
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
 }
 
 @media only screen and (max-width: 600px) {
@@ -1143,7 +1141,7 @@ footer {
 }
 
 .shadow-large {
-  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
 }
 
 .tag {
