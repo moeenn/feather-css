@@ -90,7 +90,7 @@ input[type="button"] {
 	border: solid $border-size-normal $border-color-dark;
 	cursor: pointer;
 	&:hover, &:focus {
-		border-color: darken( $border-color-normal, 30% );
+		border-color: $primary-accent-color;
 		outline: 0;
 	}
 }
@@ -152,7 +152,7 @@ pre {
 // utilities ------------------------------------------------------------------
 .full-width { width: 100%; }
 
-// align content inside the parent element 										// Implement Floats
+// align content inside the parent element
 .content-align-center   { text-align: center; }
 .content-align-left     { text-align: left; }
 .content-align-right    { text-align: right; }
@@ -395,7 +395,7 @@ table {
 form {
 	// field descriptions
 	p {
-		// @extend .margin-vertical-0;
+		@extend .margin-top-1;
 		color: $font-color-dull;
 		font-size: $font-size-small;
 		font-weight: $font-weight-normal;
@@ -415,19 +415,20 @@ input[type="url"],
 input[type="date"],
 input[type="password"] {
 	@extend .padding-vertical-1;
-	@extend .padding-horizontal-2;
+	// @extend .padding-horizontal-1;
 	@extend .transition;
 	height: $button-height;
-	background: $input-background;
-	border: solid $border-size-normal $input-border-normal;
-	border-radius: $border-radius;
+	background: transparent;
+	border: none;
+	border-bottom: solid $border-size-large $border-color-normal;
+	// border-radius: $border-radius;
 	box-shadow: none;
 	font-size: $font-size-normal;
 	font-weight: $font-weight-normal;
 	&:focus {
-		border: solid $border-size-normal $input-border-focus;
+		border-color: $input-border-focus;
 		outline: 0;
-		background: lighten($input-background, 70%);
+		// background: lighten($input-background, 70%);
 	}
 }
 
@@ -465,6 +466,7 @@ fieldset {
 	& > * {
 		@extend .full-width;
 	}
+	&:first-child { @extend .margin-top-0; }
 }
 
 input[type="checkbox"],
@@ -472,19 +474,19 @@ input[type="radio"] {
 	display: inline;
 }
 
-label > .label-body {
-	@extend .margin-horizontal-1;
-	display: inline-block;
-	font-weight: $font-weight-normal;
-}
+// label > .label-body {
+// 	@extend .margin-horizontal-1;
+// 	display: inline-block;
+// 	font-weight: $font-weight-normal;
+// }
 
 .input-error {
 	label, p {
 		color: $negative-foreground;
 	}
 	input, textarea, select {
-		background-color: lighten($negative-background,20%);
-		border: solid $border-size-normal $input-error-border;
+		// background-color: lighten($negative-background,20%);
+		border-bottom: solid $border-size-large $input-error-border;
 	}
 	input:focus, textarea:focus, select:focus {
 		border-color: darken($input-error-border, 20%);
@@ -509,7 +511,7 @@ input[type="checkbox"]:empty ~ label {
 
 input[type="checkbox"]:empty ~ label:before,
 input[type="checkbox"]:empty ~ label:after {
-	@extend .transition;
+	transition: all 0.3s ease 0s;
 	position: absolute;
 	display: block;
 	top: 0;

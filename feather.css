@@ -68,10 +68,7 @@ em {
   font-style: normal;
 }
 
-.transition, .page-buttons a, input[type=checkbox]:empty ~ label:before, select[type=checkbox]:empty ~ label:before, textarea[type=checkbox]:empty ~ label:before,
-input[type=checkbox]:empty ~ label:after,
-select[type=checkbox]:empty ~ label:after,
-textarea[type=checkbox]:empty ~ label:after, input, textarea, select,
+.transition, .page-buttons a, input, textarea, select,
 input[type=email],
 textarea[type=email],
 select[type=email],
@@ -163,7 +160,7 @@ select[type=button]:hover,
 input[type=button]:focus,
 textarea[type=button]:focus,
 select[type=button]:focus {
-  border-color: #a6a6a6;
+  border-color: #4a90e2;
   outline: 0;
 }
 
@@ -338,7 +335,7 @@ ol ol, ol ul {
   margin-right: 0;
 }
 
-.margin-horizontal-1, label > .label-body {
+.margin-horizontal-1 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
@@ -379,11 +376,11 @@ ol ol, ol ul {
   margin-right: auto;
 }
 
-.margin-top-0, h1, h2, h3, h4, h5, h6, ol, ul {
+.margin-top-0, fieldset:first-child, h1, h2, h3, h4, h5, h6, ol, ul {
   margin-top: 0;
 }
 
-.margin-top-1 {
+.margin-top-1, form p {
   margin-top: 0.5rem;
 }
 
@@ -586,31 +583,7 @@ select[type=button] {
   padding-right: 0.5rem;
 }
 
-.padding-horizontal-2, .page-buttons a, input, textarea, select,
-input[type=email],
-textarea[type=email],
-select[type=email],
-input[type=number],
-textarea[type=number],
-select[type=number],
-input[type=search],
-textarea[type=search],
-select[type=search],
-input[type=text],
-textarea[type=text],
-select[type=text],
-input[type=tel],
-textarea[type=tel],
-select[type=tel],
-input[type=url],
-textarea[type=url],
-select[type=url],
-input[type=date],
-textarea[type=date],
-select[type=date],
-input[type=password],
-textarea[type=password],
-select[type=password] {
+.padding-horizontal-2, .page-buttons a {
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -929,9 +902,9 @@ input[type=password],
 textarea[type=password],
 select[type=password] {
   height: 4rem;
-  background: rgba(0, 0, 0, 0.02);
-  border: solid 0.1rem #f2f2f2;
-  border-radius: 0.4rem;
+  background: transparent;
+  border: none;
+  border-bottom: solid 0.2rem #f2f2f2;
   box-shadow: none;
   font-size: 1.5rem;
   font-weight: normal;
@@ -945,9 +918,8 @@ input[type=tel]:focus,
 input[type=url]:focus,
 input[type=date]:focus,
 input[type=password]:focus {
-  border: solid 0.1rem #4a90e2;
+  border-color: #4a90e2;
   outline: 0;
-  background: rgba(179, 179, 179, 0.02);
 }
 
 select {
@@ -983,17 +955,11 @@ textarea[type=radio] {
   display: inline;
 }
 
-label > .label-body {
-  display: inline-block;
-  font-weight: normal;
-}
-
 .input-error label, .input-error p {
   color: #800200;
 }
 .input-error input, .input-error textarea, .input-error select {
-  background-color: rgba(255, 102, 102, 0.15);
-  border: solid 0.1rem #f5a5a4;
+  border-bottom: solid 0.2rem #f5a5a4;
 }
 .input-error input:focus, .input-error textarea:focus, .input-error select:focus {
   border-color: #eb4a48;
@@ -1019,6 +985,7 @@ input[type=checkbox]:empty ~ label:before, select[type=checkbox]:empty ~ label:b
 input[type=checkbox]:empty ~ label:after,
 select[type=checkbox]:empty ~ label:after,
 textarea[type=checkbox]:empty ~ label:after {
+  transition: all 0.3s ease 0s;
   position: absolute;
   display: block;
   top: 0;
