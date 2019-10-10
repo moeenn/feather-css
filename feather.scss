@@ -1,4 +1,4 @@
-@import "settings";
+@import "variables";
 
 // base page settings ---------------------------------------------------------
 *, ::after, ::before { box-sizing: border-box; }
@@ -30,8 +30,8 @@ section    { @extend .margin-0; }
 
 // basic animation on hover
 .transition {
-	-webkit-transition: background,border 0.3s ease 0s;
-	transition: background,border 0.3s ease 0s;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
 }
 
 // font settings  ------------------------------------------------------------
@@ -212,7 +212,7 @@ input[type="button"] {
 	text-transform: uppercase;
 	background: $button-background;
 	border-radius: $border-radius;
-	border: solid $border-size-normal $border-color-dark;
+	border: $button-border;
 	cursor: pointer;
 	&:hover, &:focus {
 		border-color: $primary-accent-color;
@@ -224,13 +224,14 @@ input[type="button"] {
 input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
+	@extend .transition;
 	color: $button-primary-foreground;
 	background-color: $button-primary-background;
-	border-color: darken($button-primary-background, 10%);
+	border-width: 0;
+	border-color: darken($button-primary-background, 5%);
 	&:hover, &:focus {
-		color: $button-primary-hover-foreground;
-		background-color: $button-primary-hover-background;
-		border-color: darken( $button-primary-background, 10% );
+		background-color: darken($button-primary-background, 5%);
+		border-color: darken($button-primary-background, 10%);
 	}
 }
 
@@ -248,7 +249,6 @@ input[type="button"].button-primary {
 	border: solid $border-size-normal $border-color-normal;
 	border-radius: $border-radius;
 	overflow: hidden;
-	// font-size: 0;
 	a {
 		@extend .padding-horizontal-2;
 		@extend .padding-vertical-0;
@@ -257,10 +257,12 @@ input[type="button"].button-primary {
 		display: inline-block;
 		border-radius: 0;
 		color: lighten( $font-color-dull, 10%);
+		&:hover {
+			background: $background-active;
+			color: $font-color-normal;
+		}
 	}
-	a:hover {
-		background: $background-active;
-	}
+
 	.active {
 		background: $background-active;
 	}
@@ -290,7 +292,7 @@ input[type="tel"],
 input[type="url"],
 input[type="date"],
 input[type="password"] {
-	@extend .padding-bottom-1;
+	// @extend .padding-bottom-1;
 	@extend .transition;
 	height: $button-height;
 	background: transparent;
@@ -328,8 +330,8 @@ textarea {
 }
 
 label {
-	color: darken($primary-accent-color, 20%);
 	display: block;
+	color: darken($primary-accent-color, 20%);
 }
 
 fieldset {
@@ -341,17 +343,6 @@ fieldset {
 	}
 	&:first-child { @extend .margin-top-0; }
 }
-
-// input[type="checkbox"],
-// input[type="radio"] {
-// 	display: inline;
-// }
-
-// label > .label-body {
-// 	@extend .margin-horizontal-1;
-// 	display: inline-block;
-// 	font-weight: $font-weight-normal;
-// }
 
 .input-error {
 	label, p {
@@ -432,14 +423,13 @@ ol ol, ol ul {
 // code -----------------------------------------------------------------------
 code {
 	@extend .margin-0;
-	@extend .padding-vertical-2;
-	@extend .padding-horizontal-3;
+	@extend .padding-4;
+	display: block;
+	color: $code-foreground;
 	font-size: $font-size-normal * 0.9;
 	background: $code-background;
-	color: $code-foreground;
-	border: solid $border-size-normal $border-color-normal;
+	border-width: 0;
 	border-radius: $border-radius;
-	display: block;
 }
 
 pre {
@@ -462,7 +452,6 @@ nav {
 	@extend .padding-vertical-3;
 	display: flex;
 	flex-wrap: wrap;
-	// align-items: center;
 	justify-content: space-between;
 	background: $navigation-bar-background;
 	color: $navigation-bar-foreground;
@@ -526,8 +515,7 @@ a {
 	background: $link-background-normal;
 	color: $link-foreground-normal;
 	&:hover {
-		background: $link-background-hover;
-		color: $link-foreground-hover;
+		color: darken( $link-foreground-normal, 10% );
 	}
 }
 
@@ -599,17 +587,17 @@ footer {
 	@extend .padding-4;
 	background: $background-active;
 	color: $font-color-dull;
-	.text-bold { @extend .margin-bottom-1; }
+	& .text-bold { @extend .margin-bottom-1; }
 }
 
 .flash-message {
-	display: table;
+	@extend .padding-vertical-2;
+	display: block;
 	background: $background-active;
 	width: 100%;
 	radius: 0;
 	cursor: pointer;
 	.container 	{ background: transparent; }
-	p 			{ @extend .margin-vertical-2; }
 }
 
 .rounded-corners {
@@ -636,9 +624,7 @@ footer {
 
 // inline tags ----------------------------------------------------------------
 .tag {
-	@extend .padding-1;
-	padding-left: 0.8rem;
-	padding-right: 0.8rem;
+	padding: $spacing-1 0.8rem;
 	font-size: $font-size-small;
 	font-family: monospace;
 	background: $background-active;
@@ -655,7 +641,7 @@ blockquote {
 	display: block;
 	border-left: solid $border-size-large $primary-accent-color;
 	background: $background-hover;
-	& > p { @extend .margin-0; }
+	& p { @extend .margin-0; }
 }
 
 // colors ---------------------------------------------------------------------
