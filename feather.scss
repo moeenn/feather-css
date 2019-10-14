@@ -449,30 +449,30 @@ pre {
 
 // navigation bar -------------------------------------------------------------
 nav {
-	@extend .padding-vertical-3;
+	@extend .padding-vertical-2;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	background: $navigation-bar-background;
 	color: $navigation-bar-foreground;
-	& > div { display: inline-block; }
+	// & > div { display: inline-block; }
 
 	.logo {
-		@extend .margin-bottom-1;
 		@extend .text-bold;
-		display: inline-block;
+		// display: inline-block;
 		margin-right: $spacing-5;
 		font-size: $font-size-large;
 	}
 
 	.links {
-		display: inline-block;
+		display: flex;
+		height: 100%;
 		a {
 			@extend .padding-vertical-2;
 			@extend .padding-horizontal-3;
 			@extend .transition;
 			color: $navigation-bar-foreground;
-			vertical-align: sub;
+			vertical-align: middle;
 			text-decoration: none;
 			text-align: center;
 			border-bottom: solid $navigation-bar-active-border-size transparent;
@@ -483,8 +483,9 @@ nav {
 }
 
 @media only screen and (max-width: $resolution-phone) {
-	nav 			{ flex-direction: column; }
-	nav .links a 	{ display: block; text-align: left; }
+	.logo 			{ min-width: 100% }
+	.links 			{ flex-direction: column; min-width: 100%; }
+	nav .links a 	{ padding: $spacing-2 $spacing-1; text-align: left; }
 }
 
 // multimedia -----------------------------------------------------------------
@@ -678,7 +679,7 @@ blockquote {
 .flex-5 			{ flex: 5; }
 .flex-6 			{ flex: 6; }
 
-// break-point templates ( copy from here when needed ) -----------------------
+// breakpoint templates ( copy from here when needed ) -----------------------
 // @media only screen and (min-width: $resolution-phone) {}
 // @media only screen and (min-width: $resolution-tablet) {}
 // @media only screen and (min-width: $resolution-laptop) {}

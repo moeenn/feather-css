@@ -378,7 +378,7 @@ ol ol, ol ul {
 .message select[type=button],
 .message textarea[type=submit],
 .message textarea[type=reset],
-.message textarea[type=button], nav .logo, h1, h2, h3, h4, h5, h6 {
+.message textarea[type=button], .message nav .logo, nav .message .logo, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem;
 }
 
@@ -466,12 +466,12 @@ select[type=button] {
   padding-bottom: 0.5rem;
 }
 
-.padding-vertical-2, .flash-message, nav .links a {
+.padding-vertical-2, .flash-message, nav .links a, nav {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-.padding-vertical-3, nav {
+.padding-vertical-3 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
@@ -939,20 +939,17 @@ nav {
   background: white;
   color: #191919;
 }
-nav > div {
-  display: inline-block;
-}
 nav .logo {
-  display: inline-block;
   margin-right: 2.5rem;
   font-size: 1.8rem;
 }
 nav .links {
-  display: inline-block;
+  display: flex;
+  height: 100%;
 }
 nav .links a {
   color: #191919;
-  vertical-align: sub;
+  vertical-align: middle;
   text-decoration: none;
   text-align: center;
   border-bottom: solid 0.2rem transparent;
@@ -965,12 +962,17 @@ nav .links .active {
 }
 
 @media only screen and (max-width: 600px) {
-  nav {
+  .logo {
+    min-width: 100%;
+  }
+
+  .links {
     flex-direction: column;
+    min-width: 100%;
   }
 
   nav .links a {
-    display: block;
+    padding: 1rem 0.5rem;
     text-align: left;
   }
 }
