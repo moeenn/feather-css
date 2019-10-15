@@ -455,11 +455,10 @@ nav {
 	justify-content: space-between;
 	background: $navigation-bar-background;
 	color: $navigation-bar-foreground;
-	// & > div { display: inline-block; }
 
 	.logo {
 		@extend .text-bold;
-		// display: inline-block;
+		padding-left: $spacing-1;
 		margin-right: $spacing-5;
 		font-size: $font-size-large;
 	}
@@ -476,16 +475,17 @@ nav {
 			text-decoration: none;
 			text-align: center;
 			border-bottom: solid $navigation-bar-active-border-size transparent;
-			&:hover { background: $background-hover; }
+			&:hover { border-bottom: $navigation-bar-active-border; }
 		}
-		.active { border-bottom: $navigation-bar-active-border; }
+		.active { font-weight: $font-weight-bold; color: darken($navigation-bar-foreground, 10%)}
 	}
 }
 
 @media only screen and (max-width: $resolution-phone) {
-	.logo 			{ min-width: 100% }
-	.links 			{ flex-direction: column; min-width: 100%; }
-	nav .links a 	{ padding: $spacing-2 $spacing-1; text-align: left; }
+	.logo 				{ min-width: 100% }
+	.links 				{ flex-direction: column; min-width: 100%; }
+	nav .links a 		{ padding: $spacing-2 $spacing-1; text-align: left; }
+	// nav .links .active  { border-bottom: none; color: black; font-weight: $font-weight-bold; }
 }
 
 // multimedia -----------------------------------------------------------------

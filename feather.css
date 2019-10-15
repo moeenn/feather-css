@@ -937,9 +937,10 @@ nav {
   flex-wrap: wrap;
   justify-content: space-between;
   background: white;
-  color: #191919;
+  color: #282828;
 }
 nav .logo {
+  padding-left: 0.5rem;
   margin-right: 2.5rem;
   font-size: 1.8rem;
 }
@@ -948,17 +949,18 @@ nav .links {
   height: 100%;
 }
 nav .links a {
-  color: #191919;
+  color: #282828;
   vertical-align: middle;
   text-decoration: none;
   text-align: center;
   border-bottom: solid 0.2rem transparent;
 }
 nav .links a:hover {
-  background: rgba(0, 0, 0, 0.02);
+  border-bottom: solid 0.2rem #4a90e2;
 }
 nav .links .active {
-  border-bottom: solid 0.2rem #4a90e2;
+  font-weight: 550;
+  color: #0f0f0f;
 }
 
 @media only screen and (max-width: 600px) {
