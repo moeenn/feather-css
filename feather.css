@@ -106,6 +106,10 @@ select[type=button], em {
   font-weight: 550;
 }
 
+.text-italic {
+  font-style: italic;
+}
+
 .text-justify {
   text-align: justify;
 }
@@ -232,10 +236,6 @@ em {
   margin: 12rem;
 }
 
-.margin-auto {
-  margin: auto;
-}
-
 .margin-vertical-0 {
   margin-top: 0;
   margin-bottom: 0;
@@ -275,11 +275,6 @@ ol ol, ol ul {
 .margin-vertical-huge {
   margin-top: 12rem;
   margin-bottom: 12rem;
-}
-
-.margin-vertical-auto {
-  margin-top: auto;
-  margin-bottom: auto;
 }
 
 .margin-horizontal-0, hr {
@@ -323,11 +318,6 @@ ol ol, ol ul {
   margin-right: 12rem;
 }
 
-.margin-horizontal-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .margin-top-0, ol, ul, fieldset:first-child, h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
 }
@@ -344,7 +334,7 @@ ol ol, ol ul {
   margin-top: 1.5rem;
 }
 
-.margin-top-4, footer, fieldset {
+.margin-top-4, fieldset {
   margin-top: 2rem;
 }
 
@@ -358,10 +348,6 @@ ol ol, ol ul {
 
 .margin-top-huge {
   margin-top: 12rem;
-}
-
-.margin-top-auto {
-  margin-top: auto;
 }
 
 .margin-bottom-0, .group-vertical > input:last-child, .group-vertical > select:last-child, .group-vertical > textarea:last-child, .group-vertical > div:last-child {
@@ -406,8 +392,68 @@ ol ol, ol ul {
   margin-bottom: 12rem;
 }
 
-.margin-bottom-auto {
-  margin-bottom: auto;
+.margin-left-0 {
+  margin-left: 0;
+}
+
+.margin-left-1 {
+  margin-left: 0.5rem;
+}
+
+.margin-left-2 {
+  margin-left: 1rem;
+}
+
+.margin-left-3 {
+  margin-left: 1.5rem;
+}
+
+.margin-left-4 {
+  margin-left: 2rem;
+}
+
+.margin-left-5 {
+  margin-left: 2.5rem;
+}
+
+.margin-left-big {
+  margin-left: 8rem;
+}
+
+.margin-left-huge {
+  margin-left: 12rem;
+}
+
+.margin-right-0 {
+  margin-right: 0;
+}
+
+.margin-right-1 {
+  margin-right: 0.5rem;
+}
+
+.margin-right-2 {
+  margin-right: 1rem;
+}
+
+.margin-right-3 {
+  margin-right: 1.5rem;
+}
+
+.margin-right-4 {
+  margin-right: 2rem;
+}
+
+.margin-right-5 {
+  margin-right: 2.5rem;
+}
+
+.margin-right-big {
+  margin-right: 8rem;
+}
+
+.margin-right-huge {
+  margin-right: 12rem;
 }
 
 .padding-0 {
@@ -442,10 +488,6 @@ ol ol, ol ul {
   padding: 12rem;
 }
 
-.padding-auto {
-  padding: auto;
-}
-
 .padding-vertical-0, .page-buttons a, .button-thin, .container {
   padding-top: 0;
   padding-bottom: 0;
@@ -466,7 +508,7 @@ select[type=button] {
   padding-bottom: 0.5rem;
 }
 
-.padding-vertical-2, .flash-message, nav .links a, nav {
+.padding-vertical-2, .flash-message, nav .links a {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -486,7 +528,7 @@ select[type=button] {
   padding-bottom: 2.5rem;
 }
 
-.padding-vertical-big, footer {
+.padding-vertical-big {
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
@@ -494,11 +536,6 @@ select[type=button] {
 .padding-vertical-huge {
   padding-top: 12rem;
   padding-bottom: 12rem;
-}
-
-.padding-vertical-auto {
-  padding-top: auto;
-  padding-bottom: auto;
 }
 
 .padding-horizontal-0 {
@@ -551,11 +588,6 @@ select[type=button], .container {
   padding-right: 12rem;
 }
 
-.padding-horizontal-auto {
-  padding-left: auto;
-  padding-right: auto;
-}
-
 .padding-top-0 {
   padding-top: 0;
 }
@@ -564,7 +596,7 @@ select[type=button], .container {
   padding-top: 0.5rem;
 }
 
-.padding-top-2 {
+.padding-top-2, nav {
   padding-top: 1rem;
 }
 
@@ -586,10 +618,6 @@ select[type=button], .container {
 
 .padding-top-huge {
   padding-top: 12rem;
-}
-
-.padding-top-auto {
-  padding-top: auto;
 }
 
 .padding-bottom-0 {
@@ -624,8 +652,68 @@ select[type=button], .container {
   padding-bottom: 12rem;
 }
 
-.padding-bottom-auto {
-  padding-bottom: auto;
+.padding-left-0 {
+  padding-left: 0;
+}
+
+.padding-left-1 {
+  padding-left: 0.5rem;
+}
+
+.padding-left-2 {
+  padding-left: 1rem;
+}
+
+.padding-left-3 {
+  padding-left: 1.5rem;
+}
+
+.padding-left-4 {
+  padding-left: 2rem;
+}
+
+.padding-left-5 {
+  padding-left: 2.5rem;
+}
+
+.padding-left-big {
+  padding-left: 8rem;
+}
+
+.padding-left-huge {
+  padding-left: 12rem;
+}
+
+.padding-right-0 {
+  padding-right: 0;
+}
+
+.padding-right-1 {
+  padding-right: 0.5rem;
+}
+
+.padding-right-2 {
+  padding-right: 1rem;
+}
+
+.padding-right-3 {
+  padding-right: 1.5rem;
+}
+
+.padding-right-4 {
+  padding-right: 2rem;
+}
+
+.padding-right-5 {
+  padding-right: 2.5rem;
+}
+
+.padding-right-big {
+  padding-right: 8rem;
+}
+
+.padding-right-huge {
+  padding-right: 12rem;
 }
 
 .button,
@@ -1061,6 +1149,10 @@ footer {
   font-size: 1.2rem;
   background: #192124;
   color: #979797;
+}
+footer hr {
+  border-color: #3e3e3e;
+  border-style: dashed;
 }
 
 .message {
