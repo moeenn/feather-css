@@ -624,7 +624,7 @@ select[type=button], .container {
   padding-bottom: 0;
 }
 
-.padding-bottom-1 {
+.padding-bottom-1, nav {
   padding-bottom: 0.5rem;
 }
 
@@ -1028,7 +1028,6 @@ nav {
   color: #282828;
 }
 nav .logo {
-  padding-left: 0.5rem;
   margin-right: 2.5rem;
   font-size: 1.8rem;
 }
@@ -1054,6 +1053,7 @@ nav .links .active {
 @media only screen and (max-width: 600px) {
   .logo {
     min-width: 100%;
+    padding-left: 0.5rem;
   }
 
   .links {
