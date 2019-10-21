@@ -34,6 +34,11 @@ section    { @extend .margin-0; }
 	transition: all 0.3s ease 0s;
 }
 
+// turn off visibility of content (toggle back with JS)
+.display-none {
+	display: none;
+}
+
 // font settings  ------------------------------------------------------------
 @font-face {
 	font-family: $primary-font, "Roboto", Arial, sans-serif;
