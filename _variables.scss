@@ -83,12 +83,6 @@ $link-background-normal: transparent;
 $footer-background: rgba(25,33,36,1);
 $footer-foreground: darken(invert($font-color-dull), 25%);
 
-// switches -------------------------------------------------------------------
-$switch-height: 2.5rem;
-$switch-width: 4.5rem;
-$switch-padding: 0.3rem;
-$switch-label-margin: $spacing-3;
-
 // navigation bar -------------------------------------------------------------
 $navigation-bar-background: $background-page-base;
 $navigation-bar-foreground: $font-color-dull;
