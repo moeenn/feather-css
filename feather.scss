@@ -12,7 +12,7 @@ body {
 	background: $background-page-base;
 }
 
-section    { @extend .margin-0; }
+section    { @extend .margin-padding-0; }
 .container {
 	@extend .padding-vertical-0;
 	@extend .padding-horizontal-5;
