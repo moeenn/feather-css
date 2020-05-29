@@ -11,6 +11,12 @@ If all that sounds good then you may like Feather-CSS. Do note that this project
 * Original creators of Skeleton CSS. Without their excellent work this project would not be possible. [Website](http://getskeleton.com/)
 * Mike Abbink, creator of the font IBM Plex Sans. [Website](https://www.ibm.com/plex/)
 
+# Demo
+Demo page of the Feather CSS can be opened using NPM
+```
+$ npm run start
+```
+
 # Features and Changes
 ## Margins and Paddings
 Margins and Paddings can be added to elements conveniently using these special classes
