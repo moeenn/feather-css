@@ -1,12 +1,11 @@
 {
   "name": "feather-css",
   "version": "1.0.0",
-  "description": "Feather CSS is a natural successor to Skeleton-CSS, which is great but was missing quite a few things. On top it that Skeleton-CSS hasn't been in active development since 2015.",
-  "main": "public/index.js",
+  "description": "Feather CSS is a successor to Skeleton-CSS, which hasn't been in active development since 2015.",
+  "main": "index.js",
   "scripts": {
-    "start": "node .",
-    "build": "sass --watch src/feather.scss:public/assets/stylesheets/feather.css --no-source-map --style=compressed",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "sass src/feather.scss:dist/feather.css --no-source-map",
+    "build_mini": "sass src/feather.scss:dist/feather_mini.css --no-source-map --style=compressed"
   },
   "repository": {
     "type": "git",
@@ -18,11 +17,5 @@
   "bugs": {
     "url": "https://github.com/moeenn/feather-css/issues"
   },
-  "homepage": "https://github.com/moeenn/feather-css#readme",
-  "devDependencies": {
-    "sass": "^1.26.7"
-  },
-  "dependencies": {
-    "node-static": "^0.7.11"
-  }
+  "homepage": "https://github.com/moeenn/feather-css#readme"
 }

@@ -11,10 +11,15 @@ If all that sounds good then you may like Feather-CSS. Do note that this project
 * Original creators of Skeleton CSS. Without their excellent work this project would not be possible. [Website](http://getskeleton.com/)
 * Mike Abbink, creator of the font IBM Plex Sans. [Website](https://www.ibm.com/plex/)
 
-# Demo
-Demo page of the Feather CSS can be opened using NPM
+# Build
+Feather CSS can be compiled from source using SASS compiler using the following commands
+
 ```
-$ npm run start
+# build expanded version
+$ npm run build
+
+# build minified version
+$ npm run build_mini
 ```
 
 # Features and Changes
