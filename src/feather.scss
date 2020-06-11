@@ -670,10 +670,12 @@ blockquote {
 .flex-5 			{ flex: 5; }
 .flex-6 			{ flex: 6; }
 
-// breakpoint templates ( copy from here when needed ) -----------------------
+// breakpoint templates ( copy from here when needed ) ------------------------
 // @media only screen and (min-width: $resolution-phone) {}
 // @media only screen and (min-width: $resolution-tablet) {}
 // @media only screen and (min-width: $resolution-laptop) {}
 // @media only screen and (min-width: $resolution-desktop) {}
 
-// ----------------------------------------------------------------------------
+// plugin imports -------------------------------------------------------------
+@import "./plugins/switch/switch";
+@import "./plugins/tabbar/tabbar";

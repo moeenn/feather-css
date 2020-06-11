@@ -29,7 +29,7 @@ body {
   clear: both;
 }
 
-.transition, table tbody tr, nav .links a, input, textarea, select,
+.transition, nav a, table tbody tr, nav .links a, input, textarea, select,
 input[type=email],
 textarea[type=email],
 select[type=email],
@@ -245,7 +245,7 @@ em {
   margin-bottom: 0;
 }
 
-.margin-vertical-1 {
+.margin-vertical-1, input[type=checkbox]:empty ~ label, select[type=checkbox]:empty ~ label, textarea[type=checkbox]:empty ~ label {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
@@ -562,7 +562,7 @@ select[type=button] {
   padding-right: 1.5rem;
 }
 
-.padding-horizontal-4 {
+.padding-horizontal-4, nav a {
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -600,7 +600,7 @@ select[type=button], .container {
   padding-top: 0.5rem;
 }
 
-.padding-top-2, nav {
+.padding-top-2, nav a, nav {
   padding-top: 1rem;
 }
 
@@ -628,7 +628,7 @@ select[type=button], .container {
   padding-bottom: 0;
 }
 
-.padding-bottom-1, nav {
+.padding-bottom-1, nav a, nav {
   padding-bottom: 0.5rem;
 }
 
@@ -1256,4 +1256,94 @@ blockquote {
 
 .flex-6 {
   flex: 6;
+}
+
+input[type=checkbox]:empty, select[type=checkbox]:empty, textarea[type=checkbox]:empty {
+  display: none;
+}
+
+input[type=checkbox]:empty ~ label, select[type=checkbox]:empty ~ label, textarea[type=checkbox]:empty ~ label {
+  line-height: 2.5rem;
+  font-weight: normal;
+  position: relative;
+  text-indent: 6rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input[type=checkbox]:empty ~ label:before, select[type=checkbox]:empty ~ label:before, textarea[type=checkbox]:empty ~ label:before,
+input[type=checkbox]:empty ~ label:after,
+select[type=checkbox]:empty ~ label:after,
+textarea[type=checkbox]:empty ~ label:after {
+  transition: all 0.3s ease 0s;
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 4.5rem;
+  background-color: rgba(0, 0, 0, 0.07);
+  border: solid 0.1rem #f2f2f2;
+  border-radius: 0.4rem;
+}
+
+input[type=checkbox]:empty ~ label:after, select[type=checkbox]:empty ~ label:after, textarea[type=checkbox]:empty ~ label:after {
+  width: 2.2rem;
+  top: 0.3rem;
+  bottom: 0.3rem;
+  margin-left: 0.3rem;
+  background-color: white;
+  border-radius: 0.4rem;
+  border: solid 0.1rem #f2f2f2;
+}
+
+input[type=checkbox]:checked ~ label:before, select[type=checkbox]:checked ~ label:before, textarea[type=checkbox]:checked ~ label:before {
+  background-color: #4a90e2;
+  border: solid 0.1rem #2275d7;
+}
+
+input[type=checkbox]:checked ~ label:after, select[type=checkbox]:checked ~ label:after, textarea[type=checkbox]:checked ~ label:after {
+  margin-left: 2rem;
+}
+
+nav {
+  background: white;
+  font-size: 0;
+  border-bottom: solid 0.1rem #f2f2f2;
+}
+nav a {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #222222;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: solid 0.2rem transparent;
+  margin-bottom: -0.1rem;
+}
+nav a:hover {
+  background: rgba(0, 0, 0, 0.02);
+  color: #222222;
+  border-bottom: solid 0.2rem #a6a6a6;
+}
+nav .active {
+  font-weight: 550;
+  border-bottom: solid 0.2rem #8c8c8c;
+}
+
+@media only screen and (max-width: 600px) {
+  nav a {
+    display: block;
+    text-align: left;
+  }
+  nav a:hover {
+    border-bottom: solid 0.2rem transparent;
+  }
+
+  nav .active {
+    border-bottom: solid 0.2rem transparent;
+  }
 }

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "sass src/feather.scss:dist/feather.css --no-source-map",
-    "build_mini": "sass src/feather.scss:dist/feather_mini.css --no-source-map --style=compressed"
+    "build_min": "sass src/feather.scss:dist/feather.min.css --no-source-map --style=compressed"
   },
   "repository": {
     "type": "git",
