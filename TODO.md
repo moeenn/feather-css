@@ -1,4 +1,5 @@
 # TODO
+- [ ] Make Button size responsive
 - [ ] Border class not working
 - [ ] Margin, Padding, [top, bottom, left, right] classes not working
 - [ ] Minimize the total number of variables

@@ -56,7 +56,7 @@
 	--resolution-phone: 850px;
 }
 
-@media all and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
 	:root {
 		--spacing-1: 1rem;
 		--spacing-2: 1.3rem;
@@ -332,6 +332,7 @@ button:hover, button:focus {
 	height: calc(var(--button-height) - 0.6rem);
 	font-weight: calc(var(--fg-weight-normal) + 100 );
 	font-size: calc(var(--fg-size-small) - 0.2rem);
+	vertical-align: bottom;
 }
 
 /*input fields*/
@@ -508,11 +509,10 @@ table th {
 }
 
 .flash-message {
-	padding: var(--spacing-2) 0;
+	padding: calc(var(--spacing-1) * 1.5) 0;
 	display: block;
 	width: 100%;
 	radius: 0;
-	cursor: pointer;
 }
 
 .rounded-corners {
@@ -545,7 +545,7 @@ table th {
 .five-col		 	{ grid-template-columns: repeat(auto-fit, minmax( calc(var(--container-width) / 5.75), 1fr)); }
 .six-col		 	{ grid-template-columns: repeat(auto-fit, minmax( calc(var(--container-width) / 6.75), 1fr)); }
 
-@media all and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
 	.two-col, .three-col, .four-col,
 	.five-col, .six-col {
 		grid-template-columns: 1fr;
