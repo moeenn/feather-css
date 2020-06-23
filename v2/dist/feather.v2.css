@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@200;400;600&display=swap');
-
 /*global style variables*/
 :root {
 	/*colors*/
@@ -10,7 +8,7 @@
 	--accent-color-primary: rgba(74,144,226,1);
 
 	/*font settings*/
-	--fg-family-primary: 'Overpass';
+	--fg-family-primary: Arial;
 	--fg-size-normal: 1.5rem;
 	--fg-size-small: 1.2rem;
 	--fg-weight-normal: 400;
