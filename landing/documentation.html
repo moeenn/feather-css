@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="stylesheets/feather.v2.css">
+	<link rel="stylesheet" href="stylesheets/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/favicon.ico">
+	<title>Feather CSS</title>
+</head>
+<body>
+	<aside>
+		<div class="container">
+			<div class="navbar">
+				<div class="logo">
+					<span><a href="index.html">Feather CSS</a></span>
+				</div>
+				<div class="links">
+					<a id="nav-download" href="#">Download</a>
+					<a id="nav-features" href="#features">Features</a>
+					<a id="nav-documentation" class="active" href="documentation.html">Documentation</a>
+				</div>
+			</div>
+		</div>
+	</aside>
+
+	<main>
+
+		<!-- main window for displaying documentation -->
+		<div>
+			<div class="container">
+				<section>
+					<div  id="documentation-view" class="d-grid">
+
+						<!-- overview of documentation topics -->
+						<div id="documentation-overview">
+							<a href="#" id="getting-started">Getting Started</a>
+							<a href="#" id="download">Download</a>
+							<a href="#" id="installation">Installation</a>
+							<hr>
+							<a href="#" id="container">Container</a>
+							<a href="#" id="section">Section</a>
+							<hr>
+							<a href="#" id="spacing">Spacing</a>
+							<hr>
+							<a href="#" id="flexbox">Flexbox</a>
+							<a href="#" id="grid">Grid</a>
+							<hr>
+							<a href="#" id="headings">Headings</a>
+							<a href="#" id="paragraphs">Paragraphs</a>
+							<a href="#" id="emphasis">Emphasis</a>
+							<a href="#" id="lists">Lists</a>
+							<a href="#" id="tables">Tables</a>
+							<hr>
+							<a href="#" id="buttons">Buttons</a>
+							<a href="#" id="inputs">Inputs</a>
+							<hr>
+							<a href="#" id="colors">Colors</a>
+							<a href="#" id="messages">Messages</a>
+							<a href="#" id="code">Code</a>
+							<a href="#" id="utility">Utility Classes</a>
+							<hr>
+							<a href="#" id="feedback">Feedback</a>
+						</div>
+
+						<!-- discussion of topic -->
+						<div id="documentation-details">
+							<div class="container">
+								<section id="section-getting-started">
+									<h1>Getting Started</h1>
+									<p>Feather CSS uses plain CSS and avoids pre-processors like SASS / LESS. Pre-processors require extra steps for compilation and integration, which in our opinion, don't add enough value and therefore can be avoided.</p>
+									<br>
+									<p>Feather relies on CSS Variables which are supported by the latest versions of all major browsers. This provides ease of debugging and easy integraion into exsiting or new web projects.</p>
+									<br>
+								</section>
+
+								<section id="section-download">
+									<h3>Download</h3>
+									<p>Feather CSS can be downloaded from our <a href="">GitHub Repository</a>. A quick link is provided below for you convenience.</p>
+									<button class="button button-primary mv-3">Download</button>
+								</section>
+
+								<section id="section-installation">
+									<h3>Installation</h3>
+									<p>After you have downloaded the Feather CSS File, you can simply link it to your HTML file as below.</p>
+									<pre><code>&lt;link rel="stylesheet" href="stylesheets/feather.v2.css"&gt;</code></pre>
+									<p><span class="fg-bold fg-color-primary">Note: </span>In order to ensure that your website scales properly on smaller screens, also add the following like to your HTML file</p>
+									<pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code></pre>
+								</section>
+
+								<hr>
+
+								<section id="section-container">
+									<h3>Container</h3>
+									<p>Container forms the boundary around the contents of the page.</p>
+									<pre><code>&lt;div class="container"&gt; ... &lt;/div&gt;</code></pre>
+								</section>
+
+								<section id="section-section">
+									<h3>Section</h3>
+									<p>Purpose of Sections is to visually distinguish different areas of the Web Page.</p>
+									<pre><code>&lt;section&gt; ... &lt;/section&gt;</code></pre>
+								</section>
+
+								<hr>
+
+								<section id="section-spacing">
+									<h3>Spacing</h3>
+									<p>Feather provides a large variety of Classes for managing spacing on the content on you Web page. Following naming conventions are used.</p>
+
+									<table class="mv-4">
+										<thead>
+											<tr>
+												<th>Shorthand</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="fg-bold">m</td>
+												<td>Margin</td>
+											</tr>
+											<tr>
+												<td class="fg-bold">p</td>
+												<td>Padding</td>
+											</tr>
+											<tr>
+												<td class="fg-bold">t</td>
+												<td>Top</td>
+											</tr>
+											<tr>
+												<td class="fg-bold">b</td>
+												<td>Bottom</td>
+											</tr>
+											<tr>
+												<td class="fg-bold">l</td>
+												<td>Left</td>
+											</tr>
+											<tr>
+												<td class="fg-bold">r</td>
+												<td>Right</td>
+											</tr>
+											<tr>
+												<td class="fg-bold">h</td>
+												<td>Horizontal</td>
+											</tr>
+											<tr>
+												<td class="fg-bold">v</td>
+												<td>Vertical</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<p><span class="fg-bold fg-color-primary">Note: </span>Valid values with spacing classes are <span class="fg-bold">1, 2, 3, 4, 5, big, huge</span>.</p>
+
+									<pre><code>&lt;!-- Vertical Margin size 4 --&gt;
+&lt;div class="mv-4"&gt; ... &lt;/div&gt;
+
+&lt;!-- Right Padding size huge --&gt;
+&lt;div class="pr-huge"&gt; ... &lt;/div&gt;</code></pre>
+								</section>
+
+								<hr>
+
+								<section id="section-flexbox">
+									<h3>Flexbox</h3>
+									<p>Feather CSS Flexbox provides a non-responsive way of dividing space. Space can be divided either Horizontally or Vertically</p>
+									<br>
+									<p><span class="fg-bold fg-color-primary">Note: </span>Flex area can be divided according to weights between 1 and 6 inclusive.</p>
+
+									<div class="border rounded-corners p-3 mv-3">
+										<div class="d-flex flex-h">
+											<div class="info flex-6 p-3"><p>Flex 6</p></div>
+											<div class="alert flex-1 p-3"><p>Flex 1</p></div>
+											<div class="positive flex-2 p-3"><p>Flex 2</p></div>
+											<div class="negative flex-1 p-3"><p>Flex 1</p></div>
+										</div>
+									</div>
+
+									<pre><code>&lt;div class="d-flex flex-h"&gt;
+  &lt;div class="info flex-6 p-3"&gt;&lt;p&gt;Flex 6&lt;/p&gt;&lt;/div&gt;
+  &lt;div class="alert flex-1 p-3"&gt;&lt;p&gt;Flex 1&lt;/p&gt;&lt;/div&gt;
+  &lt;div class="positive flex-2 p-3"&gt;&lt;p&gt;Flex 2&lt;/p&gt;&lt;/div&gt;
+  &lt;div class="negative flex-1 p-3"&gt;&lt;p&gt;Flex 1&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+									<p><span class="fg-bold fg-color-primary">Note: </span><em>flex-h</em> means Horizontal Flexbox. Alternatively, <em>flex-v</em> can be used for vertical Flexbox.</p>
+
+								</section>
+
+								<hr>
+
+								<section id="section-grid">
+									<h3>Grid</h3>
+									<p>Feather CSS provides a Responsive Grid system that can be divided into Maximum of <em>6 Columns</em>.</p>
+
+									<div class="border rounded-corners p-3 mv-3">
+										<div class="d-grid two-col">
+										  <div class="info p-2"> Child 1 </div>
+										  <div class="alert p-2"> Child 2 </div>
+										  <div class="positive p-2"> Child 3 </div>
+										  <div class="negative p-2"> Child 4 </div>
+										</div>
+									</div>
+
+									<pre><code>&lt;div class="d-grid two-col"&gt;
+  &lt;div class="info p-2"&gt; Child 1 &lt;/div&gt;
+  &lt;div class="alert p-2"&gt; Child 2 &lt;/div&gt;
+  &lt;div class="positive p-2"&gt; Child 3 &lt;/div&gt;
+  &lt;div class="negative p-2"&gt; Child 4 &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+									<p><span class="fg-bold fg-color-primary">Note: </span> Valid Class names for columns are <em>.one-col</em>, <em>.two-col</em>, <em>.three-col</em>, <em>.four-col</em>, <em>.five-col</em> and <em>.siv-col</em>.</p>
+
+									<br>
+
+									<p><span class="fg-bold fg-color-primary">Note: </span>The grid automatically adjusts according to the size of the Viewport. In the above example if you don't see two rendered columns it may be because the width of the demo section is too small.</p>
+
+								</section>
+
+								<hr>
+
+								<section id="section-headings">
+									<h3>Headings</h3>
+									<p>Feather CSS supports upto Six Levels of Heading according to the HTML specifications.</p>
+
+									<div class="border rounded-corners p-3 mv-3">
+										<h1>Heading 1</h1>
+										<h2>Heading 2</h2>
+										<h3>Heading 3</h3>
+										<h4>Heading 4</h4>
+										<h5>Heading 5</h5>
+										<h6>Heading 6</h6>
+									</div>
+
+									<pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+
+								</section>
+
+							</div>
+						</div>
+					</div>
+
+				</section>
+			</div>
+		</div>
+
+	</main>
+
+	<footer>
+		<div class="container">
+			<section>
+				<div class="d-grid two-col mv-5">
+					<div>
+						<p class="fg-italic fg-color-primary">Created By</p>
+						<a href="#"><h3 class="fg-color-dull">Exo Solutions</h3></a>
+						<div class="icons">
+							<a href="#"><img src="images/github.svg" alt="github"></a>
+							<a href="#"><img src="images/facebook.svg" alt="facebook"></a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</footer>
+
+
+	<script type="module" src="scripts/index.js"></script>
+</body>
+</html>
+
