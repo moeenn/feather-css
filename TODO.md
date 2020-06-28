@@ -1,16 +1,4 @@
 # TODO
+- [ ] Checkboxes
 - [ ] Make Button size responsive
 - [ ] Margin, Padding, [top, bottom, left, right] classes not working
-- [ ] Minimize the total number of variables
-- [ ] Implement container using CSS Grid
-- [x] Border class not working
-- [x] Refactor: font -> fg
-- [x] Refactor: background -> bg
-- [x] Refactor: margin -> m
-- [x] Refactor: padding -> p
-- [x] Refactor: vertical -> v
-- [x] Refactor: horizontal -> h
-- [x] Refactor: display -> d
-- [x] Review Button Classes
-- [x] Input fields as atomic components
-- [x] Button Hover Effect

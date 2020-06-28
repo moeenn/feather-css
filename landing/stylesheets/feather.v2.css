@@ -75,7 +75,6 @@
 html {
 	font-size: 62.5%;
 	height: 100vh;
-	scroll-behavior: smooth;
 }
 
 body {
@@ -134,7 +133,6 @@ h6 { font-size: 1.8rem; line-height: 1.8;  letter-spacing: -0.02rem; }
 .bg-color-normal		{ background-color: var(--bg-color-normal); }
 .bg-color-dull			{ background-color: var(--bg-color-dull); }
 .bg-color-dark			{ background-color: var(--bg-color-dark); }
-
 
 p {
 	font-size: var(--fg-size-normal);

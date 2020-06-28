@@ -1,4 +1,6 @@
 :root {
+	--fg-family-mono: monospace;
+
 	/*navbar*/
 	--nav-bg: white;
 	--nav-fg: var(--fg-color-normal);
@@ -65,6 +67,10 @@
 	#download-button { width: 100%; }
 }
 
+em {
+	font-family: var(--fg-family-mono);
+}
+
 .section-title {
 	margin: var(--spacing-1) 0 var(--spacing-big) 0;
 }
@@ -120,12 +126,14 @@ footer .icons img {
 
 /*documentation page styling*/
 #documentation-view {
-	grid-template-columns: 20rem auto;
-	grid-template-rows: auto;
+	grid-template-columns: 30rem auto;
+	grid-template-rows: 100vh;
 }
 
 #documentation-overview {
 	font-size: var(--fg-size-small);
+	overflow-y: scroll;
+	padding: var(--spacing-3);
 }
 
 #documentation-overview a {
@@ -145,18 +153,28 @@ footer .icons img {
 	font-weight: var(--fg-weight-bold);
 }
 
+#documentation-details {
+	overflow-y: scroll;
+}
+
 #documentation-details p {
 	text-align: justify;
 }
 
 #documentation-details section {
-	padding: 0 0 var(--spacing-4) 0;
+	padding: var(--spacing-3) 0;
 }
 
 #documentation-details pre {
 	margin: var(--spacing-2) 0;
 }
 
-#documentation-details hr {
-	margin-bottom: var(--spacing-4);
+.fg-align-left 		{ text-align: left; }
+.fg-align-right 	{ text-align: right; }
+.fg-align-center 	{ text-align: center; }
+
+html {
+	scroll-behavior: smooth;
 }
+
+.bg-color-primary		{ background-color: var(--accent-color-primary); }
