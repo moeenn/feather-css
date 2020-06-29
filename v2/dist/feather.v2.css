@@ -506,7 +506,7 @@ table th {
 	padding: calc(var(--spacing-1) * 1.5) 0;
 	display: block;
 	width: 100%;
-	radius: 0;
+	border-radius: 0;
 }
 
 .rounded-corners {
@@ -540,6 +540,3 @@ table th {
 	.two-col, .three-col, .four-col,
 	.five-col, .six-col { grid-template-columns: 1fr; }
 }
-
-/*hide elements*/
-.d-none { display: none; }
