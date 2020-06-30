@@ -7,20 +7,24 @@
 	<title>Feather Revised</title>
 </head>
 <body>
+
 	<div class="flash-message info">
 		<div class="container">
 			<p>This is a flashed message!</p>
 		</div>
 	</div>
+
 	<main>
-		<div class="container pv-5">
-			<div class="message border">
-				<h2>Welcome</h2>
-				<p class="mv-3 fg-justify">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod iure adipisci optio deserunt sunt unde explicabo quam ducimus laboriosam sapiente ab, veniam quidem porro, reprehenderit omnis ipsam quaerat rerum eveniet.
-				</p>
-				<button class="button-primary">Join</button>
-			</div>
+		<div class="container">
+			<section>
+				<div class="message">
+					<h2>Welcome</h2>
+					<p class="mv-3 fg-justify">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod iure adipisci optio deserunt sunt unde explicabo quam ducimus laboriosam sapiente ab, veniam quidem porro, reprehenderit omnis ipsam quaerat rerum eveniet.
+					</p>
+					<button class="button-primary">Join</button>
+				</div>
+			</section>
 		</div>
 
 		<div class="container">
@@ -38,7 +42,7 @@
 			</section>
 		</div>
 
-				<div class="container">
+		<div class="container">
 			<hr>
 		</div>
 
@@ -53,30 +57,40 @@
 			</section>
 		</div>
 
-				<div class="container">
+		<div class="container">
 			<hr>
 		</div>
 
 		<div class="container">
 			<section>
-				<div class="d-grid two-col">
-					<div class="message positive mv-1">
-						<p>
+				<div class="d-grid three-col">
+					<div class="message">
+						<p class="fg-align-left">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod iure adipisci optio deserunt sunt unde explicabo quam ducimus laboriosam sapiente ab, veniam quidem porro, reprehenderit omnis ipsam quaerat rerum eveniet.
 						</p>
 					</div>
-					<div class="message negative mv-1">
-						<p>
+					<div class="message positive">
+						<p class="fg-align-center">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod iure adipisci optio deserunt sunt unde explicabo quam ducimus laboriosam sapiente ab, veniam quidem porro, reprehenderit omnis ipsam quaerat rerum eveniet.
 						</p>
 					</div>
-					<div class="message alert mv-1">
-						<p>
+					<div class="message negative">
+						<p class="fg-align-right">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod iure adipisci optio deserunt sunt unde explicabo quam ducimus laboriosam sapiente ab, veniam quidem porro, reprehenderit omnis ipsam quaerat rerum eveniet.
 						</p>
 					</div>
-					<div class="message info mv-1">
-						<p>
+					<div class="message alert">
+						<p class="fg-align-justify">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod iure adipisci optio deserunt sunt unde explicabo quam ducimus laboriosam sapiente ab, veniam quidem porro, reprehenderit omnis ipsam quaerat rerum eveniet.
+						</p>
+					</div>
+					<div class="message info">
+						<p class="fg-align-justify">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod iure adipisci optio deserunt sunt unde explicabo quam ducimus laboriosam sapiente ab, veniam quidem porro, reprehenderit omnis ipsam quaerat rerum eveniet.
+						</p>
+					</div>
+					<div class="rounded-corners bg-color-primary fg-color-inverted p-5">
+						<p class="fg-align-justify">
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod iure adipisci optio deserunt sunt unde explicabo quam ducimus laboriosam sapiente ab, veniam quidem porro, reprehenderit omnis ipsam quaerat rerum eveniet.
 						</p>
 					</div>
@@ -90,7 +104,7 @@
 
 		<div class="container">
 			<section>
-				<button>Normal</button>
+				<button class="mr-1">Normal</button>
 				<button class="button-primary">Primary</button>
 			</section>
 		</div>
@@ -101,7 +115,7 @@
 
 		<div class="container">
 			<section>
-				<button class="button-thin">Thin</button>
+				<button class="button-thin mr-1">Thin</button>
 				<button class="button button-thin button-primary">Thin Primary</button>
 			</section>
 		</div>
@@ -217,6 +231,11 @@ int main(void) {
 
 					<fieldset>
 						<input type="submit" value="Create" class="button button-primary">
+					</fieldset>
+
+					<fieldset class="mv-3 d-flex flex-h">
+						<label >Remember Me</label>
+						<input type="checkbox">
 					</fieldset>
 				</form>
 			</section>
