@@ -1,0 +1,33 @@
+<style>
+  /*code */
+  code {
+    padding: var(--spacing-3);
+    display: block;
+    color: var(--fg-color-normal);
+    font-size: calc(var(--fg-size-normal) * 0.9);
+    background-color: var(--bg-color-dark);
+    border-width: 0;
+    border-radius: var(--border-radius);
+    overflow: auto;
+  }
+
+  pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: var(--fg-line-height);
+  }
+</style>
+
+<template>
+  <code>
+    <pre>
+#include
+
+int main(void) {
+printf("%s \n", "Hello World!");
+return 0;
+}				</pre
+    >
+  </code>
+</template>

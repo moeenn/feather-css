@@ -1,0 +1,57 @@
+<template>
+  <table>
+    <thead>
+      <tr>
+        <th>ID.</th>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>01</td>
+        <td>User</td>
+        <td>email@email.com</td>
+      </tr>
+      <tr>
+        <td>02</td>
+        <td>User</td>
+        <td>email@email.com</td>
+      </tr>
+      <tr>
+        <td>03</td>
+        <td>User</td>
+        <td>email@email.com</td>
+      </tr>
+      <tr>
+        <td>04</td>
+        <td>User</td>
+        <td>email@email.com</td>
+      </tr>
+    </tbody>
+  </table>
+</template>
+
+<style>
+  /*tables*/
+  table {
+    font-size: var(--fg-size-normal);
+    border-spacing: 0;
+    width: 100%;
+  }
+
+  table th,
+  td {
+    padding: var(--spacing-2);
+    text-align: left;
+  }
+
+  table tbody tr:hover {
+    background-color: var(--bg-color-dull);
+  }
+
+  table th {
+    text-align: left;
+    border-bottom: solid var(--border-size-normal) var(--border-color-normal);
+  }
+</style>
