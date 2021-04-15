@@ -1,11 +1,11 @@
 /*global style variables*/
 :root {
 	/*colors*/
-	--bg-color-normal: white;
-	--bg-color-dull: rgba(0,0,0,0.02);
-	--bg-color-dark: rgba(239,240,241,1);
-	--bg-color-selection: rgba(0,107,255,0.15);
-	--accent-color-primary: rgba(74,144,226,1);
+	--bg-color-normal: hsl(0, 0%, 100%);
+	--bg-color-dull: hsla(0, 0%, 0%, 0.03);
+	--bg-color-dark: hsl(210, 7%, 94%);
+	--bg-color-selection: hsla(215, 100%, 50%, 0.15);
+	--accent-color-primary: hsl(212, 72%, 59%);
 
 	/*font settings*/
 	--fg-family-primary: Arial;
@@ -16,9 +16,9 @@
 	--fg-weight-bold: 550;
 	--fg-line-height: 2.5rem;
 	--fg-letter-spacing: 0.01rem;
-	--fg-color-normal: rgba(0,0,0,0.85);
-	--fg-color-dull: rgba(0,0,0,0.55);
-	--fg-color-link: rgba(213,62,60,1);
+	--fg-color-normal: hsl(0, 0%, 0%);
+	--fg-color-dull: hsla(0, 0%, 0%, 0.65);
+	--fg-color-link: hsl(1, 65%, 54%);
 
 	/*spacing constants*/
 	--spacing-1: 1rem;
@@ -30,23 +30,23 @@
 	--spacing-huge: clamp(6rem, 2.5vw, 12rem);
 
 	/*event colors*/
-	--bg-positive: rgba(207,236,138,0.47);
-	--fg-positive: rgba(17,99,0,1);
-	--bg-negative: rgba(255,0,0,0.15);
-	--fg-negative: rgba(128,2,0,1);
-	--bg-alert: rgba(255,148,0,0.19);
-	--fg-alert: rgba(123,63,0,1);
-	--bg-info: rgba(0,132,255,0.13);
-	--fg-info: rgba(0,98,152,1);
+	--bg-positive: hsla(78, 72%, 73%, 0.47);
+	--fg-positive: hsl(110, 100%, 19%);
+	--bg-negative: hsla(0, 100%, 50%, 0.15);
+	--fg-negative: hsl(1, 100%, 25%);
+	--bg-alert: hsla(35, 100%, 50%, 0.19);
+	--fg-alert: hsl(31, 100%, 24%);
+	--bg-info: hsla(209, 100%, 50%, 0.13);
+	--fg-info: hsl(201, 100%, 30%);
 
 	/*borders*/
 	--border-size-normal: 0.1rem;
-	--border-color-normal: rgba(242,242,242,1);
-	--border-color-dark: rgba(225,225,225,1);
+	--border-color-normal: hsl(0, 0%, 95%);
+	--border-color-dark: hsl(0, 0%, 88%);
 	--border-radius: 0.4rem;
 
 	/*shadows*/
-	--shadow-normal: 0.1rem 0.2rem 0.3rem rgba(0,0,0,0.1);
+	--shadow-normal: 0.1rem 0.2rem 0.3rem hsla(0, 0%, 0%, 0.1);
 
 	/*inputs*/
 	--input-height: 4rem;
@@ -349,21 +349,21 @@ fieldset { border: none; }
 
 /*errors on fieldsets*/
 form .error :is(label, p) {
-  color: rgba(213,62,60,1);
+  color: hsl(1, 65%, 54%);
 }
 
 form .error :is(textarea, input) {
-  color: rgba(213,62,60,1);
-	background-color: rgba(213,62,60,0.08);
-	border-color: rgba(213,62,60,0.3);
+  color: hsl(1, 65%, 54%);
+	background-color: hsla(1, 65%, 54%, 0.08);
+	border-color: hsla(1, 65%, 54%, 0.3);
 }
 
 form .error :is(input, textarea):is(:hover, :focus) {
-  border-color: rgba(213,62,60,1);
+  border-color: hsl(1, 65%, 54%);
 }
 
 form .error :is(input, textarea)::placeholder {
-	color: rgba(213,62,60,0.55);
+	color: hsla(1, 65%, 54%, 0.55);
 }
 
 /*normal input states*/
@@ -436,6 +436,7 @@ a {
 	text-decoration: none;
 	background-color: transparent;
 	color: var(--fg-color-link);
+	outline: none;
 }
 
 a:hover {
