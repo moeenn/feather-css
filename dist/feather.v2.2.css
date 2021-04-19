@@ -30,14 +30,14 @@
 	--spacing-huge: clamp(6rem, 2.5vw, 12rem);
 
 	/*event colors*/
-	--bg-positive: hsla(78, 72%, 73%, 0.47);
-	--fg-positive: hsl(110, 100%, 19%);
-	--bg-negative: hsla(0, 100%, 50%, 0.15);
-	--fg-negative: hsl(1, 100%, 25%);
-	--bg-alert: hsla(35, 100%, 50%, 0.19);
-	--fg-alert: hsl(31, 100%, 24%);
-	--bg-info: hsla(209, 100%, 50%, 0.13);
-	--fg-info: hsl(201, 100%, 30%);
+	--bg-positive: hsl(104, 35%, 87%);
+	--fg-positive: hsl(104, 35%, 30%);
+	--bg-negative: hsl(31, 89%, 90%);
+	--fg-negative: hsl(31, 89%, 30%);
+	--bg-alert: hsl(45, 100%, 90%);
+	--fg-alert: hsl(45, 100%, 30%);
+	--bg-info: hsl(218, 77%, 88%);
+	--fg-info: hsl(218, 77%, 30%);
 
 	/*borders*/
 	--border-size-normal: 0.1rem;
